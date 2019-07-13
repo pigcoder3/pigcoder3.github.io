@@ -4,15 +4,104 @@
 	<title> Sean Johnson </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"/>
 	<link rel="stylesheet" type="text/css" href="navbar.css"\>
+	<script type= "text/javascript" src="stickynav.js"> </script>
+	<style>
+
+		body {
+			background-color: rgb(240,240,240);
+			margin: 0px;
+		}
+
+		#name {
+			margin: 0px;
+			padding: 20px;
+			background-color: rgb(100,100,100);
+			text-align: center;
+			font-family: courier new, monospace;
+		}
+
+		#primary {
+			padding: 20px;
+		}
+
+		@media(max-width:750px) {
+
+			#intro {		
+				border-radius: 5px;
+				border: 1px solid black;
+				background-color: white;
+				width: 50%;
+				margin: 50px auto;
+				position: relative;
+			}
+			
+			#profile {
+				margin: 0 auto;	
+				padding: 10px;
+				border-radius: 30px;
+				width: 60px;
+				height: 60px;
+				display: block;
+			}
+
+			#desc {
+				font-family: verdana, sans-serif;
+				display: block;
+				padding: 10px;
+			}
+		}
+
+		@media(min-width:750px) {
+
+			#intro {
+				border-radius: 5px;
+				border: 1px solid black;
+				background-color: white;
+				width: 50%;
+				margin: 50px auto;
+				display: flex;
+				position: relative;
+			}
+			#profile {
+				margin: auto 0;	
+				padding: 20px;
+				border-radius: 30px;
+				width: 60px;
+				height: 60px;
+			}
+
+			#desc {
+				padding: 20px;
+				font-family: verdana, sans-serif;
+				margin: auto 0;	
+			}
+		}
+
+	</style>
 </head>
 <body>
-	<!-- navigation bar -->
-	<div id="navbar"> 
-		<li> <a class="nav-button" href="pigcoder3.github.io">Home</a> </li>
-		<li> <a class="nav-button" href="contact.html">Contact</a> </li>
-		<li> <a class="nav-button" href="about.html">About</a> </li>
-		<li> <a class="nav-button" href="projects.html">Projects</a> </li>
+	<!-- name -->
+	<div>
+		<h1 id="name">Sean Johnson</h1>	
 	</div>
+	<!-- navigation bar -->	
+	<div id="navbar"> 
+			<a class="nav-button" href="projects.html">Projects</a>
+			<a class="nav-button" href="pigcoder3.github.io">Home</a>
+			<a class="nav-button" href="contact.html">Contact</a>
+	</div>
+	<div id="spacer"> </div>
 	<!-- page body -->
+	<div id="primary">
+		<!-- intro -->
+		<div id="intro">
+			<a href="https://github.com/pigcoder3"> <img id="profile" src="github-profile.png" alt="github profile"\> </a>
+			<span id="desc">
+				Sean is a current high school student who programs for fun when he is not studying for class. He is moderatley fluent in Java, C, Python, and Bash.
+			</span>
+		</div>
+		<br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</div>
 </body>
 </html>
