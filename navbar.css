@@ -1,0 +1,36 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#navbar {
+	background-color: rgb(200, 200, 200);
+	height: 50px;
+	float: top;
+	margin: 0px;
+	overflow: hidden;
+	text-align: center;
+}
+
+#navbar li {
+	display: inline;
+	text-decoration: none;
+}
+
+#navbar .nav-button {
+	/*float: top;*/
+	display: inline-block;
+	color: black;	
+	font-family: verdana, sans-serif;
+	text-decoration: none;
+	/*margin: auto auto;*/
+	padding: 14px 20px;
+	text-align: center;
+	background-color: rgb(200,200,200);
+	position: relative;
+}
+
+#navbar a:hover {
+	background-color: rgb(150,150,150);
+	color: black;
+}
