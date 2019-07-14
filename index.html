@@ -186,9 +186,9 @@
 	</div>
 	<!-- navigation bar -->	
 	<div id="navbar"> 
-		<div id="projects-dropdown">
-			<span class="nav-button" href="#">Projects</span>
-			<div id="projects-dd-content">	
+		<div id="projects-dropdown" class="nav">
+			<button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
+			<div class="projects-dd-content" id="dropdown-content">	
 				<a class="project-link" href="dodger/dodger.html">Dodger</a>	
 				<a class="project-link" href="subtrouble/subtrouble.html">SubTrouble</a>
 				<a class="project-link" href="minesweeper/minesweeper.html">Minesweeper</a>
@@ -196,15 +196,27 @@
 				<a class="project-link" href="talk/talk.html">Talk</a>
 			</div>
 		</div>
-		<div>
+		<div class="nav">
 			<a class="nav-button" href="https://pigcoder3.github.io/">Home</a>
 		</div>
-		<div>
+		<div class="nav">
 			<a class="nav-button" href="#">Contact</a>
 		</div>
 
 	</div>
 	<div id="spacer"> </div>
+	<script>
+		function toggle() {
+			var e = document.getElementById("dropdown-content");
+			e.classList.toggle("projects-dd-content-shown");
+		}
+
+		window.onclick = function(event) {
+  			if (!event.target.matches("projects-dropdown-button")) {
+				e.classList.toggle("projects-dd-content-shown");
+    		}
+  		}
+	</script>
 	<!-- page body -->
 	<div id="primary">
 		<!-- intro -->
