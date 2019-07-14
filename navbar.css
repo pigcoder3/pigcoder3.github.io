@@ -1,7 +1,7 @@
 @media (min-width:500px) {
 	#navbar {
 		list-style-type: none;
-		background-color: rgb(100,100,100);
+		background-color: rgb(50,50,50);
 		height: 50px;
 		float: top;
 		margin: 0px auto;
@@ -16,7 +16,7 @@
 
 	.nav-button {
 		display: inline-block;
-		color: rgb(50,50,50);	
+		color: rgb(200,200,200);	
 		font-family: verdana, sans-serif;
 		text-decoration: none;
 		padding: 14px 20px;
@@ -28,7 +28,7 @@
 	}
 	.nav-button:hover {
 		border-width: 5px;	
-		color: rgb(200,200,200);
+		color: rgb(240,240,240);
 	}
 	.stickyspacer {
 		height: 50px;
@@ -39,7 +39,7 @@
 @media (max-width:500px) {
 	#navbar {
 		list-style-type: none;
-		background-color: rgb(100,100,100);
+		background-color: rgb(50,50,50);
 		height: 150px;
 		width: 100%;
 		float: top;
@@ -55,7 +55,7 @@
 
 	.nav-button {
 		display: block;
-		color: rgb(50,50,50);	
+		color: rgb(200,200,200);	
 		font-family: verdana, sans-serif;
 		text-decoration: none;
 		left: 0px;	
@@ -67,7 +67,7 @@
 		border-width: thin;
 	}
 	.nav-button:hover {
-		color: rgb(200,200,200);
+		color: rgb(240,240,240);
 	}
 	.stickyspacer {
 		height: 150px !important;

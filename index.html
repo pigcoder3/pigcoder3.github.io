@@ -27,10 +27,7 @@
 		@media(max-width:750px) {
 
 			#intro {		
-				border-radius: 5px;
-				border: 1px solid black;
-				background-color: white;
-				width: 50%;
+				width: 75%;
 				margin: 50px auto;
 				position: relative;
 			}
@@ -54,18 +51,16 @@
 		@media(min-width:750px) {
 
 			#intro {
-				border-radius: 5px;
-				border: 1px solid black;
-				background-color: white;
 				width: 50%;
 				margin: 50px auto;
 				display: flex;
 				position: relative;
 			}
+
 			#profile {
 				margin: auto 0;	
 				padding: 20px;
-				border-radius: 30px;
+				border-radius: 60px;
 				width: 60px;
 				height: 60px;
 			}
@@ -76,6 +71,109 @@
 				margin: auto 0;	
 			}
 		}
+
+		.content_container {
+			border-radius: 5px;
+			border: 1px solid black;
+			background-color: white;
+		}
+
+		.content_container:hover {
+			background-color: rgb(250,250,250);
+		}
+
+		@media(min-width: 750px) {
+			.project_container {
+				width: 40%;
+				max-height: 175px;
+				max-width: 40%;
+				min-width: 200px;
+				margin: 50px auto;
+				display: inline;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+			}
+			
+			.project_container a img:hover {
+				width: 110%;
+				height: auto;
+			}
+
+			.left_project span {
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+			}
+
+			.right_project span {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+			}
+		}
+
+		@media(max-width: 750px) {
+			.project_container {
+				width: 40%;
+				max-height: 175px;
+				max-width: 175%;
+				min-width: 200px;
+				margin: 50px auto;
+				display: block;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+			}
+
+			.project_container a img:hover {
+				width: 110%;
+				height: auto;
+			}
+
+			.left_project span {
+				position: absolute;
+				bottom: 5px;
+				right: 5px;
+			}
+
+			.right_project span {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+			}
+		}
+
+		.project_name {
+			font-family: verdana, sans-serif;
+			text-decoration: none;
+			color: black;
+			font-size: 120%;
+		}
+
+		.project_container a img {
+			vertical-align: top;
+			position: relative;
+			width: 100%;
+			height: auto;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%) ;
+		}
+
+		#projects {
+			max-height 175px;
+			margin: 0 auto;
+			width: 50%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#projects_header {
+			text-align: center;
+			font-family: verdana, sans-serif;
+		}
+
 
 	</style>
 </head>
@@ -94,13 +192,47 @@
 	<!-- page body -->
 	<div id="primary">
 		<!-- intro -->
-		<div id="intro">
+		<div class="content_container" id="intro">
 			<a href="https://github.com/pigcoder3"> <img id="profile" src="github-profile.png" alt="github profile"\> </a>
 			<span id="desc">
 				Sean is a current high school student who programs for fun when he is not studying for class. He is moderatley fluent in Java, C, Python, and Bash.
 			</span>
 		</div>
-		<br/>
+		
+		<!-- Projects -->
+		<h2 id="projects_header"> Projects </h2>
+		<div id="projects">
+			<div class="content_container project_container left_project">
+				<a href="dodger.html">
+					<img src="dodger.png"/>
+					<span class="project_name">Dodger</span>
+				</a>
+			</div>
+			<div class="content_container project_container right_project">
+				<a href="sub_trouble.html">
+					<img src="sub_trouble.png"/>
+					<span class="project_name">Sub Strouble</span>
+				</a>
+			</div>
+			<div class="content_container project_container left_project">
+				<a href="minesweeper.html">
+					<img src="minesweeper.png"/>
+					<span class="project_name">Minesweeper</span>
+				</a>
+			</div>
+			<div class="content_container project_container right_project">
+				<a href="tetris.html">
+					<img src="tetris.png"/>
+					<span class="project_name">Tetris</span>
+				</a>
+			</div>
+			<div class="content_container project_container left_project">
+				<a href="talk.html">
+					<img src="talk.png"/>
+					<span class="project_name" style="color: white">Talk</span>
+				</a>
+			</div>
+		</div>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	</div>
 </body>
