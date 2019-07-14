@@ -100,20 +100,9 @@
 				height: auto;
 			}
 
-			.left_project span {
-				position: absolute;
-				bottom: 5px;
-				right: 5px;
-			}
-
-			.right_project span {
-				position: absolute;
-				bottom: 5px;
-				left: 5px;
-			}
 		}
 
-		@media(max-width: 750px) {
+		@media(max-width: 1000px) {
 			.project_container {
 				width: 100%;
 				max-height: 175px;
@@ -130,36 +119,78 @@
 				width: 110%;
 				height: auto;
 			}
-
-			.left_project span {
-				position: absolute;
-				bottom: 5px;
-				right: 5px;
-			}
-
-			.right_project span {
-				position: absolute;
-				bottom: 5px;
-				left: 5px;
-			}
+			
 		}
 
 		.project_name {
 			font-family: verdana, sans-serif;
 			text-decoration: none;
 			color: black;
-			font-size: 120%;
-		}
-
-		.project_container a img {
-			vertical-align: top;
-			position: relative;
-			width: 100%;
-			height: auto;
+			font-size: 20px;
+			left: 5px;
+			position: absolute;
+			/* vertically align */
 			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%) ;
-			filter: grayscale(50%);
+			transform: translateY(-50%);
+		}
+	
+		@media(min-width:1000px) {	
+			.project-desc-container {
+				min-height: 40px;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				z-index: 10;
+				background-color: rgb(200,200,200,0.5);
+			}
+		
+			.project_desc {
+				font-family: verdana, sans-serif;
+				text-decoration: none;
+				color: black;
+				font-size: 15px;
+				right: 5px;
+				position: absolute;
+				/* vertically align */
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			.project_container a img {
+				vertical-align: top;
+				position: relative;
+				width: 100%;
+				height: auto;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%) ;
+			}
+		}
+		
+		@media(max-width:1300px) {	
+			.project-desc-container {
+				min-height: 40px;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+				z-index: 1;
+				background-color: rgb(200,200,200,0.5);
+				display: block;
+			}
+		
+			.project_desc {
+				display: none;	
+			}
+
+			.project_container a img {
+				vertical-align: top;
+				position: relative;
+				width: 100%;
+				height: auto;
+				top: 50%;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%) ;
+			}
 		}
 
 		#projects {
@@ -224,41 +255,57 @@
 		<div class="content_container" id="intro">
 			<a href="https://github.com/pigcoder3"> <img id="profile" src="github-profile.png" alt="github profile"\> </a>
 			<span id="desc">
-				Sean is a current high school student who programs as a hobby. He is moderatley fluent in Java, C, Python, and Bash.
+				I program for fun when I'm not overloaded with work from my high school classes. I am moderatley fluent in Java, C, Python, and Bash.
 			</span>
 		</div>
 		
 		<!-- Projects -->
 		<h2 id="projects_header"> Projects </h2>
 		<div id="projects">
-			<div class="content_container project_container left_project">
+			<div class="content_container project_container">
 				<a href="dodger/dodger.html">
+					<div class="project-desc-container">
+						<span class="project_name">Dodger</span>
+						<span class="project_desc">Fast-paced Survival</span>
+					</div>
 					<img src="dodger/dodger.png"/>
-					<span class="project_name">Dodger</span>
 				</a>
 			</div>
-			<div class="content_container project_container right_project">
+			<div class="content_container project_container">
 				<a href="sub_trouble/sub_trouble.html">
+					<div class="project-desc-container">
+						<span class="project_name">Sub Strouble</span>
+						<span class="project_desc">Sea Defense</span>
+					</div>
 					<img src="sub_trouble/sub_trouble.png"/>
-					<span class="project_name">Sub Strouble</span>
 				</a>
 			</div>
-			<div class="content_container project_container left_project">
+			<div class="content_container project_container">
 				<a href="minesweeper/minesweeper.html">
+					<div class="project-desc-container">
+						<span class="project_name">Minesweeper</span>
+						<span class="project_desc">Classic Puzzler</span>
+					</div>
 					<img src="minesweeper/minesweeper.png"/>
-					<span class="project_name">Minesweeper</span>
+
 				</a>
 			</div>
-			<div class="content_container project_container right_project">
+			<div class="content_container project_container">
 				<a href="tetris/tetris.html">
+					<div class="project-desc-container">
+						<span class="project_name">Tetris</span>
+						<span class="project_desc">Fast-paced Classic</span>
+					</div>
 					<img src="tetris/tetris.png"/>
-					<span class="project_name">Tetris</span>
 				</a>
 			</div>
-			<div class="content_container project_container left_project">
+			<div class="content_container project_container">
 				<a href="talk/talk.html">
+					<div class="project-desc-container">
+						<span class="project_name" style="color: white">Talk</span>
+						<span class="project_desc" style="color: white">Client/Server Chat</span>
+					</div>
 					<img src="talk/talk.png"/>
-					<span class="project_name" style="color: white">Talk</span>
 				</a>
 			</div>
 		</div>
