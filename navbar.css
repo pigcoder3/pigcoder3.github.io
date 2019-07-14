@@ -1,21 +1,19 @@
 @media (min-width:500px) {
 	#navbar {
-		list-style-type: none;
 		background-color: rgb(50,50,50);
 		height: 50px;
 		float: top;
 		margin: 0px auto;
-		overflow: hidden;
 		text-align: center;
-		z-index: 1;
+		z-index: 1000;
 	}
 
-	#navbar li {
-		display: inline;
+	#navbar div {
+		display: inline-block;	
 	}
 
 	.nav-button {
-		display: inline-block;
+		display: block;
 		color: rgb(200,200,200);	
 		font-family: verdana, sans-serif;
 		text-decoration: none;
@@ -23,13 +21,45 @@
 		text-align: center;
 		/*position: relative;*/
 		margin: 0px 30px;
-		border-bottom: 4px solid black;
-		border-width: thin;
+		z-index: 1;
 	}
+
 	.nav-button:hover {
-		border-width: 5px;	
 		color: rgb(240,240,240);
 	}
+
+	#projects-dropdown {
+  		position: relative;
+  		display: inline-block;
+	}
+
+	#projects-dd-content {
+		display: none !important;
+		position: absolute;
+		background-color: white;
+		color: black;
+		width: 100%;
+  		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	
+	#projects-dropdown:hover #projects-dd-content {
+  		display: block !important;
+	}
+	
+	.project-link {
+		display: block;
+		padding: 15px;
+		color: black;
+		font-family: verdana, sans-serif;
+		text-align: left;
+		text-decoration: none;
+	}
+
+	.project-link:hover {
+		background-color: lightgrey;
+	}
+
 	.stickyspacer {
 		height: 50px;
 		width: 100%;
@@ -44,7 +74,6 @@
 		width: 100%;
 		float: top;
 		margin: 0px;
-		overflow: hidden;
 		text-align: center;
 		z-index: 1;
 	}
@@ -63,12 +92,47 @@
 		text-align: center;
 		/*position: relative;*/
 		margin: 0px 0px;
-		border-bottom: 4px solid black;
-		border-width: thin;
+		border-bottom: 1px solid black;
 	}
+
 	.nav-button:hover {
 		color: rgb(240,240,240);
 	}
+
+	#projects-dropdown {
+  		position: relative;
+  		display: inline-block;
+		width: 100%;
+	}
+
+	#projects-dd-content {
+		display: none !important;
+		position: absolute;
+		background-color: white;
+		color: black;
+		margin-left: calc(0% - 50vw);
+  		width: 100vw;	
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	
+	#projects-dropdown:hover #projects-dd-content {
+  		display: inline-block !important;
+	}
+	
+	.project-link {
+		display: block;
+		padding: 15px;
+		color: black;
+		font-family: verdana, sans-serif;
+		text-align: left;
+		text-decoration: none;
+	}
+
+	.project-link:hover {
+		background-color: lightgrey;
+	}
+
 	.stickyspacer {
 		height: 150px !important;
 		width: 100%;
