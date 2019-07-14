@@ -8,6 +8,7 @@
 		z-index: 1000;
 	}
 
+
 	#navbar div {
 		display: inline-block;	
 	}
@@ -42,11 +43,15 @@
   		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
 	}
+
+	#projects-dropdown:active #projects-dd-content {
+		display: block !important;
+	}
 	
 	#projects-dropdown:hover #projects-dd-content {
   		display: block !important;
 	}
-	
+
 	.project-link {
 		display: block;
 		padding: 15px;
@@ -115,7 +120,11 @@
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
 	}
-	
+
+	#projects-dropdown:active #projects-dd-content {
+		display: inline-block !important;
+	}
+
 	#projects-dropdown:hover #projects-dd-content {
   		display: inline-block !important;
 	}
