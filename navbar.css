@@ -56,10 +56,6 @@
 		z-index: 1;
 	}
 
-	#projects-dropdown:hover .projects-dd-content {
-  		display: block !important;
-	}
-
 	.project-link {
 		display: block;
 		padding: 15px;
@@ -88,7 +84,7 @@
 		float: top;
 		margin: 0px;
 		text-align: center;
-		z-index: 1;
+		z-index: 1000;
 	}
 
 	#navbar li {
@@ -141,10 +137,6 @@
 		z-index: 1;
 	}
 
-	#projects-dropdown:hover .projects-dd-content {
-  		display: inline-block !important;
-	}
-	
 	.project-link {
 		display: block;
 		padding: 15px;
