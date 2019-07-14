@@ -126,6 +126,10 @@
 		width: 100%;
 	}
 
+	.projects-dd-content-shown {
+		display: inline-block !important;		
+	}
+
 	.projects-dd-content {
 		display: none;
 		position: absolute;
