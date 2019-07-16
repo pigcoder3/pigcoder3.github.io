@@ -126,7 +126,7 @@ def createdoc():
 							if(os.path.isdir(file+"/gallery")):
 								for name in os.listdir(file+"/gallery"):
 									if(os.path.isfile(file+"/gallery/"+name)):
-										with tag('img', klass='gallery-image', href="https://pigcoder3.github.io/"+file+'/gallery/'+name): pass
+										with tag('img', klass='gallery-image', src="https://pigcoder3.github.io/"+file+'/gallery/'+name): pass
 							with tag('span', id='no-images'):
 								text("It looks like we have no images for this project")
 						with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):

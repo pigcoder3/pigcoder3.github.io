@@ -8,7 +8,7 @@ window.onload = function() {
 	if(images.length > 0) { document.getElementById("no-images").style.display = "none"; }
 	else { return; }
 	current=images[currentNumber];
-	current.style.display="inline-block";
+	current.style.display="flex";
 	document.getElementById("image-number").textContent = (currentNumber+1)+" / "+images.length;
 }
 function goRight() {
@@ -17,7 +17,7 @@ function goRight() {
 	if(currentNumber>images.length-1) { currentNumber = 0; }
 	current.style.display="none";
 	current = images[currentNumber];
-	current.style.display="inline-block";
+	current.style.display="flex";
 	document.getElementById("image-number").textContent = (currentNumber+1)+" / "+images.length;
 }
 function goLeft() {
@@ -26,6 +26,6 @@ function goLeft() {
 	if(currentNumber<0)	{ currentNumber = images.length-1; }
 	current.style.display="none";
 	current = images[currentNumber];
-	current.style.display="inline-block";
+	current.style.display="flex";
 	document.getElementById("image-number").textContent = (currentNumber+1)+" / "+images.length;
 }
