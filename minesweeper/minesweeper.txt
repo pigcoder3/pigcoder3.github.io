@@ -1,0 +1,8 @@
+name:Minesweeper
+simpledesc:Classic Puzzler
+longdesc:This game is a take on the classic minesweeper game. The player must flag all mines without uncovering a single one. If one is uncovered, the game is lost.
+compiled:minesweeper-2.1.jar
+requirements:
+	Java 11
+:requirements
+github:https://github.com/pigcoder3/Minesweeper
