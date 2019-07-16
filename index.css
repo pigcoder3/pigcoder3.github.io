@@ -149,7 +149,7 @@
 			}
 		}
 		
-		@media(max-width:1300px) {	
+		@media(max-width:1000px) {	
 			.project-desc-container {
 				min-height: 40px;
 				position: absolute;

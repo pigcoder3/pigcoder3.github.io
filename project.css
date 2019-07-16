@@ -19,6 +19,152 @@
 	text-align: center;
 }
 
+#gallery-header {
+	margin: 0 auto;
+	padding: 20px 20px 0px 20px;
+	text-align: center;
+}
+
+#no-images {
+	display: block;
+	color: white;
+	margin: auto 0;
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#image-number-container {
+	min-height: 40px;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: 10;
+	background-color: rgb(50,50,50,0.5);
+	display: block;
+}
+
+#image-number {
+	position: absolute;
+	color: white;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	z-index: 10;
+	padding: 5px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@media(min-width:750px) {
+
+	#gallery {
+		margin: 20px auto;
+		width: 400px;
+		height: 300px;
+		display: flex;
+	}
+
+	#image-container {
+		height: 300px;
+		width: 300px;
+		background-color: rgb(50,50,50);
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		display: flex;
+	}
+
+	#image-container img {
+		width: 100%;
+		height: auto;
+		display: none;
+		margin: auto 0;
+		z-index: 10;
+	}
+
+	.gallery-image-container-show {
+		display: block;
+		list-style-type: none;
+	}
+
+	.gallery-button {
+		border-radius: 5px;
+		width: 50px;
+		background-color: rgb(245,245,245,1);
+		outline: none;
+		border: none;
+	}
+
+	.gallery-button:hover {
+		background-color: rgb(255,255,255,1);
+	}
+
+	#left-button {
+		border-radius: 5px 0px 0px 5px;
+		border-right: 1px solid black;		
+	}
+
+	#right-button {
+		border-radius: 0px 5px 5px 0px;
+		border-left: 1px solid black;
+	}
+}
+
+@media(max-width:750px) {
+
+	#gallery {
+		margin: 20px auto;
+		width: 75%;
+		height: 300px;
+		display: flex;
+	}
+
+	#image-container {
+		height: 100%;
+		width: 100%;
+		background-color: rgb(50,50,50);
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		display: flex;
+	}
+
+	#image-container img {
+		width: 100%;
+		height: auto;
+		margin: auto 0;
+		display: none;
+		vertical-align: middle;	
+		position: relative;
+		z-index: 10;
+	}
+
+	.gallery-button {
+		border-radius: 5px;
+		width: 50px;
+		background-color: rgb(245,245,245,1);
+		outline: none;
+		border: none;
+	}
+
+	.gallery-button:hover {
+		background-color: rgb(255,255,255,1);
+	}
+
+	#left-button {
+		border-radius: 5px 0px 0px 5px;
+		border-right: 1px solid black;		
+	}
+
+	#right-button {
+		border-radius: 0px 5px 5px 0px;
+		border-left: 1px solid black;
+	}
+}
+
 @media(max-width:750px) {
 	#intro {
 		width: 75%;

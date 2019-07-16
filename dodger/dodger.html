@@ -37,13 +37,13 @@
 
 		window.onclick = function(event) {
   			if (!event.target.matches("projects-dropdown-button")) {
-				e.classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}</script>
     <div id="primary">
       <h2 id="project-name">Dodger</h2>
       <div class="content-container" id="intro">
-        <a href="#">
+        <a href="https://github.com/pigcoder3/Dodger/releases">
           <img id="project-img" src="dodger.png"></img>
         </a>
         <span id="project-desc">Dodger is a game that puts the player, a green ball, in a field where an endless onslaught of lethal red squares races toward the top of the screen. The goal is to survive as long as possible.</span>
@@ -70,6 +70,24 @@
             </ul>
           </div>
         </div>
+      </div>
+      <h2 id="gallery-header">Gallery</h2>
+      <div class="content-container" id="gallery">
+        <button id="left-button" class="gallery-button" onclick="goLeft()"> &lt; </button>
+        <div id="image-container">
+          <div id="image-number-container">
+            <span id="image-number">0 / 0</span>
+          </div>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/ingame.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/home.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/difficulties.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/Player_Lost.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/start.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/dodger/gallery/Paused.png"></img>
+          <span id="no-images">It looks like we have no images for this project</span>
+        </div>
+        <button id="right-button" class="gallery-button" onclick="goRight()"> &gt; </button>
+        <script type="text/javascript" src="../gallery.js"></script>
       </div>
     </div>
   </body>

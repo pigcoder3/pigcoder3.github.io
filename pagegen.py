@@ -69,14 +69,14 @@ def createdoc():
 							text('You can contact me through GitHub (')
 							with tag('strong'):
 								text(github)
-							text('), although I do not check it very often')
+							text('), although I do not check it very often.')
 					with tag('div', klass='content-container', id='email'):
 						with tag('img', src='email.png', id='email-logo'): pass
 						with tag('span', klass='notes'):
 							text('Email me at ')
 							with tag('strong'):
 								text(email)
-							text('. I check my email ofter so it is likely you will be able to get a hold of me.')
+							text('. I check my email often, so it is likely you will be able to get a hold of me.')
 					with tag('div', klass='content-container', id='phone'):
 						with tag('img', src='phone.png', id='phone-logo'): pass
 						with tag('span', klass='notes'):
@@ -85,7 +85,7 @@ def createdoc():
 					with tag('h2', id='project-name'):
 						text(parseBasicInfo(file, "name"))
 					with tag('div', klass='content-container', id='intro'):
-						with tag('a', href='#'):
+						with tag('a', href=parseBasicInfo(file, "github")):
 							with tag('img', id='project-img', src=file+'.png'): pass
 						with tag('span', id='project-desc'):
 							text(parseBasicInfo(file, "longdesc"))
@@ -114,6 +114,24 @@ def createdoc():
 							with tag('div', klass='container-body'):
 								with tag('ul'):
 									doc.asis(parseBasicInfo(file, "requirements"))
+					with tag('h2', id="gallery-header"):
+						text("Gallery")
+					with tag('div', klass='content-container', id='gallery'):
+						with tag('button', id='left-button', klass='gallery-button', onclick="goLeft()"):
+							text(' < ')
+						with tag('div', id='image-container'):
+							with tag('div', id='image-number-container'):
+								with tag('span', id='image-number'):
+									text("0 / 0")
+							if(os.path.isdir(file+"/gallery")):
+								for name in os.listdir(file+"/gallery"):
+									if(os.path.isfile(file+"/gallery/"+name)):
+										with tag('img', klass='gallery-image', href="https://pigcoder3.github.io/"+file+'/gallery/'+name): pass
+							with tag('span', id='no-images'):
+								text("It looks like we have no images for this project")
+						with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):
+							text(' > ')
+						with tag('script', type='text/javascript', src='../gallery.js'): pass
 #create the name header
 def nameheader():
 	doc, tag, text = Doc().tagtext();
@@ -149,7 +167,7 @@ def navbar():
 
 		window.onclick = function(event) {
   			if (!event.target.matches("projects-dropdown-button")) {
-				e.classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}""")
 	return doc.getvalue();
