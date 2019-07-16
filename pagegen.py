@@ -11,9 +11,9 @@ if(len(sys.argv) < 1 or sys.argv[1] == "-help"):
 file=""
 type=""
 
-if(len(sys.argv) >= 1):
+if(len(sys.argv) >= 2):
 	file = sys.argv[1]
-if(len(sys.argv) >= 1):
+if(len(sys.argv) >= 3):
 	type = sys.argv[2]
 
 #the start function
