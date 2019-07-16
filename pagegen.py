@@ -7,6 +7,7 @@ if(len(sys.argv) < 1 or sys.argv[1] == "-help"):
 	print("pagegen.py file type\n")
 	print("If the type is 'project', supply the name of the directory that it is located in as the file\n")
 	print("Otherwise, just give the name of the file to be generated\n") 
+	exit()
 
 file=""
 type=""
@@ -20,7 +21,7 @@ if(len(sys.argv) >= 2):
 	if(sys.argv[1] == 'pagegen.py'):
 		print("STOP! You are attempting to regenerate the page generation script!")
 		exit()
-	if(sys.argv[1][len(sys.argv[1])-4:len(sys.argv[1])] != 'html'):
+	if(sys.argv[1][len(sys.argv[1])-4:len(sys.argv[1])] != 'html' and sys.argv[2] != "project"):
 		print("STOP! You are attempting to regenerate a page that is not an html page!")
 		exit()
 if(len(sys.argv) >= 3):
@@ -32,7 +33,8 @@ def createdoc():
 	with tag('html'):
 		with tag('head'):
 			with tag('title'):
-				text('Sean Johnson')
+				if(type == "project"):
+					text(parseBasicInfo(file, 'name') + ' - Sean Johnson')
 			with tag('meta', name='viewport', content='width=device-width', charset='UTF-8'): pass
 			if(type != "project"):
 				with tag('script', type='text/javascript', src='stickynav.js'): pass

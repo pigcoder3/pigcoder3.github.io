@@ -4,5 +4,6 @@ longdesc:Talk is a simple server based chat system. Users communicate on a linux
 compiled:
 requirements:
 	Linux or MacOs
+	ncurses
 :requirements
 github:https://github.com/pigcoder3/Talk
