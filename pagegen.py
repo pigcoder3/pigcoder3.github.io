@@ -11,8 +11,18 @@ if(len(sys.argv) < 1 or sys.argv[1] == "-help"):
 file=""
 type=""
 
+email="seanmjohns1@gmail.com"
+github="pigcoder3"
+phone=""
+
 if(len(sys.argv) >= 2):
 	file = sys.argv[1]
+	if(sys.argv[1] == 'pagegen.py'):
+		print("STOP! You are attempting to regenerate the page generation script!")
+		exit()
+	if(sys.argv[1][len(sys.argv[1])-4:len(sys.argv[1])] != 'html'):
+		print("STOP! You are attempting to regenerate a page that is not an html page!")
+		exit()
 if(len(sys.argv) >= 3):
 	type = sys.argv[2]
 
@@ -33,6 +43,8 @@ def createdoc():
 				with tag('link', rel='stylesheet', href='../project.css'): pass
 			if(file == "index.html"):
 				with tag('link', rel='stylesheet', href='index.css'): pass
+			if(file == "contact.html"):
+				with tag('link', rel='stylesheet', href='contact.css'): pass
 			
 		with tag('body'):
 			doc.asis(nameheader())
@@ -45,6 +57,28 @@ def createdoc():
 						with tag('span', id='desc'):
 							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, C, Python, and Bash.');
 					doc.asis(createprojectcontainers())
+				if(file == "contact.html"):
+					with tag('h2', id='contact-header'):
+						text("Contact")
+					with tag('div', klass='content-container', id='github'):
+						with tag('a', href='https://github.com/pigcoder3'):
+							with tag('img', src='github-logo.png', id='github-logo'): pass
+						with tag('span', klass='notes'):
+							text('You can contact me through GitHub (')
+							with tag('strong'):
+								text(github)
+							text('), although I do not check it very often')
+					with tag('div', klass='content-container', id='email'):
+						with tag('img', src='email.png', id='email-logo'): pass
+						with tag('span', klass='notes'):
+							text('Email me at ')
+							with tag('strong'):
+								text(email)
+							text('. I check my email ofter so it is likely you will be able to get a hold of me.')
+					with tag('div', klass='content-container', id='phone'):
+						with tag('img', src='phone.png', id='phone-logo'): pass
+						with tag('span', klass='notes'):
+							text('I do not yet have a phone number, but I likely will soon.')
 				if(type == "project"):
 					with tag('h2', id='project-name'):
 						text(parseBasicInfo(file, "name"))
@@ -102,7 +136,7 @@ def navbar():
 			with tag('a', klass='nav-button', href='https://pigcoder3.github.io/'):
 				text('Home')
 		with tag('div', klass='nav'):
-			with tag('a', klass='nav-button', href='#'):
+			with tag('a', klass='nav-button', href='https://pigcoder3.github.io/contact.html'):
 				text('Contact')
 	with tag('div', id='spacer'): pass
 	with tag('script'):

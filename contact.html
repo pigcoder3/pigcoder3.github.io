@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sean Johnson</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
+    <script type="text/javascript" src="stickynav.js"></script>
+    <link rel="stylesheet" href="navbar.css"></link>
+    <link rel="stylesheet" href="contact.css"></link>
+  </head>
+  <body>
+    <div>
+      <h1 id="name">Sean Johnson</h1>
+    </div>
+    <div id="navbar">
+      <div id="projects-dropdown" class="nav">
+        <button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
+        <div class="projects-dd-content" id="dropdown-content">
+          <a class="project-link" href="https://pigcoder3.github.io/dodger/dodger.html">Dodger</a>
+          <a class="project-link" href="https://pigcoder3.github.io/tetris/tetris.html">Tetris</a>
+          <a class="project-link" href="https://pigcoder3.github.io/minesweeper/minesweeper.html">Minesweeper</a>
+          <a class="project-link" href="https://pigcoder3.github.io/sub_trouble/sub_trouble.html">Sub Trouble</a>
+          <a class="project-link" href="https://pigcoder3.github.io/talk/talk.html">Talk</a>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="nav-button" href="https://pigcoder3.github.io/">Home</a>
+      </div>
+      <div class="nav">
+        <a class="nav-button" href="https://pigcoder3.github.io/contact.html">Contact</a>
+      </div>
+    </div>
+    <div id="spacer"></div>
+    <script>function toggle() {
+			var e = document.getElementById("dropdown-content");
+			e.classList.toggle("projects-dd-content-shown");
+		}
+
+		window.onclick = function(event) {
+  			if (!event.target.matches("projects-dropdown-button")) {
+				e.classList.toggle("projects-dd-content-shown");
+    		}
+  		}</script>
+    <div id="primary">
+      <h2 id="contact-header">Contact</h2>
+      <div class="content-container" id="github">
+        <a href="https://github.com/pigcoder3">
+          <img src="github-logo.png" id="github-logo"></img>
+        </a>
+        <span class="notes">You can contact me through GitHub (<strong>pigcoder3</strong>), although I do not check it very often</span>
+      </div>
+      <div class="content-container" id="email">
+        <img src="email.png" id="email-logo"></img>
+        <span class="notes">Email me at <strong>seanmjohns1@gmail.com</strong>. I check my email ofter so it is likely you will be able to get a hold of me.</span>
+      </div>
+      <div class="content-container" id="phone">
+        <img src="phone.png" id="phone-logo"></img>
+        <span class="notes">I do not yet have a phone number, but I likely will soon.</span>
+      </div>
+    </div>
+  </body>
+</html>
