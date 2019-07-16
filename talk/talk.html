@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sean Johnson</title>
+    <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
+    <script type="text/javascript" src="../stickynav.js"></script>
+    <link rel="stylesheet" href="../navbar.css"></link>
+    <link rel="stylesheet" href="../project.css"></link>
+  </head>
+  <body>
+    <div>
+      <h1 id="name">Sean Johnson</h1>
+    </div>
+    <div id="navbar">
+      <div id="projects-dropdown" class="nav">
+        <button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
+        <div class="projects-dd-content" id="dropdown-content">
+          <a class="project-link" href="https://pigcoder3.github.io/dodger/dodger.html">Dodger</a>
+          <a class="project-link" href="https://pigcoder3.github.io/tetris/tetris.html">Tetris</a>
+          <a class="project-link" href="https://pigcoder3.github.io/minesweeper/minesweeper.html">Minesweeper</a>
+          <a class="project-link" href="https://pigcoder3.github.io/sub_trouble/sub_trouble.html">Sub Trouble</a>
+          <a class="project-link" href="https://pigcoder3.github.io/talk/talk.html">Talk</a>
+        </div>
+      </div>
+      <div class="nav">
+        <a class="nav-button" href="https://pigcoder3.github.io/">Home</a>
+      </div>
+      <div class="nav">
+        <a class="nav-button" href="#">Contact</a>
+      </div>
+    </div>
+    <div id="spacer"></div>
+    <script>function toggle() {
+			var e = document.getElementById("dropdown-content");
+			e.classList.toggle("projects-dd-content-shown");
+		}
+
+		window.onclick = function(event) {
+  			if (!event.target.matches("projects-dropdown-button")) {
+				e.classList.toggle("projects-dd-content-shown");
+    		}
+  		}</script>
+    <div id="primary">
+      <h2 id="project-name">Talk</h2>
+      <div class="content-container" id="intro">
+        <a href="#">
+          <img id="project-img" src="talk.png"></img>
+        </a>
+        <span id="project-desc">Talk is a simple server based chat system. Users communicate on a linux and macos only text-based environment. There is no running dedicated server, so if you wish to use it, you must run a server yourself.</span>
+      </div>
+      <div id="technical-info">
+        <div class="content-container" id="download">
+          <span class="subheader" id="download-header">Download</span>
+          <div class="container-body">
+            <div id="source">
+              <span id="source-header">Source</span>
+              <a href="https://github.com/pigcoder3/Talk">Github</a>
+            </div>
+            <div id="precompiled">
+              <span id="precompiled-header">Compiled</span>
+              <a>-</a>
+            </div>
+          </div>
+        </div>
+        <div class="content-container" id="requirements">
+          <span class="subheader" id="requirements-header">Requirements</span>
+          <div class="container-body">
+            <ul>
+              <li>Linux or MacOs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

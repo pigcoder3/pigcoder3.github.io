@@ -1,0 +1,8 @@
+name:Talk
+simpledesc:Client/Server Chat
+longdesc:Talk is a simple server based chat system. Users communicate on a linux and macos only text-based environment. There is no running dedicated server, so if you wish to use it, you must run a server yourself.
+compiled:
+requirements:
+	Linux or MacOs
+:requirements
+github:https://github.com/pigcoder3/Talk
