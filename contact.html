@@ -37,7 +37,7 @@
 
 		window.onclick = function(event) {
   			if (!event.target.matches("projects-dropdown-button")) {
-				e.classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}</script>
     <div id="primary">
@@ -46,11 +46,11 @@
         <a href="https://github.com/pigcoder3">
           <img src="github-logo.png" id="github-logo"></img>
         </a>
-        <span class="notes">You can contact me through GitHub (<strong>pigcoder3</strong>), although I do not check it very often</span>
+        <span class="notes">You can contact me through GitHub (<strong>pigcoder3</strong>), although I do not check it very often.</span>
       </div>
       <div class="content-container" id="email">
         <img src="email.png" id="email-logo"></img>
-        <span class="notes">Email me at <strong>seanmjohns1@gmail.com</strong>. I check my email ofter so it is likely you will be able to get a hold of me.</span>
+        <span class="notes">Email me at <strong>seanmjohns1@gmail.com</strong>. I check my email often, so it is likely you will be able to get a hold of me.</span>
       </div>
       <div class="content-container" id="phone">
         <img src="phone.png" id="phone-logo"></img>

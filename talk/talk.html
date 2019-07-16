@@ -37,13 +37,13 @@
 
 		window.onclick = function(event) {
   			if (!event.target.matches("projects-dropdown-button")) {
-				e.classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}</script>
     <div id="primary">
       <h2 id="project-name">Talk</h2>
       <div class="content-container" id="intro">
-        <a href="#">
+        <a href="https://github.com/pigcoder3/Talk">
           <img id="project-img" src="talk.png"></img>
         </a>
         <span id="project-desc">Talk is a simple server based chat system. Users communicate on a linux and macos only text-based environment. There is no running dedicated server, so if you wish to use it, you must run a server yourself.</span>
@@ -71,6 +71,23 @@
             </ul>
           </div>
         </div>
+      </div>
+      <h2 id="gallery-header">Gallery</h2>
+      <div class="content-container" id="gallery">
+        <button id="left-button" class="gallery-button" onclick="goLeft()"> &lt; </button>
+        <div id="image-container">
+          <div id="image-number-container">
+            <span id="image-number">0 / 0</span>
+          </div>
+          <img class="gallery-image" href="https://pigcoder3.github.io/talk/gallery/userschatting.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/talk/gallery/userleftchat.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/talk/gallery/secretmessage.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/talk/gallery/bigmessage.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/talk/gallery/scrollingthoughchat.png"></img>
+          <span id="no-images">It looks like we have no images for this project</span>
+        </div>
+        <button id="right-button" class="gallery-button" onclick="goRight()"> &gt; </button>
+        <script type="text/javascript" src="../gallery.js"></script>
       </div>
     </div>
   </body>

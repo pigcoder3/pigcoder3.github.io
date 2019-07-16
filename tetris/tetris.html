@@ -37,13 +37,13 @@
 
 		window.onclick = function(event) {
   			if (!event.target.matches("projects-dropdown-button")) {
-				e.classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}</script>
     <div id="primary">
       <h2 id="project-name">Tetris</h2>
       <div class="content-container" id="intro">
-        <a href="#">
+        <a href="https://github.com/pigcoder3/Tetris/releases">
           <img id="project-img" src="tetris.png"></img>
         </a>
         <span id="project-desc">This game is a clone of the original Tetris franchise. The player must fill as many lines as possible before the blocks stack to the top of the playing field.</span>
@@ -70,6 +70,25 @@
             </ul>
           </div>
         </div>
+      </div>
+      <h2 id="gallery-header">Gallery</h2>
+      <div class="content-container" id="gallery">
+        <button id="left-button" class="gallery-button" onclick="goLeft()"> &lt; </button>
+        <div id="image-container">
+          <div id="image-number-container">
+            <span id="image-number">0 / 0</span>
+          </div>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/ingame2.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/starting.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/juststarted.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/ingame.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/juststarted2.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/gameover.png"></img>
+          <img class="gallery-image" href="https://pigcoder3.github.io/tetris/gallery/paused.png"></img>
+          <span id="no-images">It looks like we have no images for this project</span>
+        </div>
+        <button id="right-button" class="gallery-button" onclick="goRight()"> &gt; </button>
+        <script type="text/javascript" src="../gallery.js"></script>
       </div>
     </div>
   </body>
