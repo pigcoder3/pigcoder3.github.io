@@ -167,7 +167,7 @@ def navbar():
 
 		window.onclick = function(event) {
   			if (event.target != document.getElementById("projects-dropdown-button")) {
-				document.getElementsByClassName("projects-dd-content")[0].classList.toggle("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dd-content")[0].classList.remove("projects-dd-content-shown");
     		}
   		}""")
 	return doc.getvalue();
