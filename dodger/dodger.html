@@ -30,15 +30,14 @@
       </div>
     </div>
     <div id="spacer"></div>
-    <script>
-		function toggle() {
+    <script>function toggle() {
 			var e = document.getElementById("dropdown-content");
 			e.classList.toggle("projects-dd-content-shown");
 		}
 
 		window.onclick = function(event) {
   			if (event.target != document.getElementById("projects-dropdown-button")) {
-				document.getElementsByClassName("projects-dd-content")[0].classList.remove("projects-dd-content-shown");
+				document.getElementsByClassName("projects-dd-content")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}</script>
     <div id="primary">
