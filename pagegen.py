@@ -166,8 +166,8 @@ def navbar():
 		}
 
 		window.onclick = function(event) {
-  			if (!event.target.matches("projects-dropdown-button")) {
-				document.getElementsByClassName("projects-dropdown-button")[0].classList.toggle("projects-dd-content-shown");
+  			if (event.target != document.getElementById("projects-dropdown-button")) {
+				document.getElementsByClassName("projects-dd-content")[0].classList.toggle("projects-dd-content-shown");
     		}
   		}""")
 	return doc.getvalue();
