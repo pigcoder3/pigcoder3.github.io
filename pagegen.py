@@ -97,7 +97,7 @@ def createdoc():
 								with tag('div', id='source'):
 									with tag('span', id='source-header'):
 										text('Source')
-									with tag('a', href=parseBasicInfo(file, "github")):
+									with tag('a', href=parseBasicInfo(file, "github")+'/releases'):
 										text('Github')
 								with tag('div', id='precompiled'):
 									with tag('span', id='precompiled-header'):
