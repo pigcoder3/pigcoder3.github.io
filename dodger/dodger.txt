@@ -5,4 +5,4 @@ compiled:dodger-1.3.jar
 requirements:
 	Java 11
 :requirements
-github:https://github.com/pigcoder3/Dodger/releases
+github:https://github.com/pigcoder3/Dodger
