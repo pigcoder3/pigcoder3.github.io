@@ -77,10 +77,6 @@ def createdoc():
 							with tag('strong'):
 								text(email)
 							text('. I check my email often, so it is likely you will be able to get a hold of me.')
-					with tag('div', klass='content-container', id='phone'):
-						with tag('img', src='phone.png', id='phone-logo'): pass
-						with tag('span', klass='notes'):
-							text('I do not yet have a phone number, but I likely will soon.')
 				if(type == "project"):
 					with tag('h2', id='project-name'):
 						text(parseBasicInfo(file, "name"))
