@@ -13,7 +13,7 @@ file=""
 type=""
 
 email="seanmjohns1@gmail.com"
-github="pigcoder3"
+github="seanmjohns"
 phone=""
 
 if(len(sys.argv) >= 2):
@@ -54,16 +54,16 @@ def createdoc():
 			with tag('div', id='primary'):
 				if(file == "index.html"):
 					with tag('div', klass='content_container', id='intro'):
-						with tag('a', href='https://github.com/pigcoder3'):
+						with tag('a', href='https://github.com/seanmjohns'):
 							with tag('img', id='profile', src='github-profile.png', alt='github profile'): pass
 						with tag('span', id='desc'):
-							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, C, Python, and Bash.');
+							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, C, C++, Python, and Bash.');
 					doc.asis(createprojectcontainers())
 				if(file == "contact.html"):
 					with tag('h2', id='contact-header'):
 						text("Contact")
 					with tag('div', klass='content-container', id='github'):
-						with tag('a', href='https://github.com/pigcoder3'):
+						with tag('a', href='https://github.com/seanmjohns'):
 							with tag('img', src='github-logo.png', id='github-logo'): pass
 						with tag('span', klass='notes'):
 							text('You can contact me through GitHub (')
@@ -99,7 +99,7 @@ def createdoc():
 									with tag('span', id='precompiled-header'):
 										text('Compiled')
 									if(parseBasicInfo(file, "compiled")):
-										with tag('a', href='https://pigcoder3.github.io/'+file+'/'+parseBasicInfo(file, "compiled")):
+										with tag('a', href='https://seanmjohns.github.io/'+file+'/'+parseBasicInfo(file, "compiled")):
 											text(parseBasicInfo(file, "compiled"))
 									else:
 										with tag('a'):
@@ -122,7 +122,7 @@ def createdoc():
 							if(os.path.isdir(file+"/gallery")):
 								for name in os.listdir(file+"/gallery"):
 									if(os.path.isfile(file+"/gallery/"+name)):
-										with tag('img', klass='gallery-image', src="https://pigcoder3.github.io/"+file+'/gallery/'+name): pass
+										with tag('img', klass='gallery-image', src="https://seanmjohns.github.io/"+file+'/gallery/'+name): pass
 							with tag('span', id='no-images'):
 								text("It looks like we have no images for this project")
 						with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):
@@ -146,13 +146,13 @@ def navbar():
 			with tag('div', klass='projects-dd-content', id='dropdown-content'):
 				for name in os.listdir("."):
 					if(os.path.isdir(name) and name != '.git'):
-						with tag('a', klass='project-link', href="https://pigcoder3.github.io/"+name+'/'+name+'.html'):
+						with tag('a', klass='project-link', href="https://seanmjohns.github.io/"+name+'/'+name+'.html'):
 							text(parseBasicInfo(name, "name"))
 		with tag('div', klass='nav'):
-			with tag('a', klass='nav-button', href='https://pigcoder3.github.io/'):
+			with tag('a', klass='nav-button', href='https://seanmjohns.github.io/'):
 				text('Home')
 		with tag('div', klass='nav'):
-			with tag('a', klass='nav-button', href='https://pigcoder3.github.io/contact.html'):
+			with tag('a', klass='nav-button', href='https://seanmjohns.github.io/contact.html'):
 				text('Contact')
 	with tag('div', id='spacer'): pass
 	with tag('script'):

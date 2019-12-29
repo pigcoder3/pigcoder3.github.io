@@ -6,4 +6,4 @@ requirements:
 	Linux or MacOs
 	ncurses
 :requirements
-github:https://github.com/pigcoder3/Talk
+github:https://github.com/seanmjohns/Talk

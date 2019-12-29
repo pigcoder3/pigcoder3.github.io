@@ -5,4 +5,4 @@ compiled:tetris-1.3.jar
 requirements:
 	java 11
 :requirements
-github:https://github.com/pigcoder3/Tetris
+github:https://github.com/seanmjohns/Tetris
