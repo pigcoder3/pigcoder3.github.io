@@ -5,4 +5,4 @@ compiled:
 requirements:
   None
 :requirements
-github:https://github.com/pigcoder3/calc
+github:https://github.com/seanmjohns/calc

@@ -5,4 +5,4 @@ compiled: sub_trouble-1.5.jar
 requirements:
 	Java 11
 :requirements
-github:https://github.com/pigcoder3/Submarine-Trouble
+github:https://github.com/seanmjohns/Submarine-Trouble
