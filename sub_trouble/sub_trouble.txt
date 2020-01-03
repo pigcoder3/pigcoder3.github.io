@@ -1,6 +1,6 @@
 name:Sub Trouble
 simpledesc:Sea-Based Defense
-longdesc:Submarine Trouble is a game that is set on an ocean. The player controls a destroyer and must defend him/herself from the enless wave of submarines lurking below, while they attack with accurate torpedoes. The only weapons provided are depth charges with a small damage radius. Survive for as long as possible.
+longdesc:Submarine Trouble is a game that is set on an ocean. The player controls a destroyer and must defend him/herself from the endless wave of submarines lurking below, while they attack with accurate torpedoes. The only weapons provided are depth charges with a small damage radius. Survive for as long as possible.
 compiled: sub_trouble-1.5.jar
 requirements:
 	Java 11
