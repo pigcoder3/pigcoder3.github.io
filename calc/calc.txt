@@ -1,6 +1,6 @@
 name:Calc
 simpledesc:Terminal Calculator
-longdesc:Calc is a simple terminal calculator that supports addition, subtraction, multiplication, division, exponents, roots, absolute value, and parenthesis. You can get steps to calculate the equation and output the result in scientific notation.
+longdesc:Calc is a simple terminal calculator that supports addition, subtraction, multiplication, division, exponents, roots, absolute value, parenthesis, and trigonometric functions. You can get steps to calculate the expression and output the result in scientific notation.
 compiled:
 requirements:
   None
