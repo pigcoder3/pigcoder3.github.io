@@ -122,7 +122,8 @@ def createdoc():
 							if(os.path.isdir(file+"/gallery")):
 								for name in os.listdir(file+"/gallery"):
 									if(os.path.isfile(file+"/gallery/"+name)):
-										with tag('img', klass='gallery-image', src="https://seanmjohns.github.io/"+file+'/gallery/'+name): pass
+										print(file);
+										with tag('img', klass='gallery-image', src='gallery/'+name): pass
 							with tag('span', id='no-images'):
 								text("It looks like we have no images for this project")
 						with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):
@@ -146,14 +147,26 @@ def navbar():
 			with tag('div', klass='projects-dd-content', id='dropdown-content'):
 				for name in os.listdir("."):
 					if(os.path.isdir(name) and name != '.git'):
-						with tag('a', klass='project-link', href="https://seanmjohns.github.io/"+name+'/'+name+'.html'):
-							text(parseBasicInfo(name, "name"))
+						if(type == "project"):
+							with tag('a', klass='project-link', href="../"+name+'/'+name+'.html'):
+								text(parseBasicInfo(name, "name"))
+						else:
+							with tag('a', klass='project-link', href=name+'/'+name+'.html'):
+								text(parseBasicInfo(name, "name"))
 		with tag('div', klass='nav'):
-			with tag('a', klass='nav-button', href='https://seanmjohns.github.io/'):
-				text('Home')
+			if(type == "project"):
+				with tag('a', klass='nav-button', href='../index.html'):
+					text('Home')
+			else:
+				with tag('a', klass='nav-button', href='index.html'):
+					text('Home')
 		with tag('div', klass='nav'):
-			with tag('a', klass='nav-button', href='https://seanmjohns.github.io/contact.html'):
-				text('Contact')
+			if(type == "project"):
+				with tag('a', klass='nav-button', href='../contact.html'):
+					text('Contact')
+			else:
+				with tag('a', klass='nav-button', href='contact.html'):
+					text('Contact')
 	with tag('div', id='spacer'): pass
 	with tag('script'):
 		text("""function toggle() {
