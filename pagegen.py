@@ -69,7 +69,7 @@ def createdoc():
 							text('You can contact me through GitHub (')
 							with tag('strong'):
 								text(github)
-							text('), although I do not check it very often.')
+							text(').')
 					with tag('div', klass='content-container', id='email'):
 						with tag('img', src='email.png', id='email-logo'): pass
 						with tag('span', klass='notes'):
@@ -121,7 +121,7 @@ def createdoc():
 									text("0 / 0")
 							if(os.path.isdir(file+"/gallery")):
 								for name in os.listdir(file+"/gallery"):
-									if(os.path.isfile(file+"/gallery/"+name)):
+									if(os.path.isfile(file+"/gallery/"+name) and name != ".DS_STORE"):
 										print(file);
 										with tag('img', klass='gallery-image', src='gallery/'+name): pass
 							with tag('span', id='no-images'):
