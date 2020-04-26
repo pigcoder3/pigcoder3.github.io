@@ -1,7 +1,7 @@
 name:Text Fighter
 simpledesc:Text Game Engine
 longdesc:Text Fighter is a game engine that allows the for creation of modpacks which can change the game slightly or completely rewrite it. There is a vanilla pack that players do not have to download separately. All one has to do is download the jar are run it to play. Save files are free to be edited by the user to increase the gaming possibilities. I personally enjoy Text Fighter due to its flexibility and ease. The mod-making guide can be found on the GitHub wiki.
-compiled: textfighter-1.3.1.jar
+compiled: textfighter-1.3.2.jar
 requirements:
 	Java 8
 :requirements
