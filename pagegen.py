@@ -14,7 +14,7 @@ type=""
 
 email="seanmjohns1@gmail.com"
 github="seanmjohns"
-phone=""
+linkedin="seanmjohns1"
 
 if(len(sys.argv) >= 2):
 	file = sys.argv[1]
@@ -35,6 +35,10 @@ def createdoc():
 			with tag('title'):
 				if(type == "project"):
 					text(parseBasicInfo(file, 'name') + ' - Sean Johnson')
+				if(file == "contact.html"):
+					text("Contact - Sean Johnson")
+				if(file == "index.html"):
+					text("Projects - Sean Johnson")
 			with tag('meta', name='viewport', content='width=device-width', charset='UTF-8'): pass
 			if(type != "project"):
 				with tag('script', type='text/javascript', src='stickynav.js'): pass
@@ -57,26 +61,37 @@ def createdoc():
 						with tag('a', href='https://github.com/seanmjohns'):
 							with tag('img', id='profile', src='github-profile.png', alt='github profile'): pass
 						with tag('span', id='desc'):
-							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, C, C++, Python, and Bash.');
+							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, Python, C, C++, and Bash.');
 					doc.asis(createprojectcontainers())
 				if(file == "contact.html"):
 					with tag('h2', id='contact-header'):
 						text("Contact")
-					with tag('div', klass='content-container', id='github'):
+					with tag('div', klass='content-container', id='github', title="github"):
 						with tag('a', href='https://github.com/seanmjohns'):
 							with tag('img', src='github-logo.png', id='github-logo'): pass
 						with tag('span', klass='notes'):
 							text('You can contact me through GitHub (')
 							with tag('strong'):
-								text(github)
+								with tag('a', href='https://github.com/seanmjohns', klass="intextlink"):
+									text(github)
 							text(').')
-					with tag('div', klass='content-container', id='email'):
+					with tag('div', klass='content-container', id='email', title="email"):
 						with tag('img', src='email.png', id='email-logo'): pass
 						with tag('span', klass='notes'):
 							text('Email me at ')
 							with tag('strong'):
 								text(email)
 							text('. I check my email often, so it is likely you will be able to get a hold of me.')
+					with tag('div', klass='content-container', id='linkedin', title="linkedin"):
+						with tag('a', href='https://linkedin.com/in/seanmjohns1'):
+							with tag('img', src='LI-In-Bug.png', id='linkedin-logo'): pass
+						with tag('span', klass='notes'):
+							text("Contact me through LinkedIn (")
+							with tag('strong'):
+								with tag('a', href='https://linkedin.com/in/seanmjohns1', klass="intextlink"):
+									text(linkedin)
+							text(").")
+
 				if(type == "project"):
 					with tag('h2', id='project-name'):
 						text(parseBasicInfo(file, "name"))
