@@ -19,6 +19,10 @@
 	background-color: rgb(250,250,250);
 }
 
+.intextlink {
+	color: black;
+}
+
 @media(min-width:750px) {
 
 	.content-container {
