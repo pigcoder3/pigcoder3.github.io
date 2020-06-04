@@ -16,6 +16,9 @@ email="seanmjohns1@gmail.com"
 github="seanmjohns"
 linkedin="seanmjohns1"
 
+images="images/"
+projects="projects/"
+
 if(len(sys.argv) >= 2):
 	file = sys.argv[1]
 	if(sys.argv[1] == 'pagegen.py'):
@@ -44,9 +47,9 @@ def createdoc():
 				with tag('script', type='text/javascript', src='stickynav.js'): pass
 				with tag('link', rel='stylesheet', href='navbar.css'): pass
 			else:
-				with tag('script', type='text/javascript', src='../stickynav.js'): pass
-				with tag('link', rel='stylesheet', href='../navbar.css'): pass
-				with tag('link', rel='stylesheet', href='../project.css'): pass
+				with tag('script', type='text/javascript', src='../../stickynav.js'): pass
+				with tag('link', rel='stylesheet', href='../../navbar.css'): pass
+				with tag('link', rel='stylesheet', href='../../project.css'): pass
 			if(file == "index.html"):
 				with tag('link', rel='stylesheet', href='index.css'): pass
 			if(file == "contact.html"):
@@ -58,8 +61,8 @@ def createdoc():
 			with tag('div', id='primary'):
 				if(file == "index.html"):
 					with tag('div', klass='content_container', id='intro'):
-						with tag('a', href='https://github.com/seanmjohns'):
-							with tag('img', id='profile', src='github-profile.png', alt='github profile'): pass
+						with tag('a', href='https://linkedin.com/in/seanmjohns1/', title="linkedin"):
+							with tag('img', id='profile', src=images+'github-profile.png', alt='github profile'): pass
 						with tag('span', id='desc'):
 							text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, Python, C, C++, and Bash.');
 					doc.asis(createprojectcontainers())
@@ -68,7 +71,7 @@ def createdoc():
 						text("Contact")
 					with tag('div', klass='content-container', id='github', title="github"):
 						with tag('a', href='https://github.com/seanmjohns'):
-							with tag('img', src='github-logo.png', id='github-logo'): pass
+							with tag('img', src=images+'github-logo.png', id='github-logo'): pass
 						with tag('span', klass='notes'):
 							text('You can contact me through GitHub (')
 							with tag('strong'):
@@ -76,7 +79,7 @@ def createdoc():
 									text(github)
 							text(').')
 					with tag('div', klass='content-container', id='email', title="email"):
-						with tag('img', src='email.png', id='email-logo'): pass
+						with tag('img', src=images+'email.png', id='email-logo'): pass
 						with tag('span', klass='notes'):
 							text('Email me at ')
 							with tag('strong'):
@@ -84,7 +87,7 @@ def createdoc():
 							text('. I check my email often, so it is likely you will be able to get a hold of me.')
 					with tag('div', klass='content-container', id='linkedin', title="linkedin"):
 						with tag('a', href='https://linkedin.com/in/seanmjohns1'):
-							with tag('img', src='LI-In-Bug.png', id='linkedin-logo'): pass
+							with tag('img', src=images+'LI-In-Bug.png', id='linkedin-logo'): pass
 						with tag('span', klass='notes'):
 							text("Contact me through LinkedIn (")
 							with tag('strong'):
@@ -134,16 +137,18 @@ def createdoc():
 							with tag('div', id='image-number-container'):
 								with tag('span', id='image-number'):
 									text("0 / 0")
-							if(os.path.isdir(file+"/gallery")):
-								for name in os.listdir(file+"/gallery"):
-									if(os.path.isfile(file+"/gallery/"+name) and name != ".DS_STORE"):
-										print(file);
+							if(os.path.isdir(projects+file+"/gallery")):
+								print(projects+file+"/gallery/")
+								for name in os.listdir(projects+file+"/gallery"):
+									print(projects+file+"/gallery/"+name)
+									if(os.path.isfile(projects+file+"/gallery/"+name) and name != ".DS_STORE"):
+										print(projects+file+"/gallery/"+name)
 										with tag('img', klass='gallery-image', src='gallery/'+name): pass
 							with tag('span', id='no-images'):
-								text("It looks like we have no images for this project")
+								text("It looks like we have no images for this project.")
 						with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):
 							text(' > ')
-						with tag('script', type='text/javascript', src='../gallery.js'): pass
+						with tag('script', type='text/javascript', src='../../gallery.js'): pass
 #create the name header
 def nameheader():
 	doc, tag, text = Doc().tagtext();
@@ -160,24 +165,24 @@ def navbar():
 			with tag('button', id='projects-dropdown-button', klass='nav-button', onclick='toggle()'):
 				text("Projects");
 			with tag('div', klass='projects-dd-content', id='dropdown-content'):
-				for name in os.listdir("."):
-					if(os.path.isdir(name) and name != '.git'):
+				for name in os.listdir(projects): #get all project directories
+					if(os.path.isdir(projects+name)):
 						if(type == "project"):
-							with tag('a', klass='project-link', href="../"+name+'/'+name+'.html'):
+							with tag('a', klass='project-link', href="../../"+projects+name+'/'+name+'.html'):
 								text(parseBasicInfo(name, "name"))
 						else:
-							with tag('a', klass='project-link', href=name+'/'+name+'.html'):
+							with tag('a', klass='project-link', href=projects+name+'/'+name+'.html'):
 								text(parseBasicInfo(name, "name"))
 		with tag('div', klass='nav'):
 			if(type == "project"):
-				with tag('a', klass='nav-button', href='../index.html'):
+				with tag('a', klass='nav-button', href='../../index.html'):
 					text('Home')
 			else:
 				with tag('a', klass='nav-button', href='index.html'):
 					text('Home')
 		with tag('div', klass='nav'):
 			if(type == "project"):
-				with tag('a', klass='nav-button', href='../contact.html'):
+				with tag('a', klass='nav-button', href='../../contact.html'):
 					text('Contact')
 			else:
 				with tag('a', klass='nav-button', href='contact.html'):
@@ -202,8 +207,8 @@ def createprojectcontainers():
 	with tag('h2', id='projects_header'):
 		text('Projects');
 	with tag('div', id='projects'):
-		for name in os.listdir("."):
-			if(os.path.isdir(name) and name != '.git'):
+		for name in os.listdir(projects): #Get all the projects so we can create sneak-peeks
+			if(os.path.isdir(projects+name) and name != '.git'):
 				with tag('div', klass='content_container project_container'):
 					with tag('a', href=name+'/'+name+'.html'):
 						with tag('div', klass='project-desc-container'):
@@ -211,7 +216,7 @@ def createprojectcontainers():
 								text(parseBasicInfo(name, "name"))
 							with tag('span', klass='project_desc'):
 								text(parseBasicInfo(name, 'simpledesc'))
-						with tag('img', src=name+'/'+name+'.png'): pass
+						with tag('img', src=projects+name+'/'+name+'.png'): pass
 
 	return doc.getvalue();
 #gets info from project info files
@@ -219,7 +224,8 @@ def parseBasicInfo(filename, key):
 	doc, tag, text = Doc().tagtext()
 	output = "";
 	input = "";
-	with open(filename+"/"+filename+".txt", "r") as f:
+
+	with open("projects/"+filename+"/"+filename+".txt", "r") as f:
 		while(1):
 			input = f.readline();
 			if(not input): 
@@ -254,7 +260,7 @@ doc, tag, text = Doc().tagtext()
 createdoc();
 print(indent(doc.getvalue()))
 if(type == "project"):	
-	with open(file+'/'+file+'.html', 'w') as f:
+	with open("projects/"+file+'/'+file+'.html', 'w') as f:
 		f.write(indent(doc.getvalue()))
 else:
 	with open(file, 'w') as f:
