@@ -210,7 +210,7 @@ def createprojectcontainers():
 		for name in os.listdir(projects): #Get all the projects so we can create sneak-peeks
 			if(os.path.isdir(projects+name) and name != '.git'):
 				with tag('div', klass='content_container project_container'):
-					with tag('a', href=name+'/'+name+'.html'):
+					with tag('a', href=projects+name+'/'+name+'.html'):
 						with tag('div', klass='project-desc-container'):
 							with tag('span', klass='project_name'):
 								text(parseBasicInfo(name, "name"))
