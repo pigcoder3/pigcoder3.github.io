@@ -1,6 +1,6 @@
 name:Turt
 simpledesc:Discord Moderation Bot
-longdesc:Turt is a simple Discord server moderation bot that works cross server. Turt has an easy to use elections system in which users vote on issues, which are then carried out by server admins. Turt also has a warning system in which the accumulative severity of the warnings will result in temporary bans with increased periods of time.
+longdesc:Turt is a simple Discord server moderation bot that works across multiple servers. Turt has an easy to use elections system in which users vote on issues, which are then carried out by server admins. Turt also has a warning system in which the accumulative severity of the warnings will result in temporary bans with increased periods of time.
 compiled:
 requirements:
     At Least python3.6
