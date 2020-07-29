@@ -28,7 +28,7 @@ ls projects/pysics/docs/html
 
 #Rename references
 sed -i '' "s/_static/static/g" projects/pysics/docs/*.html
-sed -i '' "s/_images/static/g" projects/pysics/docs/*.html
+sed -i '' "s/_images/images/g" projects/pysics/docs/*.html
 
 #Move referenced directories to appropriate names
 mv projects/pysics/docs/_static projects/pysics/docs/static
