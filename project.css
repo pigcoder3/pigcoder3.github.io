@@ -165,7 +165,7 @@
 }
 
 @media(max-width:750px) {
-	#intro {
+	#intro, #links {
 		width: 75%;
 		margin: 25px auto 50px auto;
 		position: relative;
@@ -204,6 +204,12 @@
 		padding: 15px;
 		margin: auto 0;
 	}
+
+    #links {
+        width: 25%;
+		margin: 25px auto 50px auto;
+		position: relative;
+    }
 
 	#project-img {
 		margin: auto 0;	
