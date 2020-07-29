@@ -6,4 +6,7 @@ requirements:
     At Least python3.6
     discord.py
 :requirements
-github:https://github.com/Things-N-Stuff/Turt
+links:
+    Server Permissions Recommendations for using Turt|https://github.com/Things-N-Stuff/Turt#server-permissions
+:links
+github:https://github.com/Things-N-Stuff/Turt/

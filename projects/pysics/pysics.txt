@@ -5,4 +5,7 @@ compiled:
 requirements:
     python 3.6
 :requirements
+links:
+    Documentation|./docs/index.html
+:links
 github:https://github.com/seanmjohns/pysics
