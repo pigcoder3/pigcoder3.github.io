@@ -1,0 +1,8 @@
+name:Pysics
+simpledesc:Python Physics Engine
+longdesc:A Physics Engine created for python games that allows developers to accurately control time (in both directions) that does not rely on cpu time. Instead, developers manually (although simply) pass time by ticking universes or individual objects within universes.
+compiled:
+requirements:
+    python 3.6
+:requirements
+github:https://github.com/seanmjohns/pysics
