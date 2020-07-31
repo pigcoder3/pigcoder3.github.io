@@ -1,0 +1,121 @@
+#footer {
+    background-color: rgb(100,100,100);
+    min-height: 50px;
+    display: flex;
+    box-shadow: 16px 0px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* --- footer projects --- */
+
+#footer-projects-header {
+    font-size: 12px;
+    color: rgb(200,200,200);
+}
+
+#footer-projects-list {
+    list-style: None;
+    padding-left: 0px;
+}
+
+#footer-projects-list li {
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+#footer-projects-list li a {
+    text-decoration: None;
+    color: rgb(255,255,255);
+}
+
+#footer-projects-list li a:hover {
+    text-decoration: underline;
+}
+
+/* --- footer picture --- */
+
+#footer-picture {
+    margin: 0px auto 20px auto;
+}
+
+#footer-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- footer contact --- */
+
+#footer-contact {
+    margin: 0 auto;
+}
+
+#footer-contact-header {
+    font-size: 12px;
+    color: rgb(200,200,200);
+}
+
+#footer-contact-images {
+    width: 60px;
+    margin: 0 auto;
+    list-style: None;
+    padding-left: 0px;
+}
+
+#footer-contact-images li {
+    font-size: 12px;
+    display: inline;
+}
+
+.contact-image {
+    width: 30px;
+    height: 30px;
+}
+
+#contact-linkedin-image {
+    float: left;
+}
+
+#contact-github-image {
+    float: right;
+}
+
+#email {
+    margin: 0 auto;
+    padding-top: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* --- footer sizing and positioning --- */
+
+#footer-left {
+    float: left;
+    padding: 25px 0px 25px 0px;
+    width: 50%;
+}
+
+#footer-right {
+    float: right;
+    padding: 25px 0px 25px 0px;
+    width: 50%;
+}
+
+@media(min-width:500px) {
+
+    #centered {
+        margin: 0px auto;
+        width: 500px;
+        color: rgb(255,255,255);
+    }
+
+}
+
+@media(max-width:500px) {
+
+    #centered {
+        margin: 0px auto;
+        width: 100%;
+        color: rgb(255,255,255);
+    }
+
+}
