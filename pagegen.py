@@ -15,6 +15,12 @@ type=""
 email="seanmjohns1@gmail.com"
 github="seanmjohns"
 linkedin="seanmjohns1"
+source="https://github.com/seanmjohns/seanmjohns.github.io"
+
+linkedin_link="https://www.linkedin.com/in/seanmjohns1/"
+github_link="https://github.com/seanmjohns"
+
+
 
 images="images/"
 projects="projects/"
@@ -46,10 +52,12 @@ def createdoc():
             if(type != "project"):
                 with tag('script', type='text/javascript', src='stickynav.js'): pass
                 with tag('link', rel='stylesheet', href='navbar.css'): pass
+                with tag('link', rel='stylesheet', href='footer.css'): pass
             else:
                 with tag('script', type='text/javascript', src='../../stickynav.js'): pass
                 with tag('link', rel='stylesheet', href='../../navbar.css'): pass
                 with tag('link', rel='stylesheet', href='../../project.css'): pass
+                with tag('link', rel='stylesheet', href='../../footer.css'): pass
             if(file == "index.html"):
                 with tag('link', rel='stylesheet', href='index.css'): pass
             if(file == "contact.html"):
@@ -61,7 +69,7 @@ def createdoc():
             with tag('div', id='primary'):
                 if(file == "index.html"):
                     with tag('div', klass='content_container', id='intro'):
-                        with tag('a', href='https://linkedin.com/in/seanmjohns1/', title="linkedin"):
+                        with tag('a', href=linkedin_link, title="linkedin"):
                             with tag('img', id='profile', src=images+'github-profile.png', alt='github profile'): pass
                         with tag('span', id='desc'):
                             text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, Python, C, C++, and Bash.');
@@ -70,12 +78,12 @@ def createdoc():
                     with tag('h2', id='contact-header'):
                         text("Contact")
                     with tag('div', klass='content-container', id='github', title="github"):
-                        with tag('a', href='https://github.com/seanmjohns'):
+                        with tag('a', href=github_link):
                             with tag('img', src=images+'github-logo.png', id='github-logo'): pass
                         with tag('span', klass='notes'):
                             text('You can contact me through GitHub (')
                             with tag('strong'):
-                                with tag('a', href='https://github.com/seanmjohns', klass="intextlink"):
+                                with tag('a', href=github_link, klass="intextlink"):
                                     text(github)
                             text(').')
                     with tag('div', klass='content-container', id='email', title="email"):
@@ -86,12 +94,12 @@ def createdoc():
                                 text(email)
                             text('. I check my email often, so it is likely you will be able to get a hold of me.')
                     with tag('div', klass='content-container', id='linkedin', title="linkedin"):
-                        with tag('a', href='https://linkedin.com/in/seanmjohns1'):
+                        with tag('a', href=linkedin_link):
                             with tag('img', src=images+'LI-In-Bug.png', id='linkedin-logo'): pass
                         with tag('span', klass='notes'):
                             text("Contact me through LinkedIn (")
                             with tag('strong'):
-                                with tag('a', href='https://linkedin.com/in/seanmjohns1', klass="intextlink"):
+                                with tag('a', href=linkedin_link, klass="intextlink"):
                                     text(linkedin)
                             text(").")
 
@@ -155,6 +163,7 @@ def createdoc():
                         with tag('button', id='right-button', klass='gallery-button', onclick='goRight()'):
                             text(' > ')
                         with tag('script', type='text/javascript', src='../../gallery.js'): pass
+            doc.asis(footer())
 #create the name header
 def nameheader():
     doc, tag, text = Doc().tagtext();
@@ -205,7 +214,38 @@ def navbar():
                 document.getElementsByClassName("projects-dd-content")[0].classList.remove("projects-dd-content-shown");
             }
           }""")
-    return doc.getvalue();
+    return doc.getvalue()
+
+def footer():
+    doc, tag, text = Doc().tagtext();
+    extension = ""
+    if type == "project": extension="../../"
+    with tag("div", id="footer"):
+        with tag("div", id="centered"):
+            with tag("div", id="footer-left"):
+                with tag("div", id="footer-picture"):
+                    doc.stag("img", id="footer-image", src=extension+"images/github-profile.png", width="75px", height="75px")
+                with tag("div", id="footer-contact"):
+                    with tag("ul", id="footer-contact-images"): #Github and linkedin
+                        with tag("li"):
+                            with tag("a", href=linkedin_link, width="75px", height="75px"):
+                                doc.stag("img", id="contact-linkedin-image", alt="linkedin", klass="contact-image", src=extension+"images/Li-In-Bug.png")
+                        with tag("li"):
+                            with tag("a", href=github_link, width="75px", height="75px"):
+                                doc.stag("img", id="contact-github-image", alt="github", klass="contact-image", src=extension+"images/github-logo.png")
+                    with tag("div", id="contact-email"):
+                        text(email)
+            with tag("div", id="footer-right"): #Projects
+                with tag("div", id="footer-projects"):
+                    with tag("span", id="footer-projects-header"):
+                        text("Projects")
+                    with tag("ul", id="footer-projects-list"):
+                        for name in os.listdir(projects): #get all project directories
+                            if(os.path.isdir(projects+name)):
+                                with tag("li"):
+                                    with tag('a', href=extension+projects+name+'/'+name+'.html'):
+                                        text(parseBasicInfo(name, "name"))
+    return doc.getvalue()
 
 #create home page project sneak-peeks
 def createprojectcontainers():
