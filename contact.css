@@ -8,7 +8,7 @@
 }
 
 .content-container {
-	margin: 20px auto;
+	margin: 50px auto !important;
 	border-radius: 10px;
 	/*border: 1px solid black;*/
 	background-color: white;
