@@ -219,7 +219,7 @@ def navbar():
 def footer():
     doc, tag, text = Doc().tagtext();
     extension = ""
-    if type == "project": extension="../"
+    if type == "project": extension="../../"
     with tag("div", id="footer"):
         with tag("div", id="centered"):
             with tag("div", id="footer-left"):
@@ -233,7 +233,7 @@ def footer():
                         with tag("li"):
                             with tag("a", href=github_link, width="75px", height="75px"):
                                 doc.stag("img", id="contact-github-image", alt="github", klass="contact-image", src=extension+"images/github-logo.png")
-                    with tag("div", id="email"):
+                    with tag("div", id="contact-email"):
                         text(email)
             with tag("div", id="footer-right"): #Projects
                 with tag("div", id="footer-projects"):
@@ -243,7 +243,7 @@ def footer():
                         for name in os.listdir(projects): #get all project directories
                             if(os.path.isdir(projects+name)):
                                 with tag("li"):
-                                    with tag('a', href="../../"+projects+name+'/'+name+'.html'):
+                                    with tag('a', href=extension+projects+name+'/'+name+'.html'):
                                         text(parseBasicInfo(name, "name"))
     return doc.getvalue()
 
