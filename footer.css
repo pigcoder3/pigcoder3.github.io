@@ -110,12 +110,16 @@
     float: left;
     padding: 25px 0px 25px 0px;
     width: 50%;
+    margin-right: -30px;
+    margin-left: 30px;
 }
 
 #footer-right {
     float: right;
     padding: 25px 0px 25px 0px;
     width: 50%;
+    margin-right: -30px;
+    margin-left: 30px;
 }
 
 @media(min-width:500px) {
