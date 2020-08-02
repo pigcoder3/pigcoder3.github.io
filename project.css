@@ -20,6 +20,15 @@
 	text-align: center;
 }
 
+#project-name a {
+    text-decoration: None;
+    color: black;
+}
+
+#project-name a:hover {
+    text-decoration: underline;
+}
+
 #gallery-header {
 	margin: 0 auto;
 	padding: 20px 20px 0px 20px;
