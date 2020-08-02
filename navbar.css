@@ -16,6 +16,10 @@ body {
 	color: rgb(240,240,240);
 }
 
+#navbar {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
 @media (min-width:500px) {
 
 	#navbar {
@@ -193,5 +197,4 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }

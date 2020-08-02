@@ -235,6 +235,9 @@ def footer():
                                 doc.stag("img", id="contact-github-image", alt="github", klass="contact-image", src=extension+"images/github-logo.png")
                     with tag("div", id="contact-email"):
                         text(email)
+                with tag("div", id="web-source"):
+                    with tag("a", id="source-link", href="https://github.com/seanmjohns/seanmjohns.github.io"):
+                        text("source")
             with tag("div", id="footer-right"): #Projects
                 with tag("div", id="footer-projects"):
                     with tag("span", id="footer-projects-header"):
@@ -309,7 +312,6 @@ def parseBasicInfo(filename, key):
                             else:
                                 with tag('li'):
                                     pipe_index = input.index('|')
-                                    print(pipe_index)
                                     if pipe_index > -1: #CANNOT use pipe character in link name
                                         with tag('a', href = str(input[pipe_index+1:])):
                                             text(input[:pipe_index])
@@ -324,7 +326,7 @@ def parseBasicInfo(filename, key):
 doc, tag, text = Doc().tagtext()
 
 createdoc();
-print(indent(doc.getvalue()))
+#print(indent(doc.getvalue()))
 if(type == "project"):    
     with open("projects/"+file+'/'+file+'.html', 'w') as f:
         f.write(indent(doc.getvalue()))

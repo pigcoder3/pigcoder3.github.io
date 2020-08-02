@@ -3,7 +3,7 @@
     background-color: rgb(100,100,100);
     min-height: 200px;
     display: flex;
-    box-shadow: 16px 0px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2)
 }
 
 /* --- footer projects --- */
@@ -87,18 +87,39 @@
     text-align: center;
 }
 
+/* --- footer website source --- */
+
+#web-source {
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#source-link {
+    font-family: Verdana, Geneva, sans-serif;
+    margin-top: 15%;
+    text-decoration: underline;
+    font-size: 10px;
+    color: rgb(135,135,135);
+}
+
 /* --- footer sizing and positioning --- */
 
 #footer-left {
     float: left;
     padding: 25px 0px 25px 0px;
     width: 50%;
+    margin-right: -30px;
+    margin-left: 30px;
 }
 
 #footer-right {
     float: right;
     padding: 25px 0px 25px 0px;
     width: 50%;
+    margin-right: -30px;
+    margin-left: 30px;
 }
 
 @media(min-width:500px) {
