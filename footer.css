@@ -87,6 +87,23 @@
     text-align: center;
 }
 
+/* --- footer website source --- */
+
+#web-source {
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#source-link {
+    font-family: Verdana, Geneva, sans-serif;
+    margin-top: 15%;
+    text-decoration: underline;
+    font-size: 10px;
+    color: rgb(135,135,135);
+}
+
 /* --- footer sizing and positioning --- */
 
 #footer-left {
