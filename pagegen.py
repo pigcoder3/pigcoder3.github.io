@@ -16,6 +16,7 @@ email="seanmjohns1@gmail.com"
 github="seanmjohns"
 linkedin="seanmjohns1"
 source="https://github.com/seanmjohns/seanmjohns.github.io"
+github_projects = "https://github.com/seanmjohns?tab=repositories"
 
 linkedin_link="https://www.linkedin.com/in/seanmjohns1/"
 github_link="https://github.com/seanmjohns"
@@ -105,7 +106,8 @@ def createdoc():
 
                 if(type == "project"):
                     with tag('h2', id='project-name'):
-                        text(parseBasicInfo(file, "name"))
+                        with tag("a", href=parseBasicInfo(file, "github")):
+                            text(parseBasicInfo(file, "name"))
                     with tag('div', klass='content-container', id='intro'):
                         with tag('a', href=parseBasicInfo(file, "github")):
                             with tag('img', id='project-img', src=file+'.png'): pass
@@ -254,7 +256,8 @@ def footer():
 def createprojectcontainers():
     doc, tag, text = Doc().tagtext();    
     with tag('h2', id='projects_header'):
-        text('Projects');
+        with tag("a", href=github_projects):
+            text('Projects')
     with tag('div', id='projects'):
         for name in os.listdir(projects): #Get all the projects so we can create sneak-peeks
             if(os.path.isdir(projects+name) and name != '.git'):

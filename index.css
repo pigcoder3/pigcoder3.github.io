@@ -208,3 +208,11 @@
 			font-family: verdana, sans-serif;
 		}
 
+        #projects_header a {
+            text-decoration: None;
+            color: black;
+        }
+
+        #projects_header a:hover {
+            text-decoration: underline;
+        }
