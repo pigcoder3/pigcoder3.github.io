@@ -73,7 +73,7 @@ def createdoc():
                         with tag('a', href=linkedin_link, title="linkedin"):
                             with tag('img', id='profile', src=images+'github-profile.png', alt='github profile'): pass
                         with tag('span', id='desc'):
-                            text('I program for fun when I\'m not overloaded with work from my high school classes. I am moderately fluent in Java, Python, C, C++, and Bash.');
+                            text('I program for fun when I\'m not overloaded with work from my high school classes and part-time job. I am moderately fluent in Java, Python, C, C++, and Bash.');
                     doc.asis(createprojectcontainers())
                 if(file == "contact.html"):
                     with tag('h2', id='contact-header'):
