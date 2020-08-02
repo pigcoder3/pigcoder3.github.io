@@ -229,7 +229,7 @@ def footer():
                     with tag("ul", id="footer-contact-images"): #Github and linkedin
                         with tag("li"):
                             with tag("a", href=linkedin_link, width="75px", height="75px"):
-                                doc.stag("img", id="contact-linkedin-image", alt="linkedin", klass="contact-image", src=extension+"images/LI-In-Bug.png")
+                                doc.stag("img", id="contact-linkedin-image", alt="linkedin", klass="contact-image", src=extension+"images/black-linkedin-logo.png")
                         with tag("li"):
                             with tag("a", href=github_link, width="75px", height="75px"):
                                 doc.stag("img", id="contact-github-image", alt="github", klass="contact-image", src=extension+"images/github-logo.png")

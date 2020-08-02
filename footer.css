@@ -79,10 +79,14 @@
 
 #contact-linkedin-image {
     float: left;
+    margin-right: 5px;
+    margin-left: -5px;
 }
 
 #contact-github-image {
     float: right;
+    margin-left: 5px;
+    margin-right: -5px;
 }
 
 #contact-email {
