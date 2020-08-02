@@ -6,6 +6,7 @@ requirements:
 	Java 8
 :requirements
 links:
+Text Fighter Wiki|https://github.com/seanmjohns/Text-Fighter/wiki
     Game Engine Documentation|./docs/index.html
 :links
 github:https://github.com/seanmjohns/Text-Fighter
