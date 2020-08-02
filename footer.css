@@ -3,7 +3,7 @@
     background-color: rgb(100,100,100);
     min-height: 200px;
     display: flex;
-    box-shadow: 16px 0px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2)
 }
 
 /* --- footer projects --- */
