@@ -102,12 +102,13 @@ body {
 }
 
 @media (max-width:500px) {
+
 	#navbar {
 		list-style-type: none;
 		background-color: rgb(50,50,50);
-		height: 150px;
+		min-height: 150px;
 		width: 100%;
-		float: top;
+		/*float: top;*/
 		margin: 0px;
 		text-align: center;
 		z-index: 1000;
@@ -123,8 +124,9 @@ body {
 		font-family: verdana, sans-serif;
 		text-decoration: none;
 		left: 0px;	
-		padding: 14.5px 20px;
+		padding: 14.5px 0px;
 		text-align: center;
+		background-color: rgb(50,50,50);
 		/*position: relative;*/
 		margin: 0px 0px;
 		border-bottom: 1px solid black;
@@ -140,27 +142,27 @@ body {
 		margin: 0px;
 		border: none;
 		border-bottom: 1px solid black;
-		background-color: rgb(0,0,0,0);
+		background-color: rgb(50,50,50);
 		width: 100%;
 		height: 50px;
 	}
 
 	#projects-dropdown {
-  		position: relative;
-  		display: inline-block;
+  		position: static;
+  		display: block;
 		width: 100%;
 	}
 
 	.projects-dd-content-shown {
-		display: inline-block !important;		
+		display: block !important;		
 	}
 
 	.projects-dd-content {
 		display: none;
-		position: absolute;
+		position: static;
 		background-color: white;
 		color: black;
-		margin-left: calc(0% - 50vw);
+		/*margin-left: calc(0% - 50vw);*/
   		width: 100vw;	
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
@@ -173,6 +175,7 @@ body {
 		font-family: verdana, sans-serif;
 		text-align: left;
 		text-decoration: none;
+        border-bottom: 1px solid gray;
 	}
 
 	.project-link:hover {
