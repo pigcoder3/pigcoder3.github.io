@@ -1,5 +1,6 @@
 #primary {
 	font-family: verdana, sans-serif;
+    padding: 20px;
 }
 
 #contact-header {
@@ -51,7 +52,7 @@
 @media(max-width:750px) {
 
 	.content-container {
-		width: 75%;
+		width: 100%;
 		margin: 20px auto;
 		border-radius: 5px;
 		background-color: white;
