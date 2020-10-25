@@ -9,8 +9,8 @@
 		@media(max-width:750px) {
 
 			#intro {		
-				width: 75%;
-				margin: 50px auto;
+				width: 100%;
+				margin: 5px auto 50px auto;
 				position: relative;
 			}
 			
@@ -28,6 +28,7 @@
 				display: block;
 				padding: 10px;
 			}
+
 		}
 
 		@media(min-width:750px) {
@@ -56,6 +57,10 @@
 				font-family: verdana, sans-serif;
 				margin: auto 0;	
 			}
+
+            #projects {
+                width: 75%;
+            }
 		}
 
 		.content_container {
@@ -208,3 +213,11 @@
 			font-family: verdana, sans-serif;
 		}
 
+        #projects_header a {
+            text-decoration: None;
+            color: black;
+        }
+
+        #projects_header a:hover {
+            text-decoration: underline;
+        }

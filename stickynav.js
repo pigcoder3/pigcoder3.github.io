@@ -10,10 +10,11 @@ var sticky;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 window.onscroll = function check() {
+    if(document.documentElement.clientWidth <= 500) { return; }
 	if(!navbar) { return; }
   	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky")
-		spacer.classList.add("stickyspacer")
+		navbar.classList.add("sticky");
+		spacer.classList.add("stickyspacer");
   	} else {
     	navbar.classList.remove("sticky");
 		spacer.classList.remove("stickyspacer");

@@ -1,5 +1,6 @@
 #primary {
 	font-family: verdana, sans-serif;
+    padding: 20px;
 }
 
 #contact-header {
@@ -8,7 +9,7 @@
 }
 
 .content-container {
-	margin: 20px auto;
+	margin: 50px auto !important;
 	border-radius: 10px;
 	/*border: 1px solid black;*/
 	background-color: white;
@@ -17,6 +18,10 @@
 
 .content-container:hover {
 	background-color: rgb(250,250,250);
+}
+
+.intextlink {
+	color: black;
 }
 
 @media(min-width:750px) {
@@ -47,7 +52,7 @@
 @media(max-width:750px) {
 
 	.content-container {
-		width: 75%;
+		width: 100%;
 		margin: 20px auto;
 		border-radius: 5px;
 		background-color: white;
