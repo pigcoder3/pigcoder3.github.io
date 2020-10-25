@@ -1,41 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Projects - Sean Johnson</title>
-    <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
-    <script type="text/javascript" src="stickynav.js"></script>
-    <link rel="stylesheet" href="navbar.css"></link>
-    <link rel="stylesheet" href="footer.css"></link>
-    <link rel="stylesheet" href="index.css"></link>
-  </head>
-  <body>
-    <div>
-      <h1 id="name">Sean Johnson</h1>
+<head>
+  <title>Projects - Sean Johnson</title>
+  <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
+  <script type="text/javascript" src="stickynav.js"></script>
+  <link rel="stylesheet" href="navbar.css"></link>
+  <link rel="stylesheet" href="footer.css"></link>
+  <link rel="stylesheet" href="index.css"></link>
+</head>
+<div>
+  <h1 id="name">Sean Johnson</h1>
+</div>
+<div id="navbar">
+  <div id="projects-dropdown" class="nav">
+    <button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
+    <div class="projects-dd-content" id="dropdown-content">
+      <a class="project-link" href="projects/dodger/dodger.html">Dodger</a>
+      <a class="project-link" href="projects/tetris/tetris.html">Tetris</a>
+      <a class="project-link" href="projects/minesweeper/minesweeper.html">Minesweeper</a>
+      <a class="project-link" href="projects/turt/turt.html">Turt</a>
+      <a class="project-link" href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
+      <a class="project-link" href="projects/calc/calc.html">Calc</a>
+      <a class="project-link" href="projects/pysics/pysics.html">Pysics</a>
+      <a class="project-link" href="projects/textfighter/textfighter.html">Text Fighter</a>
+      <a class="project-link" href="projects/talk/talk.html">Talk</a>
     </div>
-    <div id="navbar">
-      <div id="projects-dropdown" class="nav">
-        <button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
-        <div class="projects-dd-content" id="dropdown-content">
-          <a class="project-link" href="projects/dodger/dodger.html">Dodger</a>
-          <a class="project-link" href="projects/tetris/tetris.html">Tetris</a>
-          <a class="project-link" href="projects/minesweeper/minesweeper.html">Minesweeper</a>
-          <a class="project-link" href="projects/turt/turt.html">Turt</a>
-          <a class="project-link" href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
-          <a class="project-link" href="projects/calc/calc.html">Calc</a>
-          <a class="project-link" href="projects/pysics/pysics.html">Pysics</a>
-          <a class="project-link" href="projects/textfighter/textfighter.html">Text Fighter</a>
-          <a class="project-link" href="projects/talk/talk.html">Talk</a>
-        </div>
-      </div>
-      <div class="nav">
-        <a class="nav-button" href="index.html">Home</a>
-      </div>
-      <div class="nav">
-        <a class="nav-button" href="contact.html">Contact</a>
-      </div>
-    </div>
-    <div id="spacer"></div>
-    <script>function toggle() {
+  </div>
+  <div class="nav">
+    <a class="nav-button" href="index.html">Home</a>
+  </div>
+  <div class="nav">
+    <a class="nav-button" href="contact.html">Contact</a>
+  </div>
+</div>
+<div id="spacer"></div>
+<script>function toggle() {
             var e = document.getElementById("dropdown-content");
             e.classList.toggle("projects-dd-content-shown");
         }
@@ -45,160 +43,158 @@
                 document.getElementsByClassName("projects-dd-content")[0].classList.remove("projects-dd-content-shown");
             }
           }</script>
-    <div id="primary">
-      <div class="content_container" id="intro">
-        <a href="https://www.linkedin.com/in/seanmjohns1/" title="linkedin">
-          <img id="profile" src="images/github-profile.png" alt="github profile"></img>
-        </a>
-        <span id="desc">I program for fun when I'm not overloaded with work from my high school classes and part-time job. I am moderately fluent in Java, Python, C, C++, and Bash.</span>
+<div id="primary">
+  <div class="content_container" id="intro">
+    <a href="https://www.linkedin.com/in/seanmjohns1/" title="linkedin">
+      <img id="profile" src="images/github-profile.png" alt="github profile"></img>
+    </a>
+    <span id="desc">I program for fun when I'm not overloaded with work from my high school classes and part-time job. I am moderately fluent in Java, Python, C, C++, and Bash.</span>
+  </div>
+  <h2 id="projects_header">
+    <a href="https://github.com/seanmjohns?tab=repositories">Projects</a>
+  </h2>
+  <div id="projects">
+    <div class="content_container project_container">
+      <a href="projects/dodger/dodger.html">
+        <div class="project-desc-container">
+          <span class="project_name">Dodger</span>
+          <span class="project_desc">Fast-paced survival</span>
+        </div>
+        <img src="projects/dodger/dodger.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/tetris/tetris.html">
+        <div class="project-desc-container">
+          <span class="project_name">Tetris</span>
+          <span class="project_desc">Fast-paced Classic</span>
+        </div>
+        <img src="projects/tetris/tetris.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/minesweeper/minesweeper.html">
+        <div class="project-desc-container">
+          <span class="project_name">Minesweeper</span>
+          <span class="project_desc">Classic Puzzler</span>
+        </div>
+        <img src="projects/minesweeper/minesweeper.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/turt/turt.html">
+        <div class="project-desc-container">
+          <span class="project_name">Turt</span>
+          <span class="project_desc">Discord Moderation Bot</span>
+        </div>
+        <img src="projects/turt/turt.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/sub_trouble/sub_trouble.html">
+        <div class="project-desc-container">
+          <span class="project_name">Sub Trouble</span>
+          <span class="project_desc">Sea-Based Defense</span>
+        </div>
+        <img src="projects/sub_trouble/sub_trouble.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/calc/calc.html">
+        <div class="project-desc-container">
+          <span class="project_name">Calc</span>
+          <span class="project_desc">Terminal Calculator</span>
+        </div>
+        <img src="projects/calc/calc.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/pysics/pysics.html">
+        <div class="project-desc-container">
+          <span class="project_name">Pysics</span>
+          <span class="project_desc">Python Physics Engine</span>
+        </div>
+        <img src="projects/pysics/pysics.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/textfighter/textfighter.html">
+        <div class="project-desc-container">
+          <span class="project_name">Text Fighter</span>
+          <span class="project_desc">Text Game Engine</span>
+        </div>
+        <img src="projects/textfighter/textfighter.png"></img>
+      </a>
+    </div>
+    <div class="content_container project_container">
+      <a href="projects/talk/talk.html">
+        <div class="project-desc-container">
+          <span class="project_name">Talk</span>
+          <span class="project_desc">Client/Server Chat</span>
+        </div>
+        <img src="projects/talk/talk.png"></img>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div id="centered">
+    <div id="footer-left">
+      <div id="footer-picture">
+        <img id="footer-image" src="images/github-profile.png" width="75px" height="75px" />
       </div>
-      <h2 id="projects_header">
-        <a href="https://github.com/seanmjohns?tab=repositories">Projects</a>
-      </h2>
-      <div id="projects">
-        <div class="content_container project_container">
-          <a href="projects/dodger/dodger.html">
-            <div class="project-desc-container">
-              <span class="project_name">Dodger</span>
-              <span class="project_desc">Fast-paced survival</span>
-            </div>
-            <img src="projects/dodger/dodger.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/tetris/tetris.html">
-            <div class="project-desc-container">
-              <span class="project_name">Tetris</span>
-              <span class="project_desc">Fast-paced Classic</span>
-            </div>
-            <img src="projects/tetris/tetris.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/minesweeper/minesweeper.html">
-            <div class="project-desc-container">
-              <span class="project_name">Minesweeper</span>
-              <span class="project_desc">Classic Puzzler</span>
-            </div>
-            <img src="projects/minesweeper/minesweeper.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/turt/turt.html">
-            <div class="project-desc-container">
-              <span class="project_name">Turt</span>
-              <span class="project_desc">Discord Moderation Bot</span>
-            </div>
-            <img src="projects/turt/turt.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/sub_trouble/sub_trouble.html">
-            <div class="project-desc-container">
-              <span class="project_name">Sub Trouble</span>
-              <span class="project_desc">Sea-Based Defense</span>
-            </div>
-            <img src="projects/sub_trouble/sub_trouble.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/calc/calc.html">
-            <div class="project-desc-container">
-              <span class="project_name">Calc</span>
-              <span class="project_desc">Terminal Calculator</span>
-            </div>
-            <img src="projects/calc/calc.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/pysics/pysics.html">
-            <div class="project-desc-container">
-              <span class="project_name">Pysics</span>
-              <span class="project_desc">Python Physics Engine</span>
-            </div>
-            <img src="projects/pysics/pysics.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/textfighter/textfighter.html">
-            <div class="project-desc-container">
-              <span class="project_name">Text Fighter</span>
-              <span class="project_desc">Text Game Engine</span>
-            </div>
-            <img src="projects/textfighter/textfighter.png"></img>
-          </a>
-        </div>
-        <div class="content_container project_container">
-          <a href="projects/talk/talk.html">
-            <div class="project-desc-container">
-              <span class="project_name">Talk</span>
-              <span class="project_desc">Client/Server Chat</span>
-            </div>
-            <img src="projects/talk/talk.png"></img>
-          </a>
-        </div>
+      <div id="footer-contact">
+        <ul id="footer-contact-images">
+          <li>
+            <a href="https://www.linkedin.com/in/seanmjohns1/" width="75px" height="75px">
+              <img id="contact-linkedin-image" alt="linkedin" class="contact-image" src="images/black-linkedin-logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/seanmjohns" width="75px" height="75px">
+              <img id="contact-github-image" alt="github" class="contact-image" src="images/github-logo.png" />
+            </a>
+          </li>
+        </ul>
+        <div id="contact-email">seanmjohns1@gmail.com</div>
+      </div>
+      <div id="web-source">
+        <a id="source-link" href="https://github.com/seanmjohns/seanmjohns.github.io">source</a>
       </div>
     </div>
-    <div id="footer">
-      <div id="centered">
-        <div id="footer-left">
-          <div id="footer-picture">
-            <img id="footer-image" src="images/github-profile.png" width="75px" height="75px" />
-          </div>
-          <div id="footer-contact">
-            <ul id="footer-contact-images">
-              <li>
-                <a href="https://www.linkedin.com/in/seanmjohns1/" width="75px" height="75px">
-                  <img id="contact-linkedin-image" alt="linkedin" class="contact-image" src="images/black-linkedin-logo.png" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/seanmjohns" width="75px" height="75px">
-                  <img id="contact-github-image" alt="github" class="contact-image" src="images/github-logo.png" />
-                </a>
-              </li>
-            </ul>
-            <div id="contact-email">seanmjohns1@gmail.com</div>
-          </div>
-          <div id="web-source">
-            <a id="source-link" href="https://github.com/seanmjohns/seanmjohns.github.io">source</a>
-          </div>
-        </div>
-        <div id="footer-right">
-          <div id="footer-projects">
-            <span id="footer-projects-header">Projects</span>
-            <ul id="footer-projects-list">
-              <li>
-                <a href="projects/dodger/dodger.html">Dodger</a>
-              </li>
-              <li>
-                <a href="projects/tetris/tetris.html">Tetris</a>
-              </li>
-              <li>
-                <a href="projects/minesweeper/minesweeper.html">Minesweeper</a>
-              </li>
-              <li>
-                <a href="projects/turt/turt.html">Turt</a>
-              </li>
-              <li>
-                <a href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
-              </li>
-              <li>
-                <a href="projects/calc/calc.html">Calc</a>
-              </li>
-              <li>
-                <a href="projects/pysics/pysics.html">Pysics</a>
-              </li>
-              <li>
-                <a href="projects/textfighter/textfighter.html">Text Fighter</a>
-              </li>
-              <li>
-                <a href="projects/talk/talk.html">Talk</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <div id="footer-right">
+      <div id="footer-projects">
+        <span id="footer-projects-header">Projects</span>
+        <ul id="footer-projects-list">
+          <li>
+            <a href="projects/dodger/dodger.html">Dodger</a>
+          </li>
+          <li>
+            <a href="projects/tetris/tetris.html">Tetris</a>
+          </li>
+          <li>
+            <a href="projects/minesweeper/minesweeper.html">Minesweeper</a>
+          </li>
+          <li>
+            <a href="projects/turt/turt.html">Turt</a>
+          </li>
+          <li>
+            <a href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
+          </li>
+          <li>
+            <a href="projects/calc/calc.html">Calc</a>
+          </li>
+          <li>
+            <a href="projects/pysics/pysics.html">Pysics</a>
+          </li>
+          <li>
+            <a href="projects/textfighter/textfighter.html">Text Fighter</a>
+          </li>
+          <li>
+            <a href="projects/talk/talk.html">Talk</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
