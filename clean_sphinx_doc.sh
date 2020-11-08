@@ -21,7 +21,7 @@ rm -rf projects/pysics/docs/*
 #make clean html
 #cd $dir
 #pwd
-cp -r $HOME/Documents/programming/projects/pysics/docs/_build/html/* projects/pysics/docs
+cp -r ${doc_dir}/_build/html/* projects/pysics/docs
 cp -r ${doc_dir}_build/* projects/pysics/docs
 
 ls projects/pysics/docs/html
