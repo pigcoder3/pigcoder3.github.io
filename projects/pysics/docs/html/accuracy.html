@@ -14,6 +14,7 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Collisions with Pysics" href="collisions.html" />
@@ -41,7 +42,7 @@
 <h2>Collision Accuracy<a class="headerlink" href="#collision-accuracy" title="Permalink to this headline">¶</a></h2>
 <p>When a tick passes for a universe (or individual object), pysics simply teleports all affected objects to their new positions and updates their velocities.
 Due to this teleportation, objects might “jump” (teleport past) boundaries or other objects that they are supposed to collide with, decreasing the accuracy of pysics. The teleportation distance is proportional to <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> and velocity.</p>
-<p>Below is a graph (<a class="reference external" href="https://www.desmos.com/calculator/xs1dpo8twj">link</a>) relating collision accuracy to <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> with pysics (It also models collision accuracy related to object velocity):</p>
+<p>Below is a <a class="reference external" href="https://www.desmos.com/calculator/xs1dpo8twj">graph</a> relating collision accuracy to <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> with pysics (It also models collision accuracy related to object velocity):</p>
 <a class="reference internal image-reference" href="_images/collision_accuracy_ticks.png"><img alt="collision accuracy relative to ``tick_length``" class="align-center" src="_images/collision_accuracy_ticks.png" style="width: 576.0px; height: 279.59999999999997px;" /></a>
 <p>In the graph, as <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> approaches 0, accuracy approaches unbounded infinity (it gets better and better). Unfortunately, computers only have so much computational power, so our games will slow as we decrease the <code class="docutils literal notranslate"><span class="pre">tick_lenght</span></code> (assuming <code class="docutils literal notranslate"><span class="pre">tick()</span></code> is called faster to compensate).</p>
 <p>Additionally if <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> were swapped with velocity, as velocity approaches 0, accuracy approaches unbounded infinity (the model would not change), because objects would not teleport as far (assuming <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> stays constant).</p>
@@ -53,7 +54,7 @@ Due to this teleportation, objects might “jump” (teleport past) boundaries o
 <div class="section" id="general-accuracy">
 <h2>General Accuracy<a class="headerlink" href="#general-accuracy" title="Permalink to this headline">¶</a></h2>
 <p>Although smaller <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> s lead to improved <em>collision</em> accuracy, it decreases the <em>general</em> accuracy of Pysics’ calculations by a very small fraction (over the same total time) due to <a class="reference external" href="https://softwareengineering.stackexchange.com/questions/101163/what-causes-floating-point-rounding-errors">decimal rounding and estimation</a>. This should <strong>by no means</strong> discourage you from using a smaller <code class="docutils literal notranslate"><span class="pre">tick_length</span></code>, as the decimal rounding is very small and should not be an issue in most cases, and, as mentioned before, smaller <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> s improve accuracy in other situations.</p>
-<p>Below is a graph (<a class="reference external" href="https://www.desmos.com/calculator/vaza9cycsk">link</a>) relating the general accuracy of pysics’ calculations to <code class="docutils literal notranslate"><span class="pre">tick_length</span></code>:</p>
+<p>Below is a <a class="reference external" href="https://www.desmos.com/calculator/vaza9cycsk">graph</a> relating the general accuracy of pysics’ calculations to <code class="docutils literal notranslate"><span class="pre">tick_length</span></code>:</p>
 <a class="reference internal image-reference" href="_images/general_accuracy.png"><img alt="Pysics' general accuracy relative to ``tick length``." class="align-center" src="_images/general_accuracy.png" style="width: 576.0px; height: 279.9px;" /></a>
 <p>As shown in the graph, as <code class="docutils literal notranslate"><span class="pre">tick_length</span></code> approaches 0, accuracy worsens. As more ticks pass (more passing ticks over the same period of time with a smaller <code class="docutils literal notranslate"><span class="pre">tick_length</span></code>), there are more calculations, so the positions and velcocities of objects are rounded more often.</p>
 </div>
@@ -77,6 +78,8 @@ Due to this teleportation, objects might “jump” (teleport past) boundaries o
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Pysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Pysics Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">The Basics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Accuracy of Pysics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#collision-accuracy">Collision Accuracy</a></li>
@@ -84,7 +87,7 @@ Due to this teleportation, objects might “jump” (teleport past) boundaries o
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions with Pysics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Pysics Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Work and Mechanical Energy</a></li>
 </ul>
 
 <div class="relations">
@@ -122,7 +125,7 @@ Due to this teleportation, objects might “jump” (teleport past) boundaries o
       &copy;2020, Sean Johnson.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
