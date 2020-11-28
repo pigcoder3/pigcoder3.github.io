@@ -14,10 +14,11 @@
     <script src="static/underscore.js"></script>
     <script src="static/doctools.js"></script>
     <script src="static/language_data.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Accuracy of Pysics" href="accuracy.html" />
-    <link rel="prev" title="Pysics Documentation" href="index.html" />
+    <link rel="prev" title="Pysics Reference" href="reference.html" />
    
   <link rel="stylesheet" href="static/custom.css" type="text/css" />
   
@@ -36,6 +37,7 @@
             
   <div class="section" id="the-basics">
 <h1>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h1>
+<p>Pysics allows developers to create there games with full control over how much time passes and when time passes.</p>
 <div class="section" id="physicsmanager">
 <h2>PhysicsManager<a class="headerlink" href="#physicsmanager" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">PhysicsManager</span></code> s each represent a universe in which physics works a specific way based on its configuration. It is possible to have multiple universes that are used at the same time for different things. These “universes” operate on their own “ticks” (time). Each manager has a list of all the objects within its universe. When a tick passes for a universe, a tick passes for each object within it, and the forces for each object act on them.</p>
@@ -164,6 +166,8 @@
 
 <h3>Navigation</h3>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Pysics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Pysics Reference</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The Basics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#physicsmanager">PhysicsManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ticks">Ticks</a></li>
@@ -174,14 +178,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="accuracy.html">Accuracy of Pysics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collisions.html">Collisions with Pysics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Pysics Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="energy.html">Work and Mechanical Energy</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Pysics Documentation</a></li>
+      <li>Previous: <a href="reference.html" title="previous chapter">Pysics Reference</a></li>
       <li>Next: <a href="accuracy.html" title="next chapter">Accuracy of Pysics</a></li>
   </ul></li>
 </ul>
@@ -212,7 +216,7 @@
       &copy;2020, Sean Johnson.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
