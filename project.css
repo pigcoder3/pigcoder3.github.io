@@ -195,7 +195,7 @@
 	#project-img {
 		margin: auto auto;	
 		border: 1px solid black;
-		border-radius: 5px;
+		border-radius: 20px;
 		width: 70px;
 		height: 70px;
 		display: block;
@@ -231,7 +231,7 @@
 	#project-img {
 		margin: auto 0;	
 		border: 1px solid black;
-		border-radius: 5px;
+		border-radius: 20px;
 		width: 70px;
 		height: 70px;
 	}
