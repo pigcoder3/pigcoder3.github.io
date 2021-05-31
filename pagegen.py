@@ -62,7 +62,7 @@ def createdoc(name, isproject):
                             with tag('img', src=images+'github-logo.png', id='github-logo'): 
                                 pass 
                         with tag('span', klass='notes'): 
-                            text('You can contact me through GitHub (')
+                            text('Contact me through GitHub (')
                             with tag('strong'): 
                                 with tag('a', href=github_link, klass="intextlink"):
                                     text(github)
@@ -73,7 +73,7 @@ def createdoc(name, isproject):
                             text('Email me at ')
                             with tag('strong'):
                                 text(email)
-                            text('. I check my email often, so it is likely you will be able to get a hold of me.')
+                            text('.')
                     with tag('div', klass='content-container', id='linkedin', title="linkedin"):
                         with tag('a', href=linkedin_link):
                             with tag('img', src=images+'LI-In-Bug.png', id='linkedin-logo'): pass
