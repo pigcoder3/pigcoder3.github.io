@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 
 from yattag import Doc, indent
 import sys, os
@@ -52,7 +52,7 @@ def createdoc(name, isproject):
                         with tag('a', href=linkedin_link, title="linkedin"):
                             with tag('img', id='profile', src=images+'github-profile.png', alt='github profile'): pass
                         with tag('span', id='desc'):
-                            text('I program for fun when I\'m not overloaded with work from my high school classes and part-time job. I am moderately fluent in Java, Python, C, C++, and Bash.'); 
+                            text('I am an incoming Georgia Institute of Technology student who will major in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Systems and Architecture as well as Information Internetworks.'); 
                     doc.asis(createprojectcontainers()) 
                 if(name == "contact.html"): 
                     with tag('h2', id='contact-header'): 
