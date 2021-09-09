@@ -1,0 +1,7 @@
+name:QuickQuiz
+simpledesc:Quick Review
+longdesc:QuickQuiz is an application that assists students in learning course content through multiple choice and short answer questions.
+requirements:
+    Java 11
+:requirements
+github:https://github.com/SMHS-TSA/QuickQuiz-Desktop
