@@ -50,7 +50,7 @@ def createdoc(name, isproject):
                 if(name == "index.html"):
                     with tag('div', klass='content_container', id='intro'):
                         with tag('a', href=linkedin_link, title="linkedin"):
-                            with tag('img', id='profile', src=images+'github-profile.png', alt='github profile'): pass
+                            with tag('img', id='profile', src=images+'headshot.png', alt='github profile'): pass
                         with tag('span', id='desc'):
                             text('I am an incoming Georgia Institute of Technology student who will major in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Systems and Architecture as well as Information Internetworks.'); 
                     doc.asis(createprojectcontainers()) 
@@ -208,7 +208,7 @@ def footer(isproject):
         with tag("div", id="centered"):
             with tag("div", id="footer-left"):
                 with tag("div", id="footer-picture"):
-                    doc.stag("img", id="footer-image", src=extension+"images/github-profile.png", width="75px", height="75px")
+                    doc.stag("img", id="footer-image", src=extension+"images/headshot.png", width="75px", height="75px")
                 with tag("div", id="footer-contact"):
                     with tag("ul", id="footer-contact-images"): #Github and linkedin
                         with tag("li"):
