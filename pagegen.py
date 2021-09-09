@@ -16,6 +16,8 @@ github_link="https://github.com/seanmjohns"
 images="images/"
 projects="projects/"
 
+description="I am a first-year Georgia Institute of Technology student majoring in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Information Internetworks as well as Systems and Architecture."
+
 def createdoc(name, isproject):
     doc, tag, text = Doc().tagtext()
     doc.asis('<!DOCTYPE html>');
@@ -52,7 +54,7 @@ def createdoc(name, isproject):
                         with tag('a', href=linkedin_link, title="linkedin"):
                             with tag('img', id='profile', src=images+'headshot.png', alt='github profile'): pass
                         with tag('span', id='desc'):
-                            text('I am an incoming Georgia Institute of Technology student who will major in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Systems and Architecture as well as Information Internetworks.'); 
+                            text(description); 
                     doc.asis(createprojectcontainers()) 
                 if(name == "contact.html"): 
                     with tag('h2', id='contact-header'): 
