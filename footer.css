@@ -1,91 +1,45 @@
 #footer {
     font-family: Verdana, Geneva, sans-serif;
-    background-color: rgb(100,100,100);
-    min-height: 200px;
-    display: flex;
-    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2)
-}
-
-/* --- footer projects --- */
-
-#footer-projects {
-    width: 75%;
-    margin: 0px auto;
-}
-
-#footer-projects-header {
-    font-size: 10px;
-    color: rgb(200,200,200);
-}
-
-#footer-projects-list {
-    list-style: None;
-    padding-left: 0px;
-}
-
-#footer-projects-list li {
-    font-size: 10px;
-    padding: 5px 0px;
-}
-
-#footer-projects-list li a {
-    text-decoration: None;
-    color: rgb(255,255,255);
-}
-
-#footer-projects-list li a:hover {
-    text-decoration: underline;
-}
-
-/* --- footer picture --- */
-
-#footer-picture {
-    margin: 0px auto 20px auto;
+    background-color: rgb(50, 50, 50);
+    height: 125px;
+    box-shadow: 0px -8px 16px 0px rgba(0,0,0,0.2);
 }
 
 #footer-image {
-    display: block;
+    width: 75px;
+    height: 75px;
     border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 25px;
+    float: right;
 }
 
 /* --- footer contact --- */
 
-#footer-contact {
-    margin: 0 auto;
-}
-
-#footer-contact-header {
-    font-size: 12px;
-    color: rgb(200,200,200);
-}
-
 #footer-contact-images {
-    width: 60px;
-    margin: 0 auto;
+    width: 100%;
+    margin: auto;
+    margin-left: 25px;
     list-style: None;
     padding-left: 0px;
+    float: left;
 }
 
-#footer-contact-images li {
-    font-size: 12px;
-    display: inline;
+#footer-contact-images a {
+    text-decoration: none:
 }
 
-.contact-image {
-    width: 30px;
-    height: 30px;
+#footer-contact-images img {
+    margin: 14px;
+    width: 34px;
+    height: 34px;
 }
 
 #contact-linkedin-image {
-    float: left;
     margin-right: 5px;
     margin-left: -5px;
 }
 
 #contact-github-image {
-    float: right;
     margin-left: 5px;
     margin-right: -5px;
 }
@@ -95,23 +49,6 @@
     padding-top: 40px;
     font-size: 10px;
     text-align: center;
-}
-
-/* --- footer website source --- */
-
-#web-source {
-    margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#source-link {
-    font-family: Verdana, Geneva, sans-serif;
-    margin-top: 15%;
-    text-decoration: underline;
-    font-size: 10px;
-    color: rgb(135,135,135);
 }
 
 /* --- footer sizing and positioning --- */
@@ -130,15 +67,6 @@
 
 @media(min-width:500px) {
 
-    #footer-left { /*centering*/
-        margin-right: -5%;
-        margin-left: 5%;
-    }
-
-    #footer-right { /* centering */
-        margin-right: -5%;
-        margin-left: 5%;
-    }
 
     #centered {
         margin: 0px auto;
@@ -150,10 +78,8 @@
 
 @media(max-width:500px) {
 
-    #centered {
-        margin: 0px auto;
-        width: 100%;
-        color: rgb(255,255,255);
+    #footer {
+        display: none;
     }
 
 }

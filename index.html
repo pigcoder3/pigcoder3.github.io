@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <head>
-  <title>Projects - Sean Johnson</title>
+  <title>Sean Johnson</title>
   <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
-  <script type="text/javascript" src="stickycontact.js"></script>
   <link rel="stylesheet" href="contactbar.css"></link>
   <link rel="stylesheet" href="footer.css"></link>
   <link rel="stylesheet" href="index.css"></link>
 </head>
-<div>
-  <h1 id="name">Sean Johnson</h1>
-</div>
 <div id="contactbar">
-    <div id="email">
-    </div>
-    <div id="phone">
-    </div>
-    <div id="github">
+    <div id="contactbar_container">
+        <div id="name" style="flex-grow: 1">
+            Sean Johnson
+        </div>
+        <div id="email">
+            <a href="mailto:seanmjohns1@gmail.com"><img src="icons/email.png"/></a>
+        </div>
+        <div id="github">
+            <a href="https://github.com/seanmjohns"><img src="icons/github.png"/></a>
+        </div>
+        <div id="linkedin">
+            <a href="https://www.linkedin.com/in/seanmjohns1/"><img src="icons/linkedin-white.png"/></a>
+        </div>
     </div>
 </div>
 <div id="spacer"></div>
-<script>function toggle() {
-            var e = document.getElementById("dropdown-content");
-            e.classList.toggle("projects-dd-content-shown");
-        }
-
-        window.onclick = function(event) {
-              if (event.target != document.getElementById("projects-dropdown-button")) {
-                document.getElementsByClassName("projects-dd-content")[0].classList.remove("projects-dd-content-shown");
-            }
-          }</script>
 <div id="primary">
   <div class="content_container" id="intro">
     <a href="https://www.linkedin.com/in/seanmjohns1/" title="linkedin">
       <img id="profile" src="images/headshot.png" alt="github profile"></img>
     </a>
-    <span id="desc">I am a first-year Georgia Institute of Technology student majoring in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Information Internetworks as well as Systems and Architecture.</span>
+    <span id="desc">I am a first-year Georgia Institute of Technology student majoring in computer science with a specialization in Information Internetworks as well as Systems and Architecture. I am seeking opportunities to gain experience working with backend system development.
   </div>
 
   <div id="resume">
@@ -105,7 +99,39 @@
                 Skills
             </h2>
 
-            <div class="dated_activity">
+            <div style="padding: 20px;">
+                <div id="languages" style="width: 50%; float: left">
+                    <div class="activity_metadata" style="text-align: center;">
+                        <p class="activity_title">Programming Languages</p>
+                    </div>
+                    <div class="activity_content">
+                        <div class="icons" style="padding: 10px 30px 30px 30px;">
+                            <img src="icons/java.png" alt="Java">
+                            <img src="icons/c.jpg" alt="C">
+                            <img src="icons/c++.png" alt="C++">
+                            <img src="icons/python.png" alt="Python">
+                            <img src="icons/html.png" alt="HTML">
+                            <img src="icons/css.png" alt="CSS">
+                            <img src="icons/js.png" alt="JS">
+                        </div>
+                    </div>
+                </div>
+                <div id="technologies" style="width: 50%; float: right;">
+                    <div class="activity_metadata" style="text-align: center;">
+                        <p class="activity_title">Tools / Technologies</p>
+                    </div>
+                    <div class="activity_content">
+                        <div class="icons" style="padding: 10px 30px 30px 30px;">
+                            <img src="icons/git.png" alt="git">
+                            <img src="icons/sql.png" alt="sql">
+                            <img src="icons/sqlite.png" alt="sqlite">
+                            <img src="icons/excel.png" alt="excel">
+                            <img src="icons/latex.png" alt="latex">
+                            <img src="icons/intellij.png" alt="intellij">
+                            <img src="icons/linux.png" alt="linux">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -114,7 +140,37 @@
                 Projects
             </h2>
 
-            <div class="dated_activity">
+            <div class="dated_activity" id="quickquiz">
+                <div class="activity_metadata">
+                    <div class="activity_title_location">
+                        <p class="activity_title">QuickQuiz</p>
+                        <p class="activity_location">Solo Project</p>
+                    </div>
+                    <span class="dates">January 2021 - June 2021</span>
+                </div>
+                <div class="activity_content">
+                    <ul>
+                        <li>Desktop application assisting students in learning course content through multiple choice and short answer questions the user creates</li>
+                        <li>Used Java, JavaFX, SQL, SQLite</li>
+                        <li>Learned basic UI/UX design principles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dated_activity" id="quickquiz">
+                <div class="activity_metadata">
+                    <div class="activity_title_location">
+                        <p class="activity_title">Firehawks Robotics Team</p>
+                        <p class="activity_location">VEX V5 Robotics</p>
+                    </div>
+                    <span class="dates">Fall 2019 - May 2021</span>
+                </div>
+                <div class="activity_content">
+                    <ul>
+                        <li>Lead software developer on Fall 2020 - May 2021 robot using C++</li>
+                        <li>Gained experience solving software problems with peers in short time-spans and taking lead in discussions leading up to competitions</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -126,60 +182,19 @@
       <div id="footer-picture">
         <img id="footer-image" src="images/headshot.png" width="75px" height="75px" />
       </div>
-      <div id="footer-contact">
-        <ul id="footer-contact-images">
-          <li>
-            <a href="https://www.linkedin.com/in/seanmjohns1/" width="75px" height="75px">
-              <img id="contact-linkedin-image" alt="linkedin" class="contact-image" src="images/black-linkedin-logo.png" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/seanmjohns" width="75px" height="75px">
-              <img id="contact-github-image" alt="github" class="contact-image" src="images/github-logo.png" />
-            </a>
-          </li>
-        </ul>
-        <div id="contact-email">seanmjohns1@gmail.com</div>
-      </div>
-      <div id="web-source">
-        <a id="source-link" href="https://github.com/seanmjohns/seanmjohns.github.io">source</a>
-      </div>
     </div>
     <div id="footer-right">
-      <div id="footer-projects">
-        <span id="footer-projects-header">Projects</span>
-        <ul id="footer-projects-list">
-          <li>
-            <a href="projects/turt/turt.html">Turt</a>
-          </li>
-          <li>
-            <a href="projects/dodger/dodger.html">Dodger</a>
-          </li>
-          <li>
-            <a href="projects/talk/talk.html">Talk</a>
-          </li>
-          <li>
-            <a href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
-          </li>
-          <li>
-            <a href="projects/calc/calc.html">Calc</a>
-          </li>
-          <li>
-            <a href="projects/pysics/pysics.html">Pysics</a>
-          </li>
-          <li>
-            <a href="projects/minesweeper/minesweeper.html">Minesweeper</a>
-          </li>
-          <li>
-            <a href="projects/quickquiz/quickquiz.html">QuickQuiz</a>
-          </li>
-          <li>
-            <a href="projects/textfighter/textfighter.html">Text Fighter</a>
-          </li>
-          <li>
-            <a href="projects/tetris/tetris.html">Tetris</a>
-          </li>
-        </ul>
+        <div id="footer-contact-images">
+              <a href="mailto:seanmjohns1@gmail.com">
+                <img id="contact-github-image" alt="github" class="contact-image" src="icons/email.png" />
+              </a>
+              <a href="https://github.com/seanmjohns">
+                <img id="contact-github-image" alt="github" class="contact-image" src="icons/github.png" />
+              </a>
+              <a href="https://www.linkedin.com/in/seanmjohns1/">
+                <img id="contact-linkedin-image" alt="linkedin" class="contact-image" src="icons/linkedin-white.png" />
+              </a>
+         </div>
       </div>
     </div>
   </div>

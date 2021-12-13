@@ -14,173 +14,52 @@ body {
 
 #contactbar {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    overflow: hidden;
+    float: top;
 }
 
-@media (min-width:500px) {
-
-	#contactbar {
-		background-color: rgb(50,50,50);
-		height: 50px;
-		float: top;
-		margin: 0px auto;
-		text-align: center;
-		z-index: 1000;
-	}
-
-	.nav {
-		display: inline-block;	
-	}
-
-	.nav-button {
-		display: block;
-		color: rgb(200,200,200);	
-		font-family: verdana, sans-serif;
-		text-decoration: none;
-		padding: 14px 20px;
-		text-align: center;
-		position: relative;
-		margin: auto 30px;
-		z-index: 1;
-		font-size: 100%;
-		height: 22px;
-		top: -1px;
-	}
-
-	.nav-button:hover {
-		background-color: rgb(70,70,70);
-		color: rgb(240,240,240);
-	}
-
-	#projects-dropdown {
-  		position: relative;
-  		display: inline-block;
-	}
-
-	#contactbar button {
-		outline: none;
-		border: none;
-		background-color: rgb(0,0,0,0);
-		height: 50px;
-		line-height: 100%;
-	}
-
-	#projects-dropdown-button {
-		top: 0px;
-	}
-
-	.projects-dd-content-shown {
-		display: block !important;
-	}
-
-	.projects-dd-content {
-		display: none;
-		position: absolute;
-		background-color: white;
-		color: black;
-		width: 100%;
-  		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-	}
-
-	.project-link {
-		display: block;
-		padding: 15px;
-		color: black;
-		font-family: verdana, sans-serif;
-		text-align: left;
-		text-decoration: none;
-	}
-
-	.project-link:hover {
-		background-color: lightgrey;
-	}
-
-	.stickyspacer {
-		height: 50px;
-		width: 100%;
-	}
+#contactbar_container img {
+    width: 32px;
+    height: 32px;
+    padding: 14px;
 }
 
-@media (max-width:499px) {
+#name {
+    text-align: left;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
 
-	#navbar {
-		list-style-type: none;
-		background-color: rgb(50,50,50);
-		min-height: 150px;
-		width: 100%;
-		/*float: top;*/
-		margin: 0px;
-		text-align: center;
-		z-index: 1000;
-	}
+#contactbar {
+    background-color: rgb(50,50,50);
+	height: 60px;
+	float: top;
+	margin: 0px auto;
+	text-align: center;
+	z-index: 1000;
+    width: 100%;
+}
 
-	#navbar li {
-		display: block;
-	}
+#spacer {
+	height: 50px !important;
+	width: 100%;
+}
 
-	.nav-button {
-		display: block;
-		color: rgb(200,200,200);	
-		font-family: verdana, sans-serif;
-		text-decoration: none;
-		left: 0px;	
-		padding: 14.5px 0px;
-		text-align: center;
-		background-color: rgb(50,50,50);
-		/*position: relative;*/
-		margin: 0px 0px;
-		border-bottom: 1px solid black;
-		font-size: 15px;
-	}
+@media (min-width:1000px) {
 
-	.nav-button:hover {
-		color: rgb(240,240,240);
-	}
+    #contactbar_container {
+        margin: 0px auto;
+        max-width: 40%;
+        display: flex;
+    }
+}
 
-	#navbar button {
-		outline: none;
-		margin: 0px;
-		border: none;
-		border-bottom: 1px solid black;
-		background-color: rgb(50,50,50);
-		width: 100%;
-		height: 50px;
-	}
+@media (max-width:1000px) {
 
-	#projects-dropdown {
-  		position: static;
-  		display: block;
-		width: 100%;
-	}
-
-	.projects-dd-content-shown {
-		display: block !important;		
-	}
-
-	.projects-dd-content {
-		display: none;
-		position: static;
-		background-color: white;
-		color: black;
-		/*margin-left: calc(0% - 50vw);*/
-  		width: 100vw;	
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
-	}
-
-	.project-link {
-		display: block;
-		padding: 15px;
-		color: black;
-		font-family: verdana, sans-serif;
-		text-align: left;
-		text-decoration: none;
-        border-bottom: 1px solid gray;
-	}
-
-	.project-link:hover {
-		background-color: lightgrey;
-	}
+    #contactbar_container {
+        margin: 0px auto;
+        display: flex;
+    }
 
 	.stickyspacer {
 		height: 150px !important;
