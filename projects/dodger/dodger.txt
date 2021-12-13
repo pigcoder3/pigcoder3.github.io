@@ -1,8 +1,0 @@
-name:Dodger
-simpledesc:Fast-paced survival
-longdesc:Dodger is a game that puts the player, a green ball, in a field where an endless onslaught of lethal red squares races toward the top of the screen. The goal is to survive as long as possible.
-compiled:dodger-1.3.jar
-requirements:
-	Java 11
-:requirements
-github:https://github.com/seanmjohns/Dodger

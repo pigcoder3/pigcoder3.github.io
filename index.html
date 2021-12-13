@@ -2,36 +2,21 @@
 <head>
   <title>Projects - Sean Johnson</title>
   <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
-  <script type="text/javascript" src="stickynav.js"></script>
-  <link rel="stylesheet" href="navbar.css"></link>
+  <script type="text/javascript" src="stickycontact.js"></script>
+  <link rel="stylesheet" href="contactbar.css"></link>
   <link rel="stylesheet" href="footer.css"></link>
   <link rel="stylesheet" href="index.css"></link>
 </head>
 <div>
   <h1 id="name">Sean Johnson</h1>
 </div>
-<div id="navbar">
-  <div id="projects-dropdown" class="nav">
-    <button id="projects-dropdown-button" class="nav-button" onclick="toggle()">Projects</button>
-    <div class="projects-dd-content" id="dropdown-content">
-      <a class="project-link" href="projects/turt/turt.html">Turt</a>
-      <a class="project-link" href="projects/dodger/dodger.html">Dodger</a>
-      <a class="project-link" href="projects/talk/talk.html">Talk</a>
-      <a class="project-link" href="projects/sub_trouble/sub_trouble.html">Sub Trouble</a>
-      <a class="project-link" href="projects/calc/calc.html">Calc</a>
-      <a class="project-link" href="projects/pysics/pysics.html">Pysics</a>
-      <a class="project-link" href="projects/minesweeper/minesweeper.html">Minesweeper</a>
-      <a class="project-link" href="projects/quickquiz/quickquiz.html">QuickQuiz</a>
-      <a class="project-link" href="projects/textfighter/textfighter.html">Text Fighter</a>
-      <a class="project-link" href="projects/tetris/tetris.html">Tetris</a>
+<div id="contactbar">
+    <div id="email">
     </div>
-  </div>
-  <div class="nav">
-    <a class="nav-button" href="index.html">Home</a>
-  </div>
-  <div class="nav">
-    <a class="nav-button" href="contact.html">Contact</a>
-  </div>
+    <div id="phone">
+    </div>
+    <div id="github">
+    </div>
 </div>
 <div id="spacer"></div>
 <script>function toggle() {
@@ -51,100 +36,88 @@
     </a>
     <span id="desc">I am a first-year Georgia Institute of Technology student majoring in computer science. I have been programming since age ten, and I will continue to do so as a software engineer for the rest of my life. My current focus is around Information Internetworks as well as Systems and Architecture.</span>
   </div>
-  <h2 id="projects_header">
-    <a href="https://github.com/seanmjohns?tab=repositories">Projects</a>
-  </h2>
-  <div id="projects">
-    <div class="content_container project_container">
-      <a href="projects/turt/turt.html">
-        <div class="project-desc-container">
-          <span class="project_name">Turt</span>
-          <span class="project_desc">Discord Moderation Bot</span>
+
+  <div id="resume">
+
+        <div class="content_container resume_container" id="education">
+            <h2 id="education_header">
+                Education
+            </h2>
+
+            <div class="dated_activity" id="georgia_tech">
+                <div class="activity_metadata">
+                    <div class="activity_title_location">
+                        <p class="activity_title">Georgia Institute of Technology</p>
+                        <p class="activity_location">Atlanta, Georgia</p>
+                    </div>
+                    <span class="dates">August 2021 - May 2025</span>
+                </div>
+                <div class="activity_content">
+                    <ul>
+                        <li>Pursuing Bachelor's of Science in Computer Science</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <img src="projects/turt/turt.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/dodger/dodger.html">
-        <div class="project-desc-container">
-          <span class="project_name">Dodger</span>
-          <span class="project_desc">Fast-paced survival</span>
+
+        <div class="content_container resume_container" id="experience">
+            <h2 id="experience_header">
+                Experience
+            </h2>
+
+            <div class="dated_activity">
+                <div class="activity_metadata">
+                    <div class="activity_title_location">
+                        <p class="activity_title">Student Assistant</p>
+                        <p class="activity_location"><strong>Georgia Tech College of Computing</strong> - Atlanta, Georgia</p>
+                    </div>
+                    <span class="dates">August 2021 - Current</span>
+                </div>
+                <div class="activity_content">
+                    <ul>
+                        <li>Logged and delivered packages, assisted in building moves and event set-ups</li>
+                        <li>Managed database for College of Computing building assets (Laptops, Servers, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dated_activity">
+                <div class="activity_metadata">
+                    <div class="activity_title_location">
+                        <p class="activity_title">Front Service Clerk</p>
+                        <p class="activity_location"><strong>Publix Supermarkets</strong> - Peachtree City, Georgia</p>
+                    </div>
+                    <span class="dates">July 2020 - August 2021</span>
+                </div>
+                <div class="activity_content">
+                    <ul>
+                        <li>Massively improved interpersonal and customer service skills</li>
+                        <li>Developed abilities to take orders, work as a team, improved ability to solve problems individually</li>
+                        <li>Assisted customers in issues regarding their order, and ensured no customer left unsatisfied</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <img src="projects/dodger/dodger.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/talk/talk.html">
-        <div class="project-desc-container">
-          <span class="project_name">Talk</span>
-          <span class="project_desc">Client/Server Chat</span>
+
+        <div class="content_container resume_container" id="skills">
+            <h2 id="skills">
+                Skills
+            </h2>
+
+            <div class="dated_activity">
+            </div>
         </div>
-        <img src="projects/talk/talk.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/sub_trouble/sub_trouble.html">
-        <div class="project-desc-container">
-          <span class="project_name">Sub Trouble</span>
-          <span class="project_desc">Sea-Based Defense</span>
+
+        <div class="content_container resume_container" id="projects">
+            <h2 id="projects_header">
+                Projects
+            </h2>
+
+            <div class="dated_activity">
+            </div>
         </div>
-        <img src="projects/sub_trouble/sub_trouble.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/calc/calc.html">
-        <div class="project-desc-container">
-          <span class="project_name">Calc</span>
-          <span class="project_desc">Terminal Calculator</span>
-        </div>
-        <img src="projects/calc/calc.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/pysics/pysics.html">
-        <div class="project-desc-container">
-          <span class="project_name">Pysics</span>
-          <span class="project_desc">Python Physics Engine</span>
-        </div>
-        <img src="projects/pysics/pysics.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/minesweeper/minesweeper.html">
-        <div class="project-desc-container">
-          <span class="project_name">Minesweeper</span>
-          <span class="project_desc">Classic Puzzler</span>
-        </div>
-        <img src="projects/minesweeper/minesweeper.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/quickquiz/quickquiz.html">
-        <div class="project-desc-container">
-          <span class="project_name">QuickQuiz</span>
-          <span class="project_desc">Quick Review</span>
-        </div>
-        <img src="projects/quickquiz/quickquiz.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/textfighter/textfighter.html">
-        <div class="project-desc-container">
-          <span class="project_name">Text Fighter</span>
-          <span class="project_desc">Text Game Engine</span>
-        </div>
-        <img src="projects/textfighter/textfighter.png"></img>
-      </a>
-    </div>
-    <div class="content_container project_container">
-      <a href="projects/tetris/tetris.html">
-        <div class="project-desc-container">
-          <span class="project_name">Tetris</span>
-          <span class="project_desc">Fast-paced Classic</span>
-        </div>
-        <img src="projects/tetris/tetris.png"></img>
-      </a>
-    </div>
+
   </div>
 </div>
 <div id="footer">

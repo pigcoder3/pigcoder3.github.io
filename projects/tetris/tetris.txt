@@ -1,8 +1,0 @@
-name:Tetris
-simpledesc:Fast-paced Classic
-longdesc:This game is a clone of the original Tetris franchise. The player must fill as many lines as possible before the blocks stack to the top of the playing field.
-compiled:tetris-1.3.jar
-requirements:
-	java 11
-:requirements
-github:https://github.com/seanmjohns/Tetris

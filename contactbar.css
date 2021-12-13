@@ -12,18 +12,13 @@ body {
 	font-family: courier new, monospace;
 }
 
-#projects-dropdown-button:hover {
-	background-color: rgb(70,70,70);
-	color: rgb(240,240,240);
-}
-
-#navbar {
+#contactbar {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 @media (min-width:500px) {
 
-	#navbar {
+	#contactbar {
 		background-color: rgb(50,50,50);
 		height: 50px;
 		float: top;
@@ -61,7 +56,7 @@ body {
   		display: inline-block;
 	}
 
-	#navbar button {
+	#contactbar button {
 		outline: none;
 		border: none;
 		background-color: rgb(0,0,0,0);
