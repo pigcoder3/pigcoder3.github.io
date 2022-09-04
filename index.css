@@ -83,6 +83,13 @@
             color: #375FD7;
 		}
 
+        #copyright {
+            margin: 0px 0px 20px 0px;
+            font-size: 70%;
+            text-align: center;
+            color: gray;
+        }
+
 		@media(min-width: 1000px) {
 
             #intro {
@@ -109,6 +116,7 @@
 				padding: 20px;
 				font-family: verdana, sans-serif;
 				margin: auto 0;	
+                text-align: center;
 			}
 
             #resume {
@@ -147,7 +155,7 @@
 
             #intro {		
 				width: 100%;
-				margin: 5px auto 50px auto;
+				margin: 10px auto;
 				position: relative;
 			}
 			
@@ -163,7 +171,8 @@
 			#desc {
 				font-family: verdana, sans-serif;
 				display: block;
-				padding: 10px;
+				padding: 20px;
+                text-align: center;
 			}
 
             .dates {
@@ -178,7 +187,7 @@
 				width: 100%;
 				max-width: 100%;
 				min-width: 200px;
-				margin: 50px auto;
+				margin: 10px auto;
 				display: block;
 				overflow: hidden;
 				position: relative;
