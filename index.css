@@ -130,8 +130,8 @@
             }
             
 			.content_container {
-				width: 50%;
-				max-width: 50%;
+				width: 100%;
+				max-width: 100%;
 				min-width: 750px;
 				margin: 50px auto;
 				display: inline;
