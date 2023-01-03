@@ -1,75 +1,116 @@
+/* MOBILE STYLING */
 
-body {
-	background-color: rgb(240,240,240);
-	margin: 0px;
-}
+@media (max-width: 999px) {
 
 #name {
 	margin: 0px;
 	padding: 20px;
-	background-color: rgb(100,100,100);
 	text-align: center;
 	font-family: courier new, monospace;
+    text-align: left;
+    font-size: 20px;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+
 }
 
 #contactbar {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    overflow: hidden;
     float: top;
+    pointer-events: none;
 }
 
 #contactbar_container img {
     width: 32px;
     height: 32px;
-    padding: 14px;
+    margin: 14px;
+    pointer-events: auto;
 }
 
-#name {
-    text-align: left;
-    background-color: rgb(50, 50, 50);
-    color: white;
+#contactbar_container {
+    background-color: rgba(250, 250, 250, 0.75);
 }
 
 #contactbar {
-    background-color: rgb(50,50,50);
-	height: 60px;
+	height: 75px;
 	float: top;
 	margin: 0px auto;
 	text-align: center;
 	z-index: 1000;
     width: 100%;
+    background-color: transparent;
+    position: fixed;
 }
 
-#spacer {
-	height: 50px !important;
-	width: 100%;
-}
-
-@media (min-width:1000px) {
-
-    #contactbar_container {
-        margin: 0px auto;
-        max-width: 40%;
-        display: flex;
-    }
-}
-
-@media (max-width:1000px) {
-
-    #contactbar_container {
-        margin: 0px auto;
-        display: flex;
-    }
-
-	.stickyspacer {
-		height: 150px !important;
-		width: 100%;
-	}
-	
+#contactbar_container {
+    margin: 0px auto;
+    display: flex;
 }
 
 .sticky {
 	position: fixed;
 	top: 0;
 	width: 100%;
+}
+
+}
+
+/* DESKTOP STYLING */
+
+@media (min-width: 1000px) {
+
+#name {
+	margin: 0px;
+	padding: 20px;
+	text-align: center;
+	font-family: courier new, monospace;
+    text-align: left;
+    font-size: 50px;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+
+}
+
+#contactbar {
+    float: top;
+    pointer-events: none;
+}
+
+#contactbar_container img {
+    width: 32px;
+    height: 32px;
+    margin: 14px;
+    pointer-events: auto;
+}
+
+#contactbar_container {
+    background-color: transparent;
+}
+
+#contactbar {
+	height: 75px;
+	float: top;
+	margin: 0px auto;
+	text-align: center;
+	z-index: 1000;
+    width: 100%;
+    background-color: transparent;
+    position: fixed;
+}
+
+#spacer {
+	height: 100px !important;
+	width: 100%;
+}
+
+#contactbar_container {
+    margin: 0px auto;
+    display: flex;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 }

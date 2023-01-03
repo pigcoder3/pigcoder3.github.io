@@ -1,196 +1,151 @@
 <!DOCTYPE html>
-<head>
-  <title>Sean Johnson</title>
-  <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
-  <link rel="stylesheet" href="contactbar.css"></link>
-  <link rel="stylesheet" href="footer.css"></link>
-  <link rel="stylesheet" href="index.css"></link>
-</head>
-<div id="contactbar">
-    <div id="contactbar_container">
-        <div id="name" style="flex-grow: 1">
-            Sean Johnson
-        </div>
-        <div id="email">
-            <a href="mailto:sean@seanmjohnson.net"><img src="icons/email.png"/></a>
-        </div>
-        <div id="github">
-            <a href="https://github.com/seanmjohns"><img src="icons/github.png"/></a>
-        </div>
-        <div id="linkedin">
-            <a href="https://www.linkedin.com/in/seanmjohns1/"><img src="icons/linkedin-white.png"/></a>
-        </div>
-    </div>
-</div>
-<div id="spacer"></div>
-<div id="primary">
-  <div class="content_container" id="intro">
-      <span id="desc">Georgia Tech computer science student and Security Operations Center Security Analyst with experience in cybersecurity research and internal software tools development</span>
-  </div>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.23.0/cytoscape.min.js" integrity="sha512-gEWKnYYa1/1c3jOuT9PR7NxiVI1bwn02DeJGsl+lMVQ1fWMNvtjkjxIApTdbJ/wcDjQmbf+McWahXwipdC9bGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/webcola/WebCola/cola.min.js"></script>
+        <script src="https://unpkg.com/cytoscape-cola/cytoscape-cola.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width" charset="UTF-8"></meta>
+        <link rel="stylesheet" href="contactbar.css"></link>
+        <link rel="stylesheet" href="footer.css"></link>
+        <link rel="stylesheet" href="index.css"></link>
 
-  <div id="resume">
-        <div class="content_container resume_container" id="experience">
-            <h2 id="experience_header">
-                Experience
-            </h2>
+        <style>
 
-            <div class="dated_activity">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Security Analyst</p>
-                        <p class="activity_location"><strong>Georgia Tech Cybersecurity Security Operations Center (SOC)</strong> - Atlanta, Georgia</p>
-                    </div>
-                    <span class="dates">August 2022 - Current</span>
-                </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Resolved hundreds of potentially malicious security incidents and suspicious activities</li>
-                        <li>Collaborated with coworkers to reach a verdict regarding incidents</li>
-                        <li>Reasoned with minimal information to detect malicious activity on GT workstations</li>
-                        <li>Documented security incidents in detail to streamline future incident responses</li>
-                    </ul>
-                </div>
-            </div>
+            #cy {
+                width: 100%;
+                height: 100vh;
+                display: block;
+            }
 
-            <div class="dated_activity">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Network Hardware Support Student Assistant</p>
-                        <p class="activity_location"><strong>Georgia Tech Office of Information Technology (OIT) Network Engineering</strong> - Atlanta, Georgia</p>
-                    </div>
-                    <span class="dates">March 2022 - August 2022</span>
-                </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Supported 10000+ network devices in 250+ buildings on Georgia Tech’s campus</li>
-                        <li>Developed internal automation tools, taking a year’s tedious work down to a matter of weeks</li>
-                        <li>Upgraded existing network equipment to improve network latency to multi-Gigabit speeds</li>
-                        <li>Improved network device installation processes to reduce network downtime during upgrades</li>
-                    </ul>
-                </div>
-            </div>
+        </style>
 
-            <div class="dated_activity">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Facilities Student Assistant</p>
-                        <p class="activity_location"><strong>Georgia Tech College of Computing</strong> - Atlanta, Georgia</p>
-                    </div>
-                    <span class="dates">August 2021 - March 2022</span>
-                </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Received, Logged, and delivered 2000+ packages in the College of Computing</li>
-                        <li>Inventoried 500+ devices to ensure compliance with campus policies</li>
-                        <li>Pursued lost packages and inconsistencies to ensure every customer received their package as soon as possible</li>
-                    </ul>
-                </div>
-            </div>
+    </head>
+    <body>
+        <div id="contactbar">
+            <div id="contactbar_container">
 
-            <div class="dated_activity">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Front Service Clerk</p>
-                        <p class="activity_location"><strong>Publix Supermarkets</strong> - Peachtree City, Georgia</p>
-                    </div>
-                    <span class="dates">July 2020 - August 2021</span>
+                <div id="name" style="flex-grow: 1">
+                    Sean Johnson
                 </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Assisted customers with issues regarding their order, and ensured no customer left unsatisfied</li>
-                    </ul>
+                <div id="email">
+                    <a href="mailto:sean@seanmjohnson.net"><img src="icons/email.png"/></a>
                 </div>
-            </div>
-
-        </div>
-
-        <div class="content_container resume_container" id="projects">
-            <h2 id="projects_header">
-                Projects
-            </h2>
-
-            <div class="dated_activity" id="quickquiz">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Georgia Tech Device Manager Platform Transition</p>
-                        <p class="activity_location">Georgia Tech Office of Information Technology (OIT) Network Engineering</p>
-                    </div>
-                    <span class="dates">June 2022 - Current</span>
+                <div id="github">
+                    <a href="https://github.com/seanmjohns"><img src="icons/github.png"/></a>
                 </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Transitioned to a new Cisco wireless access point management and configuration platform</li>
-                        <li>Automated the data exportation and importation between platforms to reduce project time from a year to a matter of weeks</li>
-                        <li>Utilized Python and Cisco’s APIs to manage data of campus’s 250+ buildings and 7000+ wireless access points</li>
-                        <li>Cooperated with neighboring OIT departments to streamline data sharing</li>
-                    </ul>
+                <div id="linkedin">
+                    <a href="https://www.linkedin.com/in/seanmjohns1/"><img src="icons/linkedin.png"/></a>
                 </div>
-            </div>
 
-        </div>
-
-
-        <div class="content_container resume_container" id="education">
-            <h2 id="education_header">
-                Education
-            </h2>
-
-            <div class="dated_activity" id="georgia_tech">
-                <div class="activity_metadata">
-                    <div class="activity_title_location">
-                        <p class="activity_title">Georgia Institute of Technology</p>
-                        <p class="activity_location">Atlanta, Georgia</p>
-                    </div>
-                    <span class="dates">August 2021 - May 2025</span>
-                </div>
-                <div class="activity_content">
-                    <ul>
-                        <li>Pursuing Bachelor's of Science in Computer Science (GPA: 3.5)</li>
-                    </ul>
-                </div>
             </div>
         </div>
-
-
-        <div class="content_container resume_container" id="skills">
-            <h2 id="skills">
-                Skills
-            </h2>
-
-            <div style="padding: 20px;">
-                <div id="languages" style="width: 50%; float: left">
-                    <div class="activity_metadata" style="text-align: center;">
-                        <p class="activity_title">Programming Languages</p>
-                    </div>
-                    <div class="activity_content">
-                        <div class="icons" style="padding: 10px 30px 30px 30px;">
-                            <img src="icons/java.png" alt="Java">
-                            <img src="icons/c.jpg" alt="C">
-                            <img src="icons/c++.png" alt="C++">
-                            <img src="icons/python.png" alt="Python">
-                            <img src="icons/html.png" alt="HTML">
-                            <img src="icons/css.png" alt="CSS">
-                            <img src="icons/js.png" alt="JS">
+        <div id="cy"></div>
+        <div id="left_button_area" class="view-button">
+            <span> ← </span>
+        </div>
+        <div id="right_button_area" class="view-button"> 
+            <span> → </span>
+        </div>
+        <div id="content_area">
+            <div class="content_area_container">
+                <div id="introduction" class="experience first">
+                    <div class="experience-inner">
+                        <div class="experience-top">
+                            <header id="hello">Hello, I'm Sean!&nbsp;&nbsp;👋</header>
                         </div>
+                        <br>
+                        <span class="description"> <br> I'm a second year computer science student at Georgia Tech with experience in <strong>cybersecurity</strong>, <strong>network hardware support</strong>, and <strong>software engineering</strong>. <br> <br> I come from a diverse computer science background, so I can provide a <strong>unique perspective</strong> on many solutions! </span>
+                        <br><br>
                     </div>
-                </div>
-                <div id="technologies" style="width: 50%; float: right;">
-                    <div class="activity_metadata" style="text-align: center;">
-                        <p class="activity_title">Tools / Technologies</p>
-                    </div>
-                    <div class="activity_content">
-                        <div class="icons" style="padding: 10px 30px 30px 30px;">
-                            <img src="icons/git.png" alt="git">
-                            <img src="icons/sql.png" alt="sql">
-                            <img src="icons/sqlite.png" alt="sqlite">
-                            <img src="icons/latex.png" alt="latex">
-                            <img src="icons/linux.png" alt="linux">
-                        </div>
-                    </div>
+                    <span id="see-next"> Scroll to see my experiences! </span>
                 </div>
             </div>
+            <div class="content_area_container">
+            <div id="security_analyst" class="experience"> 
+                <div class="experience-inner">
+                    <div class="experience-top">
+                        <span class="type"> Experience </span>
+                        <header class="experience-header">Security Analyst</header>
+                        <span class="experience-location">Georgia Tech Cybersecurity Security Operations Center</span>
+                        <br>
+                        <span class="experience-date">August - December 2022</span>
+                    </div>
+                    <br><br>
+                    <span class="description"> As a security analyst for Georgia Tech, I defended the security of Georgia Tech's workstations and servers from malicious executables and suspicious administrative actions. Every incident was an opportunity to learn new aspects and vulnerabilities of cyberspace!
+                    </span>
+                    <ul class="description">
+                        <li> <strong>Resolved</strong> hundreds of potentially malicious security incidents and suspicious activities</li>
+                        <li><strong>Collaborated</strong> with coworkers to reach a verdict regarding incidents</li>
+                        <li><strong>Reasoned</strong> with minimal information to detect malicious activity on GT workstations</li>
+                        <li><strong>Documented</strong> security incidents in detail to streamline future incident responses.</li>
+                    </ul>
+                    <span class="description">
+                        The ability to defend such an expansive network was an incredible opportunity, and the opportunity to make a difference was even more incredible! <br> <br> 
+                    </span>
+
+
+                </div>
+
+            </div>
+            </div>
+            <div class="content_area_container">
+            <div id="network_hardware" class="experience">
+                <div class="experience-inner">
+                    <div class="experience-top">
+                        <span class="type"> Experience </span>
+                        <header class="experience-header">Network Hardware Support Student Assistant</header>
+                        <span class="experience-location">Georgia Tech Network Services</span>
+                        <br>
+                        <span class="experience-date">March - August 2022</span>
+                    </div>
+                    <br><br>
+                    <span class="description"> As a network hardware support student assistant, I configured the numerous Cisco network switches on Georgia Tech's campus. At Network Services, I had the chance to dip my toes in other fields, such as with the <a id="platform_transition_link">Network Hardware Platform Transition Project</a>! I additionally created a procedure for setting up new Juniper brand network hardware. </span>
+                    <ul class="description">
+                    
+
+                        <li><strong>Supported</strong> 10000+ network devices in 250+ buildings on Georgia Tech’s campus</li>
+                        <li><strong>Developed</strong> internal automation tools, taking a year’s tedious work down to a matter of weeks</li>
+                        <li><strong>Upgraded</strong> existing network equipment to improve network latency to multi-Gigabit speeds</li>
+                        <li><strong>Improved</strong> network device installation processes to reduce network downtime during upgrades</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            </div>
+            <div class="content_area_container">
+            <div id="platform_transition" class="experience bottom">
+                <div class="experience-inner">
+                    <div class="experience-top">
+                        <span class="type"> Project </span>
+                        <header class="experience-header">Network Hardware Platform Transition</header>
+                        <span class="experience-location">Georgia Tech Network Services</span>
+                    </div>
+                    <br><br>
+                    <span class="description"> When I wasn't directly supporting network hardware, my project at Georgia Tech Network Services involved compiling data from one network hardware visualization platform and moving it to another, more updated, platform. The official tool for doing so malfunctioned for our data, so I cobbled together a series of homemade Python scripts that interacted with Cisco APIs and CSVs, as well as compiled new data, to create the "source of truth" for wireless access points on campus!</span>
+                    <ul class="description">                    
+
+                        <li><strong>Transitioned</strong> to a new Cisco wireless access point management and configuration platform</li>
+                        <li><strong>Automated</strong> the data exportation and importation between platforms to reduce project time from a year to a matter of weeks</li>
+                        <li><strong>Utilized</strong> Python and Cisco’s APIs to manage data of campus’s 250+ buildings and 7000+ wireless access points</li>
+                        <li><strong>Cooperated</strong> with neighboring OIT departments to streamline data sharing</li>
+                    </ul>
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="click-and-drag-container">
+
+            <span id="click-and-drag"> Click and drag to see my skills and experience! </span>
+
         </div>
 
-  </div>
-</div>
-<p id="copyright"> © 2022 Sean M. Johnson. All rights reserved. </p>
+        <script src="graph.js"></script>
+
+    </body>
+
+
+</html>

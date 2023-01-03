@@ -1,241 +1,417 @@
-		#primary {
-			padding: 20px;
-		}
+/* MOBILE STYLING */
 
-        #contactbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
+@media (max-width: 999px) {
 
-        .dated_activity {
-            padding: 0px 30px 30px 30px;
-        }
+body {
 
-        .dated_activity p {
-            text-align: left;
-        }
+    background-color: rgb(250, 250, 250);
+    margin: 0px;
 
-        .dated_activity_content {
-            text-align: left;
+}
 
-        }
+.view-button {
 
-        .dates {
-            float: right;
-            padding: 20px;
-            font-style: italic;
-        }
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: #ffffff;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: 0px 0px 15px 0px #aaaaaa;
+    z-index: 1000;
 
-        .activity_title_location {
-            float: left;
-        }
+}
 
-        .activity_content {
-            clear: both;
-            font-size: 14px;
+.view-button span {
 
-        }
+    line-height: 50px;
+    vertical-align: middle;
+    display: block;
+    margin: auto 0px;
+    pointer-events: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 
-        .activity_location {
-            font-size: 12px;
-            margin-top: -20px;
-        }
+}
 
-        .activity_title {
-            font-size: 20px;
-            font-weight: bold;
-        }
+#left_button_area {
 
-        .skill_level {
-            font-size: 12px;
-        }
+    left: 25px;
+    top: 50%;
+}
 
-        .icons img {
-            width: 50px;
-            height: 50px;
-            padding: 5px;
-        }
+#right_button_area {
 
-		.content_container {
-			border-radius: 30px;
-			/* border: 1px solid black; */
-			background-color: white;
-			box-shadow: 3px 3px 20px darkgrey;
-		}
+    right: 25px;
+    top: 50%;
 
-		.content_container:hover {
-			background-color: rgb(250,250,250);
-		}
+}
 
-        .resume_container {
-            width: 100%;
-            margin: 0px auto;
-            display: flex;
-            position: relative;
-        }
+#content_area {
 
-        .resume_container h2 {
-            padding: 20px 0px 0px 0px;
-            width: 100%;
-			font-family: verdana, sans-serif;
-            text-align: center;
-            color: #375FD7;
-		}
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    overflow-x: auto;
+    overflow-y: none;
 
-        #copyright {
-            margin: 0px 0px 20px 0px;
-            font-size: 70%;
-            text-align: center;
-            color: gray;
-        }
+}
 
-		@media(min-width: 1000px) {
+.content_area_container {
 
-            #intro {
-				width: 50%;
-                max-width: 1000px;
-				margin: 50px auto;
-				display: flex;
-				position: relative;
-			}
+    width: 90vw;
+    padding: 125vw 5vw 0vw 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
 
-			#intro a {
-				margin: auto 0;
-			}
+}
 
-			#profile {
-				margin: auto 0;	
-				padding: 20px;
-				border-radius: 60px;
-				width: 60px;
-				height: 60px;
-			}
+.experience {
 
-			#desc {
-				padding: 20px;
-				font-family: verdana, sans-serif;
-				margin: auto 0;	
-                text-align: center;
-			}
+    width: 90vw;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    border-style: none;
+    box-shadow: 0px 0px 15px 0px #aaaaaa;
+    pointer-events: auto; 
 
-            #resume {
-                width: 50%;
-            }
+}
 
-            .dates {
-                float: right;
-                padding: 20px;
-                font-style: italic;
-            }
-            
-			.content_container {
-				width: 100%;
-				max-width: 100%;
-				min-width: 750px;
-				margin: 50px auto;
-				display: inline;
-				overflow: hidden;
-                border-radius: 20px;
-			}
+.experience-top {
 
-            #resume {
-			    margin: 0 auto;
-			    min-width: 200px;
-                max-width: 1000px;
-			    width: 100%;
-			    display: flex;
-			    flex-wrap: wrap;
-		    }
+    box-shadow: 0 15px 15px -15px gray;
+    padding: 10px;
 
-		}
+}
 
-		@media(max-width: 1000px) {
+.experience-inner {
 
+    position: relative;
+    padding: 35px;
+    color: rgb(50, 50, 50);
+    overflow-y: auto;
 
-            #intro {		
-				width: 100%;
-				margin: 10px auto;
-				position: relative;
-			}
-			
-			#profile {
-				margin: 0 auto;	
-				padding: 10px;
-				border-radius: 30px;
-				width: 60px;
-				height: 60px;
-				display: block;
-			}
+}
 
-			#desc {
-				font-family: verdana, sans-serif;
-				display: block;
-				padding: 20px;
-                text-align: center;
-			}
+#cy {
 
-            .dates {
-                float: left;
-                clear: both;
-                padding: 0px 0px 20px 0px;
-                font-size: 12px;
-                font-style: none;
-            }
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+    position: fixed;
 
-			.content_container {
-				width: 100%;
-				max-width: 100%;
-				min-width: 200px;
-				margin: 10px auto;
-				display: block;
-				overflow: hidden;
-				position: relative;
-			}
+}
 
-            #resume {
-			    margin: 0 auto;
-			    min-width: 200px;
-			    max-width: 100%;
-			    display: flex;
-			    flex-wrap: wrap;
-		    }
+#hello {
 
-		}
+    font-size: 20px;
+    width: 100%;
+    font-family: Helvetica, sans-serif; 
+    text-align: center;
+    color: rgb(50, 50, 50);
+    padding-bottom: 25px;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
 
-        @media(min-width: 750px) {
-            #technologies {
-                width: 50%;
-                float: right;
-            }
+}
 
-            #languages {
-                width: 50%;
-                float: left;
-            }
-        }
+.description {
 
-        @media(max-width: 750px) {
-            #technologies {
-                width: 100% !important;
-                float: left; 
-            }
+    font-size: 13px;
+    font-family: verdana, sans-serif;
 
-            #languages {
-                width: 100% !important;
-                float: left;
-            }
+}
 
-            .icons {
-                margin: 0px auto;
+ul {
 
-            }
+  margin-left: 0.5em;
+  padding-left: 0.5em;
+
+}
+
+#platform_transition_link {
+
+    text-decoration: underline;
+
+}
+
+#platform_transition_link:hover {
+
+    cursor: pointer;
+
+}
+
+#headshot {
+
+    width: 50%;
+    height: 200px;
+    margin: 15px auto;
+    position: relative;
+
+}
+
+#see-next {
+
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    bottom: 0px;
+    display: inline-block;
+    font-family: verdana, sans-serif;
+
+}
+
+#click-and-drag-container {
+
+    height: 50px;
+    bottom: 0px;
+    position: fixed;
+    pointer-events: none;
+    display: none;
+
+}
+
+#click-and-drag {
+
+    font-family: Helvetica, sans-serif;
+    padding: 15px;
+    bottom: 0px;
+    position: fixed;
+
+}
+
+.type {
+
+    font-size: 8px;
+    font-family: verdana, sans-serif;
+
+}
+
+.experience-header {
+
+    font-size: 20px;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+.experience-location {
+
+    font-size: 10px;
+    font-family: verdana, sans-serif;
+
+}
+
+.experience-date {
+
+    font-size: 8px;
+    font-family: verdana, sans-serif;
+
+}
 
 
-        }
+}
 
-        #resume_header a {
-            text-decoration: None;
-            color: black;
-        }
+/* DESKTOP STYLING */
 
+@media (min-width: 1000px) {
+
+body {
+
+    background-color: rgb(250, 250, 250);
+    margin: 0px;
+
+}
+
+.first {
+
+    margin-top: 12vh;
+
+}
+
+#left_button_area {
+    display: none;
+}
+
+#right_button_area {
+    display: none;
+}
+
+#content_area {
+
+    width: 33%;
+    right: 10vw;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+.content_area_container {
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 1000px;
+
+}
+
+.experience {
+
+    min-height: 75vh;
+    background-color: #ffffff;
+    margin: auto 0px;
+    border-radius: 50px;
+    border-style: none;
+    box-shadow: 0px 0px 15px 0px #aaaaaa;
+    pointer-events: auto; 
+    position: relative;
+
+}
+
+.experience:hover {
+
+    box-shadow: 0px 0px 30px 0px #aaaaaa !important;
+
+}
+
+.experience-top {
+
+    box-shadow: 0 15px 15px -15px gray;
+    padding: 25px;
+
+}
+
+.experience-inner {
+
+    position: relative;
+    padding: 50px;
+    color: rgb(50, 50, 50);
+
+}
+
+#cy {
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+    position: fixed;
+
+}
+
+#hello {
+
+    font-size: 35px;
+    width: 100%;
+    font-family: Helvetica, sans-serif; 
+    text-align: center;
+    color: rgb(50, 50, 50);
+    padding-bottom: 25px;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+.description {
+
+    font-size: 20px;
+    font-family: verdana, sans-serif;
+
+}
+
+#platform_transition_link {
+
+    text-decoration: underline;
+
+}
+
+#platform_transition_link:hover {
+
+    cursor: pointer;
+
+}
+
+#headshot {
+
+    width: 50%;
+    height: 200px;
+    margin: 15px auto;
+    position: relative;
+
+}
+
+#see-next {
+
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    position: absolute;
+    padding-bottom: 25px;
+    bottom: 0px;
+    display: inline-block;
+    font-family: verdana, sans-serif;
+
+}
+
+#click-and-drag-container {
+
+    height: 50px;
+    bottom: 0px;
+    position: fixed;
+    pointer-events: none;
+
+}
+
+#click-and-drag {
+
+    font-family: Helvetica, sans-serif;
+    padding: 15px;
+    bottom: 0px;
+    position: fixed;
+
+}
+
+.type {
+
+    font-size: 10px;
+    font-family: verdana, sans-serif;
+
+}
+
+.experience-header {
+
+    font-size: 35px;
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+
+}
+
+.experience-location {
+
+    font-size: 15px;
+    font-family: verdana, sans-serif;
+
+}
+
+.experience-date {
+
+    font-size: 12px;
+    font-family: verdana, sans-serif;
+
+}
+
+}
