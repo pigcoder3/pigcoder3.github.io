@@ -389,6 +389,7 @@ cy.on('layoutstop', delay);
 
 function delay() {
     setTimeout(function() {
+        resized();
         highlight_nodes();
     }, 0);
 }
