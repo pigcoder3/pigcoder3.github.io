@@ -66,7 +66,7 @@ body {
 .content_area_container {
 
     width: 90vw;
-    padding: 125vw 5vw 0vw 5vw;
+    padding: 100vw 5vw 0vw 5vw;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -160,14 +160,7 @@ ul {
 
 #see-next {
 
-    font-size: 12px;
-    width: 100%;
-    text-align: center;
-    margin-top: 25px;
-    padding-bottom: 25px;
-    bottom: 0px;
-    display: inline-block;
-    font-family: verdana, sans-serif;
+    display: none;
 
 }
 

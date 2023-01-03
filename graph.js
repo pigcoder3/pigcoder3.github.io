@@ -451,6 +451,5 @@ right_button_area.onclick = function () {
 
 };
 //Reset to the intro
-window.scrollTo(0, 0);
-views[0].scrollIntoView({behavior: 'smooth'});
+views[0].scrollIntoView({behavior: 'smooth', block: 'start'});
 left_button_area.style.opacity = 0.5;
