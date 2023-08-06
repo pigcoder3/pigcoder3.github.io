@@ -83,9 +83,9 @@ var cy = cytoscape({
 cy.add([
     { group: 'nodes', data: { label: 'Network Hardware Support', id: 'nethard'}, classes: ['.base', 'introduction', 'network_hardware'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} },
-    { group: 'nodes', data: { label: 'Cybersecurity', id: 'cyber'}, classes: ['.base', 'introduction', 'security_analyst'],
+    { group: 'nodes', data: { label: 'Cybersecurity', id: 'cyber'}, classes: ['.base', 'software_coop', 'introduction', 'security_analyst'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold' } },
-    { group: 'nodes', data: { label: 'Software Engineering', id: 'softeng'}, classes: ['.base', 'introduction', 'platform_transition'],
+    { group: 'nodes', data: { label: 'Software Engineering', id: 'softeng'}, classes: ['.base', 'software_coop', 'introduction', 'platform_transition'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} }
 ]);
 
@@ -97,31 +97,31 @@ cy.add([
     { group: 'nodes', data: { label: 'Assembly', id: 'assembly'},
         classes: ['introduction', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Python', id: 'python'},
-        classes: ['introduction', 'platform_transition', 'network_hardware', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Java', id: 'java'},
-        classes: ['introduction'] },
+        classes: ['introduction', 'software_coop'] },
     { group: 'nodes', data: { label: 'C', id: 'clang'},
-        classes: ['introduction', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'C++', id: 'cpp'},
-        classes: ['introduction'] },
+        classes: ['introduction', 'software_coop'] },
     { group: 'nodes', data: { label: 'Linux', id: 'linux'},
-        classes: ['introduction', 'platform_transition', 'network_hardware', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst'] },
     { group: 'nodes', data: { label: 'APIs', id: 'api'},
-        classes: ['introduction', 'platform_transition', 'network_hardware'] },
+        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware'] },
     { group: 'nodes', data: { label: 'Git', id: 'git'},
-        classes: ['introduction', 'platform_transition'] },
+        classes: ['introduction', 'software_coop', 'platform_transition'] },
     { group: 'nodes', data: { label: 'SQL', id: 'sql'},
-        classes: ['introduction', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Ghidra', id: 'ghidra'},
-        classes: ['introduction', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Elastic/Kibana', id: 'elastic_kibana'},
         classes: ['introduction', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Kali Linux', id: 'kali_linux'},
-        classes: ['introduction', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Bash', id: 'bash'},
-        classes: ['introduction', 'security_analyst', 'platform_transition'] },
+        classes: ['introduction', 'software_coop', 'software_coop', 'security_analyst', 'platform_transition'] },
     { group: 'nodes', data: { label: 'Powershell', id: 'powershell'},
-        classes: ['introduction', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Network Switch Configuration', id: 'configuration'},
         classes: ['introduction', 'network_hardware'] },
     { group: 'nodes', data: { label: 'Make', id: 'make'},
@@ -226,6 +226,7 @@ function resized() {
 experiences_and_projects = [
 
     { "element": document.getElementById("introduction"), "name": "introduction" },
+    { "element": document.getElementById("software_coop"), "name": "software_coop" },
     { "element": document.getElementById("security_analyst"), "name": "security_analyst"},
     { "element": document.getElementById("network_hardware"), "name": "network_hardware"},
     { "element": document.getElementById("platform_transition"), "name": "platform_transition"}
@@ -408,9 +409,11 @@ if (document.readyState == 'complete') {
 
 // For smaller screens, have left and right buttons
 views = [document.getElementById("introduction").parentNode, 
+    document.getElementById('software_coop').parentNode,
     document.getElementById("security_analyst").parentNode, 
     document.getElementById("network_hardware").parentNode,
     document.getElementById("platform_transition").parentNode];
+
 var selectedExperience = 0;
 var left_button_area = document.getElementById("left_button_area");
 var right_button_area = document.getElementById("right_button_area");
