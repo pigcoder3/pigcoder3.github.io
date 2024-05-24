@@ -11,6 +11,34 @@ var unhighlighted_size = 100;
 
 var animation_duration = 150; // milliseconds
 
+const colorMapping = new Map();
+colorMapping.set('introduction', node_color);
+colorMapping.set('software_coop','#83cbfa');
+colorMapping.set('security_analyst','#ffa69e');
+colorMapping.set('network_hardware','#9ee37d');
+colorMapping.set('vulnerability_assessment','#fabc3c');
+colorMapping.set('platform_transition','#c879ff');
+
+const baseNodeColorMapping = new Map();
+baseNodeColorMapping.set('introduction', main_node_color);
+baseNodeColorMapping.set('software_coop','#5da3e5');
+baseNodeColorMapping.set('security_analyst','#FF675C');
+baseNodeColorMapping.set('network_hardware','#88E333');
+baseNodeColorMapping.set('vulnerability_assessment','#CE7500');
+baseNodeColorMapping.set('platform_transition','#BD47E5');
+
+['introduction', 'software_coop', 'security_analyst', 'network_hardware', 'vulnerability_assessment', 'platform_transition'].forEach((proj_name) => {
+    console.log(proj_name);
+    document.getElementById(proj_name).style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+})
+
+// document.getElementById('introduction').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('software_coop').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('security_analyst').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('network_hardware').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('vulnerability_assessment').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('platform_transition').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+
 var cy = cytoscape({
 
     container: document.getElementById('cy'), // container to render in
@@ -48,7 +76,11 @@ var cy = cytoscape({
                 'text-wrap': 'wrap',
                 'font-size': 13,
                 'font-family': ['verdana', 'sans-serif'],
-                'events': 'no'
+                'events': 'no',
+                'ghost': 'yes',
+                'ghost-offset-x': 5,
+                'ghost-offset-y': 5,
+                'ghost-opacity': 0.25
 
             }
         },
@@ -83,7 +115,7 @@ var cy = cytoscape({
 cy.add([
     { group: 'nodes', data: { label: 'Network Hardware Support', id: 'nethard'}, classes: ['.base', 'introduction', 'network_hardware'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} },
-    { group: 'nodes', data: { label: 'Cybersecurity', id: 'cyber'}, classes: ['.base', 'software_coop', 'introduction', 'security_analyst'],
+    { group: 'nodes', data: { label: 'Cybersecurity', id: 'cyber'}, classes: ['.base', 'software_coop', 'introduction', 'security_analyst', 'vulnerability_assessment'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold' } },
     { group: 'nodes', data: { label: 'Software Engineering', id: 'softeng'}, classes: ['.base', 'software_coop', 'introduction', 'platform_transition'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} }
@@ -99,35 +131,38 @@ cy.add([
     { group: 'nodes', data: { label: 'Python', id: 'python'},
         classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Java', id: 'java'},
-        classes: ['introduction', 'software_coop'] },
+        classes: ['introduction', 'software_coop', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'C', id: 'clang'},
-        classes: ['introduction', 'software_coop', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'C++', id: 'cpp'},
         classes: ['introduction', 'software_coop'] },
     { group: 'nodes', data: { label: 'Linux', id: 'linux'},
-        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'APIs', id: 'api'},
         classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware'] },
     { group: 'nodes', data: { label: 'Git', id: 'git'},
         classes: ['introduction', 'software_coop', 'platform_transition'] },
     { group: 'nodes', data: { label: 'SQL', id: 'sql'},
-        classes: ['introduction', 'software_coop', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Ghidra', id: 'ghidra'},
         classes: ['introduction', 'software_coop', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Elastic/Kibana', id: 'elastic_kibana'},
         classes: ['introduction', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Kali Linux', id: 'kali_linux'},
-        classes: ['introduction', 'software_coop', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Bash', id: 'bash'},
-        classes: ['introduction', 'software_coop', 'software_coop', 'security_analyst', 'platform_transition'] },
+        classes: ['introduction', 'software_coop', 'software_coop', 'security_analyst', 'platform_transition', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Powershell', id: 'powershell'},
-        classes: ['introduction', 'software_coop', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Network Switch Configuration', id: 'configuration'},
         classes: ['introduction', 'network_hardware'] },
     { group: 'nodes', data: { label: 'Make', id: 'make'},
         classes: ['introduction'] },
     { group: 'nodes', data: { label: 'Maven', id: 'maven'},
-        classes: ['introduction'] }
+        classes: ['introduction'] },
+    { group: 'nodes', data: {label: 'Android', id: 'android'},
+        classes: ['introduction', 'vulnerability_assessment']}
+    
 ]);
 
 
@@ -162,7 +197,8 @@ cy.add([
     { group: 'edges', data: { id: 'softeng-bash', source: 'softeng', target: 'bash' } },
     { group: 'edges', data: { id: 'clang-make', source: 'clang', target: 'make' } },
     { group: 'edges', data: { id: 'nethard-configuration', source: 'nethard', target: 'configuration' } },
-    { group: 'edges', data: { id: 'java-maven', source: 'java', target: 'maven' } }
+    { group: 'edges', data: { id: 'java-maven', source: 'java', target: 'maven' } },
+    { group: 'edges', data: { id: 'java-android', source: 'java', target: 'android'}}
 
 ]);
 
@@ -183,8 +219,6 @@ cy.layout({name: 'cola',
     allConstIter: 50,
     fit: true
 }).run();
-
-
 
 window.addEventListener('resize', resized);
 
@@ -213,7 +247,7 @@ function resized() {
         cy.fit();
 
         cy.panBy({
-            x: -document.documentElement.clientWidth/5,
+            x: -document.documentElement.clientWidth/6,
             y: 0
         });
 
@@ -229,6 +263,7 @@ experiences_and_projects = [
     { "element": document.getElementById("software_coop"), "name": "software_coop" },
     { "element": document.getElementById("security_analyst"), "name": "security_analyst"},
     { "element": document.getElementById("network_hardware"), "name": "network_hardware"},
+    { "element": document.getElementById("vulnerability_assessment"), "name": "vulnerability_assessment"},
     { "element": document.getElementById("platform_transition"), "name": "platform_transition"}
 
 ]
@@ -283,6 +318,8 @@ function highlight_nodes(direction) {
                 break;
             }
 
+            // Update the cards too
+
 
             updated_nodes = cy.nodes().filter( function(ele, i, eles) {
                 //if (ele.hasClass(".base")) { return false; } // No main nodes!!
@@ -297,7 +334,7 @@ function highlight_nodes(direction) {
             updated_nodes.intersection(baseNodes).animate({
 
                 style: { 
-                    //backgroundColor: highlighted_color,
+                    backgroundColor: baseNodeColorMapping.get(proj_name),
                     backgroundOpacity: 1.0,
                     color: highlighted_text_color,
                     //width: highlighted_main_node_size,
@@ -311,7 +348,7 @@ function highlight_nodes(direction) {
             updated_nodes.difference(baseNodes).animate({
 
                 style: { 
-                    backgroundColor: highlighted_color,
+                    backgroundColor: colorMapping.get(proj_name),
                     backgroundOpacity: 1.0,
                     color: highlighted_text_color,
                     width: highlighted_size,
@@ -327,7 +364,7 @@ function highlight_nodes(direction) {
             old_nodes.intersection(baseNodes).animate({
 
                 style: {
-                    //backgroundColor: unhighlighted_color,
+                    backgroundColor: main_node_color,
                     backgroundOpacity: 0.25,
                     color: unhighlighted_text_color,
                     //width: main_node_size,
@@ -412,6 +449,7 @@ views = [document.getElementById("introduction").parentNode,
     document.getElementById('software_coop').parentNode,
     document.getElementById("security_analyst").parentNode, 
     document.getElementById("network_hardware").parentNode,
+    document.getElementById("vulnerability_assessment").parentNode,
     document.getElementById("platform_transition").parentNode];
 
 var selectedExperience = 0;

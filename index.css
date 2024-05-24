@@ -110,6 +110,15 @@ body {
 
 }
 
+#cy:hover {
+
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+
+}
+
 #hello {
 
     font-size: 20px;
@@ -127,6 +136,12 @@ body {
 
     font-size: 13px;
     font-family: verdana, sans-serif;
+
+}
+
+.description li {
+
+    padding: 5px 0px 5px 0px;
 
 }
 
@@ -194,7 +209,7 @@ ul {
 
     font-size: 20px;
     font-family: verdana, sans-serif;
-    font-weight: bold;
+    font-weight: bold
 
 }
 
@@ -219,6 +234,7 @@ ul {
 
 @media (min-width: 1000px) {
 
+
 body {
 
     background-color: rgb(250, 250, 250);
@@ -242,7 +258,8 @@ body {
 
 #content_area {
 
-    width: 33%;
+    width: calc(65vw - 50vh);
+    min-width: 600px;
     right: 10vw;
     position: absolute;
     pointer-events: none;
@@ -256,14 +273,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    min-height: 1000px;
+    justify-content: center;
+    min-height: vh;
+    padding: 100px 0px 100px 0px;
 
 }
 
 .experience {
 
-    min-height: 75vh;
+    /*min-height: 75vh;*/
     background-color: #ffffff;
     margin: auto 0px;
     border-radius: 50px;
@@ -318,10 +336,64 @@ body {
 
 }
 
-.description {
 
-    font-size: 20px;
-    font-family: verdana, sans-serif;
+
+@media(min-height: 700px) {
+
+    .description {
+
+        font-size: 17px;
+        font-family: verdana, sans-serif;
+    
+    }    
+
+    .experience-header {
+
+        font-size: 35px;
+        font-family: verdana, sans-serif;
+        font-weight: bold;
+    
+    }
+
+    .experience-location {
+
+        font-size: 15px;
+        font-family: verdana, sans-serif;
+    
+    }
+
+}
+
+@media(max-height: 700px) {
+
+    .description {
+
+        font-size: 13px;
+        font-family: verdana, sans-serif;
+    
+    }    
+
+    .experience-header {
+
+        font-size: 35px;
+        font-family: verdana, sans-serif;
+        font-weight: bold;
+
+    }
+
+    .experience-location {
+
+        font-size: 12px;
+        font-family: verdana, sans-serif;
+    
+    }
+
+
+}
+
+.description li {
+
+    padding: 5px 0px 5px 0px;
 
 }
 
@@ -385,20 +457,7 @@ body {
 
 }
 
-.experience-header {
 
-    font-size: 35px;
-    font-family: verdana, sans-serif;
-    font-weight: bold;
-
-}
-
-.experience-location {
-
-    font-size: 15px;
-    font-family: verdana, sans-serif;
-
-}
 
 .experience-date {
 
