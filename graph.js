@@ -1,4 +1,4 @@
-var node_color = "#bfbfbf";
+var node_color = "#cfcfcf";
 var main_node_size = 150;
 var main_node_color = "#9e9e9e";
 
@@ -21,16 +21,46 @@ colorMapping.set('platform_transition','#c879ff');
 
 const baseNodeColorMapping = new Map();
 baseNodeColorMapping.set('introduction', main_node_color);
-baseNodeColorMapping.set('software_coop','#5da3e5');
+baseNodeColorMapping.set('software_coop','#4a91d3');
 baseNodeColorMapping.set('security_analyst','#FF675C');
-baseNodeColorMapping.set('network_hardware','#88E333');
-baseNodeColorMapping.set('vulnerability_assessment','#CE7500');
+baseNodeColorMapping.set('network_hardware','#6cc01e');
+baseNodeColorMapping.set('vulnerability_assessment','#ff9d1c');
 baseNodeColorMapping.set('platform_transition','#BD47E5');
 
-['introduction', 'software_coop', 'security_analyst', 'network_hardware', 'vulnerability_assessment', 'platform_transition'].forEach((proj_name) => {
-    console.log(proj_name);
-    document.getElementById(proj_name).style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+const cardBackground = new Map();
+cardBackground.set('introduction', '#e9e9e9');
+cardBackground.set('software_coop', '#A2D7FB');
+cardBackground.set('security_analyst', '#FFBBB5');
+cardBackground.set('network_hardware', '#B5EA9C');
+cardBackground.set('vulnerability_assessment', '#FBCB6C');
+cardBackground.set('platform_transition', '#D59AFF');
+
+function ColorLuminance(hex, lum) {
+
+	// validate hex string
+	hex = String(hex).replace(/[^0-9a-f]/gi, '');
+	if (hex.length < 6) {
+		hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+	}
+	lum = lum || 0;
+
+	// convert to decimal and change luminosity
+	var rgb = "#", c, i;
+	for (i = 0; i < 3; i++) {
+		c = parseInt(hex.substr(i*2,2), 16);
+		c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+		rgb += ("00"+c).substr(c.length);
+	}
+
+	return rgb;
+}
+
+['software_coop', 'security_analyst', 'network_hardware', 'vulnerability_assessment', 'platform_transition'].forEach((proj_name) => {
+    document.getElementById(proj_name).style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get(proj_name), 0.1) + "; border: solid 0px #efefef; background-color: " + cardBackground.get(proj_name) + ";";
+    //document.getElementById(proj_name).style="box-shadow: 0px 0px 50px 0px " + cardBackground.get(proj_name) + ";";
 })
+
+document.getElementById('introduction').style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get('introduction'), 0.05) + "; border: solid 0px #efefef; background-color: " + cardBackground.get('introduction') + ";";
 
 // document.getElementById('introduction').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 // document.getElementById('software_coop').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
@@ -207,6 +237,7 @@ cy.add([
 
 
 
+var selectedExperience = 0;
 
 cy.layout({name: 'cola', 
     animate: true, 
@@ -318,8 +349,22 @@ function highlight_nodes(direction) {
                 break;
             }
 
-            // Update the cards too
+            selectedExperience = i;
 
+            if(selectedExperience == 0) {
+                up_button_area.style.opacity = 0.5;
+                down_button_area.style.opacity = 1;
+            } else if (selectedExperience == views.length - 1) {
+                down_button_area.style.opacity = 0.5;
+                up_button_area.style.opacity = 1;
+            } else {
+                down_button_area.style.opacity = 1;
+                up_button_area.style.opacity = 1;
+            }
+
+            views[selectedExperience].scrollIntoView({behavior: 'smooth', block: (document.documentElement.clientWidth < 1000)?'start':'center'});
+
+            // Update the cards too
 
             updated_nodes = cy.nodes().filter( function(ele, i, eles) {
                 //if (ele.hasClass(".base")) { return false; } // No main nodes!!
@@ -452,9 +497,10 @@ views = [document.getElementById("introduction").parentNode,
     document.getElementById("vulnerability_assessment").parentNode,
     document.getElementById("platform_transition").parentNode];
 
-var selectedExperience = 0;
 var left_button_area = document.getElementById("left_button_area");
 var right_button_area = document.getElementById("right_button_area");
+var down_button_area = document.getElementById("down_button_area");
+var up_button_area = document.getElementById("up_button_area");
 left_button_area.onclick = function () {
 
     // Rotate
@@ -463,10 +509,11 @@ left_button_area.onclick = function () {
         return;
 
     }
+    console.log("selectedExperience: " + selectedExperience);
 
     
     selectedExperience--;
-    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: 'start'});
+    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: (document.documentElement.clientWidth < 1000)?'start':'center'});
     right_button_area.style.opacity = 1;
 
     if(selectedExperience == 0) {
@@ -477,21 +524,65 @@ left_button_area.onclick = function () {
 right_button_area.onclick = function () {
 
     // Rotate
-    if (selectedExperience >= views.length-1) {
+    if (selectedExperience >= views.length - 1) {
+
+        return;
+
+    }
+    console.log("selectedExperience: " + selectedExperience);
+
+    selectedExperience++;
+    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: (document.documentElement.clientWidth < 1000)?'start':'center'});
+    left_button_area.style.opacity = 1;
+
+    if(selectedExperience == views.length - 1) {
+        right_button_area.style.opacity = 0.5;
+    }
+
+};
+up_button_area.onclick = function () {
+
+    // Rotate
+    if (selectedExperience == 0) {
+
+        return;
+
+    }
+    console.log("selectedExperience: " + selectedExperience);
+
+    selectedExperience--;
+    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: (document.documentElement.clientWidth < 1000)?'start':'center'});
+    down_button_area.style.opacity = 1;
+
+    if(selectedExperience == 0) {
+        up_button_area.style.opacity = 0.5;
+    }
+
+};
+down_button_area.onclick = function () {
+
+    // Rotate
+    if (selectedExperience >= views.length - 1) {
 
         return;
 
     }
 
-    selectedExperience++;
-    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: 'start'});
-    left_button_area.style.opacity = 1;
+    console.log("selectedExperience: " + selectedExperience);
 
-    if(selectedExperience == views.length-1) {
-        right_button_area.style.opacity = 0.5;
+    selectedExperience++;
+    views[selectedExperience].scrollIntoView({behavior: 'smooth', block: (document.documentElement.clientWidth < 1000)?'start':'center'});
+    up_button_area.style.opacity = 1;
+
+    if(selectedExperience == views.length - 1) {
+        down_button_area.style.opacity = 0.5;
     }
 
 };
+
 //Reset to the intro
-views[0].scrollIntoView({behavior: 'smooth', block: 'start'});
+views[0].scrollIntoView({behavior: 'smooth', block: 'center'});
 left_button_area.style.opacity = 0.5;
+right_button_area.style.opacity = 1;
+up_button_area.style.opacity = 0.5;
+down_button_area.style.opacity = 1;

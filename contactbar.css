@@ -4,7 +4,7 @@
 
 #name {
 	margin: 0px;
-	padding: 20px 20px 0px 20px;
+	padding: 10px 10px 0px 20px;
 	text-align: center;
     font-family: Helvetica, sans-serif; 
     text-align: left;
@@ -47,7 +47,7 @@
 }
 
 #contactbar_container {
-    background-color: rgba(250, 250, 250, 0.75);
+    background-color: rgba(250, 250, 250);
 }
 
 #contactbar {

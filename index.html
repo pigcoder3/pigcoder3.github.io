@@ -21,7 +21,15 @@
         </style>
 
     </head>
-    <body>
+    <body style="overflow-x: hidden;">
+        <div id="big_button_container">
+            <div id="up_button_area" class="view-button-big">
+            <img src="images/up_arrow.png"/>
+            </div>
+            <div id="down_button_area" class="view-button-big"> 
+            <img src="images/down_arrow.png">
+            </div>
+        </div>
         <div id="contactbar">
             <div id="contactbar_container">
 
@@ -42,14 +50,14 @@
             </div>
         </div>
         <div id="cy"></div>
-        <div id="left_button_area" class="view-button">
-            <span> ← </span>
+        <div id="left_button_area" class="view-button-small">
+            <img src="images/left_arrow.png"/>
         </div>
-        <div id="right_button_area" class="view-button"> 
-            <span> → </span>
+        <div id="right_button_area" class="view-button-small"> 
+            <img src="images/right_arrow.png"/>
         </div>
-        <div id="content_area">
-            <div class="content_area_container" style="padding-top: 0px;">
+        <div id="content_area" style="overflow-x: hidden;" scroll="no">
+            <div class="content_area_container top_container" >
                 <div id="introduction" class="experience first">
                     <div class="experience-inner">
                         <div class="experience-top">

@@ -9,20 +9,20 @@ body {
 
 }
 
-.view-button {
+.view-button-small {
 
     width: 50px;
     height: 50px;
     position: fixed;
     background-color: #ffffff;
-    border-radius: 25px;
     border-style: none;
     box-shadow: 0px 0px 15px 0px #aaaaaa;
     z-index: 1000;
+    user-select: none;
 
 }
 
-.view-button span {
+.view-button-small span {
 
     line-height: 50px;
     vertical-align: middle;
@@ -37,16 +37,38 @@ body {
 
 }
 
+.view-button-small img {
+
+    position: absolute;
+    width: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    display: block;
+    margin: auto;
+    text-align: center;
+
+}
+
 #left_button_area {
 
-    left: 25px;
+    left: 0px;
     top: 50%;
+    border-radius: 0px 25px 25px 0px;
+
 }
 
 #right_button_area {
 
-    right: 25px;
+    right: 0px;
     top: 50%;
+    border-radius: 25px 0px 0px 25px;
+
+}
+
+#big_button_container {
+
+    display: none;
 
 }
 
@@ -266,9 +288,64 @@ body {
 
 }
 
+
+.view-button-big {
+
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    /*box-shadow: 0px 0px 15px 0px #aaaaaa;*/
+    z-index: 1000;
+    user-select: none;
+
+}
+
+#up_button_area {
+
+    border-radius: 25px 25px 0px 0px;
+
+}
+
+#down_button_area {
+
+    border-radius: 0px 0px 25px 25px;
+
+}
+
+.view-button-big img {
+
+    width: 34px;
+    padding: 8px;
+    display: block;
+    margin: auto;
+    text-align: center;
+
+}
+
+#big_button_container {
+
+    right: calc(10vw - 100px);
+    top: calc(50% - 50px);
+    height: 100px;
+    width: 50px !important;
+    position: fixed;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 15px 0px #aaaaaa;
+
+}
+
+
+.top_container {
+
+    padding-top: 0px !important;
+
+}
+
 .content_area_container {
 
-    width: 100%;
+    width: calc(100% - 11px);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -292,11 +369,12 @@ body {
 
 }
 
+/*
 .experience:hover {
 
     box-shadow: 0px 0px 30px 0px #aaaaaa !important;
 
-}
+}*/
 
 .experience-top {
 
@@ -467,3 +545,4 @@ body {
 }
 
 }
+
