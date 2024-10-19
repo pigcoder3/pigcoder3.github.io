@@ -17,7 +17,7 @@ colorMapping.set('software_coop','#83cbfa');
 colorMapping.set('security_analyst','#ffa69e');
 colorMapping.set('network_hardware','#9ee37d');
 colorMapping.set('vulnerability_assessment','#fabc3c');
-colorMapping.set('platform_transition','#c879ff');
+colorMapping.set('wild_track','#c879ff');
 
 const baseNodeColorMapping = new Map();
 baseNodeColorMapping.set('introduction', main_node_color);
@@ -25,7 +25,7 @@ baseNodeColorMapping.set('software_coop','#4a91d3');
 baseNodeColorMapping.set('security_analyst','#FF675C');
 baseNodeColorMapping.set('network_hardware','#6cc01e');
 baseNodeColorMapping.set('vulnerability_assessment','#ff9d1c');
-baseNodeColorMapping.set('platform_transition','#BD47E5');
+baseNodeColorMapping.set('wild_track','#BD47E5');
 
 const cardBackground = new Map();
 cardBackground.set('introduction', '#e9e9e9');
@@ -33,7 +33,7 @@ cardBackground.set('software_coop', '#A2D7FB');
 cardBackground.set('security_analyst', '#FFBBB5');
 cardBackground.set('network_hardware', '#B5EA9C');
 cardBackground.set('vulnerability_assessment', '#FBCB6C');
-cardBackground.set('platform_transition', '#D59AFF');
+cardBackground.set('wild_track', '#D59AFF');
 
 function ColorLuminance(hex, lum) {
 
@@ -55,19 +55,21 @@ function ColorLuminance(hex, lum) {
 	return rgb;
 }
 
-['software_coop', 'security_analyst', 'network_hardware', 'vulnerability_assessment', 'platform_transition'].forEach((proj_name) => {
-    document.getElementById(proj_name).style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get(proj_name), 0.1) + "; border: solid 0px #efefef; background-color: " + cardBackground.get(proj_name) + ";";
+['software_coop', 'security_analyst', 'network_hardware', 'wild_track', 'vulnerability_assessment'].forEach((proj_name) => {
+    document.getElementById(proj_name).style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get(proj_name), -0.05) + "; border: solid 0px #efefef; background-color: " + cardBackground.get(proj_name) + ";";
+    document.getElementById(proj_name + "_top").style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get(proj_name), -0.1) + "; border: solid 0px #efefef; background-color: " + ColorLuminance(cardBackground.get(proj_name), 0.1) + ";";
     //document.getElementById(proj_name).style="box-shadow: 0px 0px 50px 0px " + cardBackground.get(proj_name) + ";";
 })
 
-document.getElementById('introduction').style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get('introduction'), 0.05) + "; border: solid 0px #efefef; background-color: " + cardBackground.get('introduction') + ";";
-
+document.getElementById('introduction').style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get('introduction'), -0.05) + "; border: solid 0px #efefef; background-color: " + cardBackground.get('introduction') + ";";
+document.getElementById("introduction_top").style="box-shadow: 10px 10px 0px 0px " + ColorLuminance(cardBackground.get('introduction'), -0.1) + "; border: solid 0px #efefef; background-color: " + ColorLuminance(cardBackground.get('introduction'), 0.065) + ";";
+    
 // document.getElementById('introduction').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 // document.getElementById('software_coop').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 // document.getElementById('security_analyst').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 // document.getElementById('network_hardware').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 // document.getElementById('vulnerability_assessment').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
-// document.getElementById('platform_transition').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
+// document.getElementById('wild_track').style="box-shadow: 0px 0px 50px 0px " + colorMapping.get(proj_name) + "; background-color: " + colorMapping.get(proj_name) + ";";
 
 var cy = cytoscape({
 
@@ -147,7 +149,9 @@ cy.add([
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} },
     { group: 'nodes', data: { label: 'Cybersecurity', id: 'cyber'}, classes: ['.base', 'software_coop', 'introduction', 'security_analyst', 'vulnerability_assessment'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold' } },
-    { group: 'nodes', data: { label: 'Software Engineering', id: 'softeng'}, classes: ['.base', 'software_coop', 'introduction', 'platform_transition'],
+    { group: 'nodes', data: { label: 'Software Engineering', id: 'softeng'}, classes: ['.base', 'software_coop', 'introduction', 'wild_track'],
+        style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} },
+    { group: 'nodes', data: { label: 'UI/UX', id: 'ui/ux'}, classes: ['.base', 'introduction', 'wild_track'],
         style: { 'width': main_node_size, 'height': main_node_size, 'background-color': main_node_color, 'font-size': 15, 'font-weight': 'bold'} }
 ]);
 
@@ -159,7 +163,7 @@ cy.add([
     { group: 'nodes', data: { label: 'Assembly', id: 'assembly'},
         classes: ['introduction', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Python', id: 'python'},
-        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst'] },
+        classes: ['introduction', 'software_coop', 'network_hardware', 'security_analyst'] },
     { group: 'nodes', data: { label: 'Java', id: 'java'},
         classes: ['introduction', 'software_coop', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'C', id: 'clang'},
@@ -167,21 +171,17 @@ cy.add([
     { group: 'nodes', data: { label: 'C++', id: 'cpp'},
         classes: ['introduction', 'software_coop'] },
     { group: 'nodes', data: { label: 'Linux', id: 'linux'},
-        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware', 'security_analyst', 'vulnerability_assessment'] },
+        classes: ['introduction', 'software_coop', 'network_hardware', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'APIs', id: 'api'},
-        classes: ['introduction', 'software_coop', 'platform_transition', 'network_hardware'] },
+        classes: ['introduction', 'software_coop', 'wild_track', 'network_hardware'] },
     { group: 'nodes', data: { label: 'Git', id: 'git'},
-        classes: ['introduction', 'software_coop', 'platform_transition'] },
+        classes: ['introduction', 'software_coop', 'wild_track'] },
     { group: 'nodes', data: { label: 'SQL', id: 'sql'},
         classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Ghidra', id: 'ghidra'},
         classes: ['introduction', 'software_coop', 'security_analyst'] },
-    { group: 'nodes', data: { label: 'Elastic/Kibana', id: 'elastic_kibana'},
-        classes: ['introduction', 'security_analyst'] },
-    { group: 'nodes', data: { label: 'Kali Linux', id: 'kali_linux'},
-        classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Bash', id: 'bash'},
-        classes: ['introduction', 'software_coop', 'software_coop', 'security_analyst', 'platform_transition', 'vulnerability_assessment'] },
+        classes: ['introduction', 'software_coop', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Powershell', id: 'powershell'},
         classes: ['introduction', 'software_coop', 'security_analyst', 'vulnerability_assessment'] },
     { group: 'nodes', data: { label: 'Network Switch Configuration', id: 'configuration'},
@@ -191,7 +191,17 @@ cy.add([
     { group: 'nodes', data: { label: 'Maven', id: 'maven'},
         classes: ['introduction'] },
     { group: 'nodes', data: {label: 'Android', id: 'android'},
-        classes: ['introduction', 'vulnerability_assessment']}
+        classes: ['introduction', 'vulnerability_assessment']},
+
+    // New ones to add for wildtrack
+    { group: 'nodes', data: {label: 'Full Stack', id: 'full-stack'},
+    classes: ['introduction', 'wild_track']},
+    { group: 'nodes', data: {label: 'React', id: 'react'},
+    classes: ['introduction', 'wild_track']},
+    { group: 'nodes', data: {label: 'MongoDB', id: 'mongodb'},
+    classes: ['introduction', 'wild_track']},
+    { group: 'nodes', data: {label: 'Figma', id: 'figma'},
+    classes: ['introduction', 'wild_track']}
     
 ]);
 
@@ -209,27 +219,32 @@ cy.add([
     { group: 'edges', data: { id: 'softeng-cpp', source: 'softeng', target: 'cpp' } },
     { group: 'edges', data: { id: 'softeng-java', source: 'softeng', target: 'java' } },
     { group: 'edges', data: { id: 'nethard-python', source: 'nethard', target: 'python' } },
-    { group: 'edges', data: { id: 'softeng-linux', source: 'softeng', target: 'linux' } },
+    { group: 'edges', data: { id: 'bash-linux', source: 'bash', target: 'linux' } },
     { group: 'edges', data: { id: 'cyber-linux', source: 'cyber', target: 'linux' } },
     { group: 'edges', data: { id: 'nethard-linux', source: 'nethard', target: 'linux' } },
     { group: 'edges', data: { id: 'nethard-api', source: 'nethard', target: 'api' } },
     { group: 'edges', data: { id: 'softeng-api', source: 'softeng', target: 'api' } },
-    { group: 'edges', data: { id: 'python-api', source: 'python', target: 'api' } },
+    /*{ group: 'edges', data: { id: 'python-api', source: 'python', target: 'api' } },*/
     { group: 'edges', data: { id: 'softeng-sql', source: 'softeng', target: 'sql' } },
     { group: 'edges', data: { id: 'softeng-git', source: 'softeng', target: 'git' } },
     { group: 'edges', data: { id: 'sql-inc_resp', source: 'sql', target: 'inc_resp' } },
     { group: 'edges', data: { id: 'malware_analysis-ghidra', source: 'malware_analysis', target: 'ghidra' } },
-    { group: 'edges', data: { id: 'inc_resp-elastic_kibana', source: 'inc_resp', target: 'elastic_kibana' } },
+    /*{ group: 'edges', data: { id: 'inc_resp-elastic_kibana', source: 'inc_resp', target: 'elastic_kibana' } },*/
     { group: 'edges', data: { id: 'inc_resp-bash', source: 'inc_resp', target: 'bash' } },
     { group: 'edges', data: { id: 'inc_resp-powershell', source: 'inc_resp', target: 'powershell' } },
-    { group: 'edges', data: { id: 'inc_resp-kali_linux', source: 'inc_resp', target: 'kali_linux' } },
     { group: 'edges', data: { id: 'softeng-powershell', source: 'softeng', target: 'powershell' } },
     { group: 'edges', data: { id: 'softeng-bash', source: 'softeng', target: 'bash' } },
     { group: 'edges', data: { id: 'clang-make', source: 'clang', target: 'make' } },
     { group: 'edges', data: { id: 'nethard-configuration', source: 'nethard', target: 'configuration' } },
     { group: 'edges', data: { id: 'java-maven', source: 'java', target: 'maven' } },
-    { group: 'edges', data: { id: 'java-android', source: 'java', target: 'android'}}
+    { group: 'edges', data: { id: 'java-android', source: 'java', target: 'android'}},
 
+    // New ones for wildtrack
+    { group: 'edges', data: { id: 'full-stack-softeng', source: 'softeng', target: 'full-stack' } },
+    { group: 'edges', data: { id: 'react-softeng', source: 'softeng', target: 'react' } },
+    { group: 'edges', data: { id: 'react-ui/ux', source: 'ui/ux', target: 'react' } },
+    { group: 'edges', data: { id: 'mongodb-full-stack', source: 'full-stack', target: 'mongodb' } },
+    { group: 'edges', data: { id: 'figma-ui/ux', source: 'ui/ux', target: 'figma'}}
 ]);
 
 
@@ -294,8 +309,8 @@ experiences_and_projects = [
     { "element": document.getElementById("software_coop"), "name": "software_coop" },
     { "element": document.getElementById("security_analyst"), "name": "security_analyst"},
     { "element": document.getElementById("network_hardware"), "name": "network_hardware"},
-    { "element": document.getElementById("vulnerability_assessment"), "name": "vulnerability_assessment"},
-    { "element": document.getElementById("platform_transition"), "name": "platform_transition"}
+    { "element": document.getElementById("wild_track"), "name": "wild_track"},
+    { "element": document.getElementById("vulnerability_assessment"), "name": "vulnerability_assessment"}
 
 ]
 
@@ -461,13 +476,6 @@ document.getElementById("content_area").addEventListener("scroll", (event) => {
 
 });
 
-// Move the graph to the left so that it doesn't get hidden by the experiences
-document.getElementById('platform_transition_link').onclick = function (e) {
-    document.getElementById("platform_transition").scrollIntoView({
-        behavior: 'smooth'
-    });
-};
-
 cy.on('layoutstop', delay);
 
 function delay() {
@@ -494,8 +502,8 @@ views = [document.getElementById("introduction").parentNode,
     document.getElementById('software_coop').parentNode,
     document.getElementById("security_analyst").parentNode, 
     document.getElementById("network_hardware").parentNode,
-    document.getElementById("vulnerability_assessment").parentNode,
-    document.getElementById("platform_transition").parentNode];
+    document.getElementById("wild_track").parentNode,
+    document.getElementById("vulnerability_assessment").parentNode];
 
 var left_button_area = document.getElementById("left_button_area");
 var right_button_area = document.getElementById("right_button_area");
